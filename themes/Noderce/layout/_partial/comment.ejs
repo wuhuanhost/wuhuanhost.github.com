@@ -1,0 +1,18 @@
+<% if (page.comments){ %>
+<section id="comment">
+  <% if (theme.comment_provider == "duoshuo") {
+      if (theme.duoshuo) { %>
+        <!-- 多说评论框 start -->
+	  <div class="ds-thread" data-thread-key="<%= page.permalink%>" data-title="<%= page.title%>" data-url="<%= page.permalink%>">
+	  </div>
+	<!-- 多说评论框 end -->
+      <% } %>
+  <% } else if(theme.disqus_shortname) { %>
+      <!-- Disqus start -->
+	  <div id="disqus_thread">
+	    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+      <!-- Disqus end -->
+  <% } %>
+</section>
+<% } %>

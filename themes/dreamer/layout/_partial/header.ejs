@@ -1,0 +1,59 @@
+<!-- <div class="meta inner">
+  <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
+  <h2><a href="<%- config.root %>">主页</a>   /   <a href="<%- config.root %>archives/">归档</a></h2>
+  <nav id="main-nav">
+    <ul>
+      <% for (var i in theme.menu){ %>
+      <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+      <% } %>
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+</div>
+<div class="clearfix"></div>
+ -->
+
+<!-- 菜单 -->
+        <nav class="nav-bar">
+            <div id="nav-bar-container">
+                <ul>
+                    <li class="navbar"><a href="/">主页</a></li>
+                    <li class="navbar active"><a href="<%- config.root %>archives/">归档</a></li>
+                    <li class="navbar"><a href="#">订阅</a></li>
+                    <!-- <li class="search"><a href=""><i class="fa fa-search"></i></a></li> -->
+                    <li class="search-input">
+                        <div style="width:240px;height:30px;margin-top:13px;padding:0;position:relative;border:1px solid #999999;border-radius:2rem;z-index:2">
+                            <div style="width:200px;height:30px;line-height:30px;top:0;left:0px;display:inline-block;position:absolute;box-sizing:border-radius;z-index:1">
+                                <input type="text" style="width:198px;height:30px;outline:none;padding:0;margin:0;display:block;-webkit-appearance: none;border:0;background-color:#ffffff;margin-left:12px;">
+                            </div>
+                            <div style="display:inline-block;width:40px;height:100%;position:absolute;left:200px;line-height:30px;text-align:center;">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<!-- banner大图 -->
+		<div class="banner">
+		    <!-- 空白图片撑开banner -->
+		    <img style="width:100%;z-index:0;" src="https://isux.tencent.com/wp-content/themes/isux_v5/images/holder-192x58.png" alt="">
+		    <div class="title">
+			<!-- 背景层 -->
+			<div class="bg">
+			</div>
+			<!--遮罩层 -->
+			<div class="mask">
+			</div>
+			<!-- 标题层 -->
+			<div class="wrap">
+			    <div class="tab-cell">
+				<h1 id="title">梦想.家博客</h1>
+				<div id="subtitle">
+				    爱思考，爱编码~
+				</div>
+			    </div>
+			</div>
+		    </div>
+		</div>
+	      </div>

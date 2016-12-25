@@ -1,0 +1,53 @@
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script>
+//图片下面添加说明
+$("p img").each(function(){
+	var alt=$(this).attr("alt");
+	if(alt==""){
+	   alt="MengXiangJia.info";	
+	}
+	//$(this).css("border","1px solid #CCCCCC");
+	$(this).parent().css({"text-align":"center"});
+	$(this).parent().after("<p style='text-align:center;margin-top:6px;padding-left:20px;padding-right:20px;'><span style='display:inline-block;border-bottom:1px solid #CCCCCC;font-style:italic;color:#999999;min-width:160px;font-size:1em;'>&nbsp;"+alt+"&nbsp;</span></p>");
+});
+</script>
+
+<% if (page.highlight){ %>
+<script>$("article .entry pre").css("background-color","#FFFFFF");</script>
+<!--语法高亮插件-->
+<%- partial('highlight') %>
+<% } %>
+
+<!--目录的关闭和打开-->
+<script>
+	$(".toc-title").click(function() {
+	    if ($("#toc ol").css("display") == "none") {
+		$("#toc ol").fadeIn(300);
+		$(".toc-title").html("本文阅读目录 <span style='color:#39ade9'>[-]</span>");
+	    } else {
+		$("#toc ol").fadeOut(300);
+		$(".toc-title").html("本文阅读目录 <span style='color:#e5637c'>[+]</span>");
+	    }
+	});
+	$(".toc-title").hover(function(){
+	    $(".toc-title").css("cursor","pointer");
+	    $(".toc-title").attr("title", "本文目录");
+	});
+</script>
+
+<script type="text/javascript" src="/js/top.js"></script>
+<script type="text/javascript">
+$(function (){
+
+	$(window).manhuatoTop({
+		showHeight : 100,//设置滚动高度时显示
+		speed : 500 //返回顶部的速度以毫秒为单位
+	});
+
+         console.log("欢迎来到我的博客......");
+
+});
+</script>	
+

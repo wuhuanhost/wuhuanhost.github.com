@@ -1,0 +1,53 @@
+<article class="<%= item.layout %>">
+    <% if (index){ %>
+	<!--主页布局-->
+      <%- partial('home')%>
+    <% } else { %>
+	<!--文章内容-->
+	<div class="post-content inner">
+		<div class="alignleft"><%- item.content %></div>
+		<div class="alignright"><%- toc(item.content) %></div>
+		<div class="clearfix"></div>
+		<div class="prev-next-post">
+		 <% if (item.prev){ %>
+			<div class="prev prev-next"><a href="/<%- item.prev.path %>" alt="<%- item.prev.title %>"><i class="fa fa-angle-left" aria-hidden="true"></i> 上一篇</a></div>
+		 <% } %>
+		<% if (item.next){ %>
+			<div class="next prev-next"><a href="/<%- item.next.path %>" alt="<%- item.next.title %>">下一篇 <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+		<% } %>
+						
+		</div>
+		<div class="clearfix"></div>
+		<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+		//修改标题
+		$("#title").text('<%- item.title %>');
+		$("#subtitle").html('<span>作者:  <%- config.subtitle %></span><span>发布时间： <%- date(item.date) %></span><%- partial('post/category') %>');
+		$(".banner .title .bg").css("background","url('<%- item.banner %>')")	
+	        $(".banner .title .bg").css("background-size","100% auto");
+	        $(".banner .title .bg").css("background-position","center center");
+		</script>
+		<% if (!index){ %>
+		    <!--评论工具  -->
+		    <%- partial('comment') %>
+		<% } %>
+	</div>
+    <% } %>
+  </div>
+</article>
+
+
+<script>
+$(document).ready(function(){
+	$(document).scroll(function(){
+		var scrollTop=$(document).scrollTop();
+		var headerHeight=$("#header").height();
+		if(scrollTop>=headerHeight){
+			$(".post-content .alignright").addClass("alignright-fixed")
+		
+		}else{
+			$(".post-content .alignright").removeClass("alignright-fixed")
+		}
+	});
+});
+</script>

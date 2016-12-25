@@ -1,0 +1,179 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 梦想.家
+subtitle: 非宁静无以致远 
+author: 梦想.家
+language: zh-CN
+timezone: 
+
+# custom Site settings
+# more detail check out docs
+SEOTitle: 梦想.家 
+header-img: http://ofjiy8hta.bkt.clouddn.com/header.jpg
+email: post.thinking@gmail.com
+description: "梦想.家的个人主页，一个记录分享生活学习过程中所感、所想、所悟和乐趣的网站，内容与读书学习、编程开发、系统设计、旅行、摄影、美食心得等自己喜欢的事物相关"
+keyword: 梦想家,梦想家随笔,博客,随笔,生活,摄影,旅行,美食,读书,编程,设计,学习
+
+favicon: /favicon.ico
+# custom end
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://www.mengxiangjia.info
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# SNS settings
+# RSS:
+weibo_username: 1985520460
+zhihu_username: wuhuan
+github_username: wuhuanhost
+instagram_username: dreamer.wuhuan
+twitter_username: 
+facebook_username:  
+linkedin_username:
+
+
+# Build settings
+anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
+
+
+# Disqus settings 
+disqus_username: 
+
+# Duoshuo settings
+duoshuo_username: mengxiangjia
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+# Analytics settings
+# Baidu Analytics
+ba_track_id:
+# Google Analytics
+google_analytics: UA-52788998-1
+
+# Sidebar settings
+sidebar-about-description: 非宁静无以致远
+sidebar-avatar: http://ofjiy8hta.bkt.clouddn.com/images/ava.jpg
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+# friends
+#friends: [
+# {"title":"梦想.家",
+#  "href":"http://www.mengxiangjia.info"
+# }
+#]
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+
+markdown:
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-emoji
+
+## Themes: https://hexo.io/themes/
+theme: Anisina
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  #repository: git@github.com:wuhuanhost/wuhuanhost.github.com.git 
+  #branch: master
+  repo:
+    coding: git@git.coding.net:think365/think365.coding.me.git,master
+    #github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,master
+    
+
+
+# img CDN path
+# cdn-url: http://www.mengxiangjia.info/images
+#七牛cdn
+cdn-url: http://ofjiy8hta.bkt.clouddn.com/
+
+
+# Qiniu imageView2 API
+# More info http://developer.qiniu.com/code/v6/api/kodo-api/image/imageview2.html
+clip-content: "?imageView2/1/w/1400/h/400/interlace/1/q/90"
+clip-avatar: "?imageView2/2/w/300/h/300/interlace/1/q/90"
+clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
+
+
+# search api , set your custom key
+swiftype: false
+#swiftype_key: 
+
+
+# post default images
+post-default-img: http://ofjiy8hta.bkt.clouddn.com/default.jpg
+post-default-img-mobile: http://ofjiy8hta.bkt.clouddn.com/default.jpg
+
+# archive page title 
+archive:
+    title: archives
+    description: 归档
+
+
+postcdn:
+  enable: true                              #开启CDN慢加载
+  tagclass: lazy                    #配置图片的CLASS属性，此部分方便您在启用图片LAZYLOAD的时候只针对此CLASS的图片
+  tmpimglink: http://ofjiy8hta.bkt.clouddn.com/images/loading.gif          #临时图片就是没加载原始图片前的图片
+  cdnlink: http://ofjiy8hta.bkt.clouddn.com #CDN服务器地址，本例为七牛的CDN地址
+ #cdnlink:

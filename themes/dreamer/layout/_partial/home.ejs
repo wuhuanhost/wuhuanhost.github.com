@@ -1,0 +1,32 @@
+<!--主页布局 -->
+<% if (item.excerpt){ %>
+      <!--文章概要-->
+      <section class="inner article-profile">
+
+      <div class="alignleft">
+	<a href="<%- config.root %><%- item.path %>"><img src="<%- item.banner %>"/></a>
+      </div>
+      <div class="alignright">
+	      <h1><a href="<%- config.root %><%- item.path %>"><%- item.title %></a></h1>
+	      <div class="excerpt"><%- item.excerpt %></div>
+	<div class="remark">
+	     <div class="subtitle">
+	     <span><a href="#"><%- config.subtitle %></a></span> 发表于
+		<span class="post-time"><%- date(item.date)%></span>
+	     </div>	
+	     <div class="more-link">
+               <a href="<%- config.root %><%- item.path %>#more"><%= theme.excerpt_link %></a>
+             </div>
+	</div>
+      </div>
+
+        <div class="clearfix"></div>
+      </section>
+<% } %>
+
+<!--<script src="http://momentjs.cn/downloads/moment.min.js"></script>  -->
+<!-- <script>
+var time='<%- date(item.date)%>';
+dateString=time.replace(/[u4e00-u9fa5]{0,}/gi,"");
+document.querySelector(".post-time").innerHTML=moment(dateString, "YYYYMMDD").fromNow();
+</script> -->

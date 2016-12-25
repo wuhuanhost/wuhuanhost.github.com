@@ -1,0 +1,72 @@
+layout: false
+--------
+<!DOCTYPE HTML>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>404</title>
+	<meta name="description" content="梦想.家的个人博客,一个记录分享生活学习过程中所感、所想、所悟和乐趣的网站！">
+	<meta name="keywords" content="梦想家,梦想家个人博客,梦想家的个人随笔">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<meta property="og:site_name" content="梦想.家">
+	<style type="text/css">
+	html{
+		padding:0px;
+		margin:0px;
+		font-family:'Segoe UI', 'Lucida Grande', Helvetica, Arial, 'Microsoft YaHei', FreeSans, Arimo, 'Droid Sans', 'wenquanyi micro hei', 'Hiragino Sans GB', 'Hiragino Sans GB W3', FontAwesome, sans-serif;
+	}
+	.page-404 {
+		border: none;
+		width: 200px;
+		margin: 0 auto;
+		display: block;
+		padding: 1em;
+		font-size: 1.3em;
+		line-height: 1.2;
+		word-break: break-all;
+		word-wrap: break-word;
+		color: #555;
+		border-radius: 0;
+		font-size:Monaco, Menlo, Consolas, 'Courier New', FontAwesome, monospace;
+    }
+
+	#aa{
+	   text-align:center;
+	}
+
+	</style>
+
+</head>
+<body>
+<h1 style="text-align:center;font-size:3em">404. Not Found</h1>
+<pre class="page-404">
+          .----.
+       _.'__    `.
+   .--($)($$)---/#\
+ .' @          /###\
+ :         ,   #####
+  `-..__.-' _.-\###/
+        `;_:    `"'
+      .'"""""`.
+     /,  ya ,\\
+    //  404!  \\
+    `-._______.-'
+    ___`. | .'___
+   (______|______)
+</pre>
+<p id="aa"></p>
+<script type="text/javascript">
+	var i=6;//时间:秒
+	var content="";
+	function clock(){
+		document.getElementById("aa").innerHTML="将在【 <a href='http://www.mengxiangjia.info'>"+i+"</a> 】秒后自动返回首页!";
+		i=i-1;
+		if(i>0){
+			setTimeout("clock();",1000);}
+		else{
+			document.location.href='http://www.mengxiangjia.info';}
+	}
+	clock();
+</script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+layout: false
+--------
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>梦想.家 › 关于</title>
+    <meta name="author" content="ThinkBlog">
+    <meta name="description" content="hello world!!!">
+    <meta name="keywords" content="梦想.家,个人博客,关于我">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:site_name" content="梦想.家" />
+    <meta property="og:image" content="undefined" />
+    <link href="/favicon.ico" rel="icon">
+    <link rel="alternate" href="/atom.xml" title="梦想.家" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="meta inner">
+            <h1><a href="/">梦想.家</a></h1>
+            <h2><a href="/"></a></h2>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/about">关于</a></li>
+                    <li><a href="/archives">文章归档</a></li>
+                    <li><a href="/atom.xml">Rss</a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </nav>
+        </div>
+        <div class="clearfix"></div>
+    </header>
+    <div id="content" class="inner">
+        <div id="main-col" class="alignleft">
+            <div id="wrapper">
+                <article class="comment">
+                    <div class="post-content" style='min-height: 360px;'>
+                        <div class="entry">
+                            
+							<div id="canvas-content">
+								<canvas id="canvas" width="760" height="360"></canvas>
+                            </div>
+							<!-- <hr /> -->
+							<div class="runtime-remark">
+							<p style='text-align:center;font-size:1.4rem;'>该博客已持续运行<span id='days' style='color:red;'></span>天</p>
+							</div>
+							<!-- <hr /> -->
+							<br />
+                            <div id='contentRemark'>
+                            	本博客属于个人博客，旨在记录和分享生活学习过程中的心得体会，不涉及商业目的，博客内容如未特殊声明均属作者原创,转载请注明出处!!!<p>刚开始写博客，如果您恰好浏览到此博客同时对博客中的内容有意见或是建议，请不吝赐教!!!<p>thank you!!!                        
+							</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <footer id="footer">
+        <div class="inner">
+            <div class="alignleft">
+                <p>
+                    Copyright &copy; 2015 <a href="#top">梦想.家</a> <span class="heart">❤</span> <a href="http://www.mengxiangjia.info">Mengxiangjia.info</a>
+                </p>
+                <p>
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+var max = 0;
+
+function textlist() {
+    max = textlist.arguments.length; //获取参数的长度
+    for (i = 0; i < max; i++)
+
+        this[i] = textlist.arguments[i]; //将参数作为this对象的属性
+
+}
+tl = new textlist("本博客属于个人博客，旨在记录和分享生活学习过程中的心得体会，不涉及商业目的，博客内容如未特殊声明均属作者原创,转载请注明出处!!!<p>刚开始写博客，如果您恰好浏览到此博客同时对博客中的内容有意见或是建议，请不吝赐教!!!<p>thank you!!!"); //创建一个tl对象    textlist {0: "在此输入要输出的文字"} 
+
+var x = 0;
+pos = 0;
+var l = tl[0].length; //输入字符串的长度
+
+function textticker() {
+
+    document.getElementById("contentRemark").innerHTML = tl[x]
+        .substring(0, pos) + "_";
+    if (pos++ == l) {
+        pos = 0;
+        setTimeout("textticker()", 10000000000000);
+        if (++x == max)
+            x = 0;
+        l = tl[x].length;
+    } else {
+        setTimeout("textticker()", 150);
+    }
+}
+// textticker();
+</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-52788998-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script>
+var birthDay = new Date("12/24/2014");
+var now = new Date();
+var duration = now.getTime() - birthDay.getTime();
+var total = Math.floor(duration / (1000 * 60 * 60 * 24));
+document.getElementById("days").innerHTML = total;
+</script>
+<script type="text/javascript">
+var ballList = []; //小球数组
+var canvas=document.getElementById("canvas");
+var ctx=canvas.getContext("2d");
+//生成多个小球
+function initBall() {
+
+    //循环生成60个小球
+    for (var i = 0; i < 60; i++) {
+        // console.log(getIndex() + "   " + getIndex())
+        var ball = {};
+        ball.xPointer = getRandom(20, 760);//随机小球的X坐标
+        ball.yPointer = getRandom(20, 340);//随机小球的y坐标
+        ball.x = getIndex();//随机小球x轴运动方向
+        ball.y = getIndex();//随机小球的y轴运动方向
+        ball.vx = Math.random()/3;//随机小球x轴方向速度
+        ball.vy = Math.random()/3;//随机小球y轴方向速度
+        ball.radius = 3;//小球半径
+        ball.color = "#" + ("00000" + ((Math.random() * 16777215 + 0.5) >> 0).toString(16)).slice(-6);//随机小球颜色
+        ballList.push(ball);
+    }
+}
+
+       //随机一个1或者-1的方法    
+       function getIndex() {
+            var arr = [0, 1];
+            var index = Math.floor((Math.random() * arr.length));
+            if (index == 0) {
+                index = -1;
+            }
+            return index;
+        }
+
+        //获取两数之间的一个随机数的方法
+        function getRandom(first, last) {
+            var choice = last - first + 1;
+            return Math.floor(Math.random() * choice + first);
+        }
+
+
+function draw(ctx) {
+    ctx.clearRect(0, 0, 760, 360);//绘制前先清除画布
+    for (var i = 0; i < ballList.length; i++) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.fillStyle = ballList[i].color;
+        ctx.arc(ballList[i].xPointer, ballList[i].yPointer, ballList[i].radius, 0, Math.PI * 2, false);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+    }
+}
+
+
+
+//修改小球的状态，使小球动起来的方法
+function update(ballList, ctx) {
+	for (var i = 0; i < ballList.length; i++) {
+		ballList[i].xPointer += ballList[i].vx * ballList[i].x;
+		ballList[i].yPointer += ballList[i].vy * ballList[i].y;
+		//碰撞检测 X轴方向
+		if (ballList[i].xPointer + ballList[i].radius >= canvas.width || ballList[i].xPointer - ballList[i].radius <= 0) {
+			ballList[i].x = ballList[i].x * -1;
+		}
+		//碰撞检测 Y轴方向
+		if (ballList[i].yPointer + ballList[i].radius >= canvas.height || ballList[i].yPointer - ballList[i].radius <= 0) {
+			ballList[i].y = ballList[i].y * -1;
+		}
+    }
+}
+
+//小球之间连线
+    function drawLine(ballList, ctx) {
+        for (var i = 0; i < ballList.length; i++) {
+                for (var j = 0; j < ballList.length; j++) {
+                    var xx = Math.pow((ballList[i].xPointer - ballList[j].xPointer), 2);
+                    var yy = Math.pow((ballList[i].yPointer - ballList[j].yPointer), 2);
+                    var zz = Math.sqrt(xx + yy);
+                    //判断两个小球如果之间距离在20到100之间，就绘制一条直线
+                    if (zz <= 100&&zz>=20) {
+                        //console.log(zz)
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.strokeStyle="#999999";
+                        ctx.lineWidth=0.1;
+                        // ctx.strokeStyle= "#" + ("00000" + ((Math.random() * 16777215 + 0.5) >> 0).toString(16)).slice(-6);
+                        ctx.moveTo(ballList[i].xPointer, ballList[i].yPointer);
+                        ctx.lineTo(ballList[j].xPointer,ballList[j].yPointer);
+                        ctx.closePath();
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+               }
+          }
+    }
+
+
+
+(function(){
+
+    initBall();//生成小球
+
+    //计时器
+    setInterval(function() {
+        // console.log(selectfrom(0, 600) + "         " + selectfrom(0, 600));
+        draw(ctx);//绘制
+        update(ballList, ctx);//修改小球状态
+        drawLine(ballList, ctx);//画线
+
+    }, 24)
+
+})();
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>

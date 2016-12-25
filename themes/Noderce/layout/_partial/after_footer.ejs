@@ -1,0 +1,36 @@
+<!-- 返回顶部 -->
+<%- partial('back_top') %>
+
+<!-- 社会化评论 -->
+<script type="text/javascript">
+<% if (theme.disqus_shortname&&!theme.duoshuo){ %>
+<!--Disqus-->
+var disqus_shortname = '<%= theme.disqus_shortname %>';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+<% }else{%>
+<!--多说-->
+var duoshuoQuery = {short_name:"<%= theme.duoshuo_shortname %>"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+<% } %>
+</script>
+
+<% if (page.mathjax){ %>
+<!-- 数学公式插件 -->
+<%- partial('mathjax') %>
+<% } %>
+
+<!-- google分析 -->
+<%- partial('google_analytics') %>

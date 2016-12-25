@@ -1,0 +1,57 @@
+<article class="<%= item.layout %>">
+  <div class="post-content">
+    <header>
+      <%- partial('post/title') %>
+      <% if (item.layout != 'page'){ %>
+	<!--       <time datetime="<%= item.date.toDate().toISOString() %>"><span style='border:1px solid #999;border-radius:6px;display:inline-block;width:40px;text-align:center;color:#333333;'>原创</span>  Posted On <%= item.date.format(config.format) %> By <a href='http://www.mengxiangjia.info'><%=config.subtitle%></a> / 字数 <span class="post-count"><%= wordcount(item.content) %></span></time>    
+	       -->
+       <time datetime="<%= item.date.toDate().toISOString() %>"><span style='border:1px solid #999;border-radius:6px;display:inline-block;width:40px;text-align:center;color:#3f3f3f;height:1em;line-height:1em;'>原创</span>   <%= item.date.format(config.format) %>  <a href='http://www.mengxiangjia.info'><%=config.subtitle%></a> / 字数 <span class="post-count"><%= wordcount(item.content) %></span></time>
+      <% } %>
+
+
+    </header>
+
+
+ <div class="entry">
+    <% if (item.excerpt && index){ %>
+      <%- item.excerpt %>
+    <% } else { %>
+<% if(item.toc != false){ %>
+<div id="toc" class="toc-article">
+	<strong class="toc-title">本文阅读目录 <span style='color:#e5637c'>[+]</span></strong>
+<%- toc(item.content) %>
+</div>
+<% } %>
+      <%- item.content %>
+    <% } %>
+  </div>
+
+
+    <% if (index){ %>
+      <% if (item.excerpt){ %>
+      <footer>
+        <div class="alignleft">
+          <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <% } %>
+    <% } else { %>
+    <footer>
+      <div class="alignleft">
+	<!--分类-->
+      	<%- partial('post/category') %>
+      	<!--标签-->
+	<%- partial('post/tag') %>
+      	<!--版权信息-->
+      </div>
+      <div class="clearfix"></div>
+    </footer>
+    <% } %>
+  </div>
+</article>
+
+<% if (!index){ %>
+    <!--评论工具  -->
+    <%- partial('comment') %>
+<% } %>

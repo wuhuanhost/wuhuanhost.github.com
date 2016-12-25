@@ -1,0 +1,42 @@
+<div id="main-col" class="alignleft"><div id="wrapper"><h2 class="archive-title"><a href='/archives'>归档</a><a href='/categories' style='margin-left:30px;'>分类</a><a href='/tags' style='color:#CF4646 !important;font-weight:bold !important;margin-left:30px;'>标签</a></h2>
+  <article class="archive">
+  <section class="layout-wrap">
+  <div class="layout-title">
+<!--     <span><%= page.title %></span> -->
+  </div>
+  <div class="layout-wrap-inner">
+    <% if(site.tags.length) { %>
+      <%- list_tags(site.tags) %>
+    <% } %>
+  </div>
+</section>
+</div>
+</div>
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+
+
+var color=["#9BB3F6","#1BD6C5","#89C0B0","#53BEF3","#5E66A2","#5A53B7","#D48278","#0AA5D2","#4B9775","#7D7872","#B35F38","#7B8791","#DB78C3","#6A6266","#A7A2F6","#38CE68","#E77DE3","#B66DC5","#DD9F61","#61BE85"];
+
+
+
+function getRandomColor(){ 
+	return "#"+("00000"+((Math.random()*16777215+0.5)>>0).toString(16)).slice(-6); 
+} 
+
+$(document).ready(function(){
+
+var colorIndex=0;
+$(".tag-list-item").each(function(){
+
+	if(color[colorIndex]!="undefined"){
+		$(this).css("background-color",color[colorIndex]);
+	}else{
+		$(this).css("background-color",getRandomColor());
+	}
+	
+colorIndex++;
+});
+});
+</script>

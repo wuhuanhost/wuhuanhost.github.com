@@ -1,0 +1,16 @@
+menu:
+  关于: /about
+  文章归档: /archives
+  Rss: /atom.xml
+
+
+excerpt_link: 阅读全文 ›
+
+#disqus访问不了了
+#disqus_shortname: ithinkblog
+
+duoshuo: true
+comment_provider: duoshuo
+duoshuo_shortname: mengxiangjia
+
+google_analytics: UA-52788998-1

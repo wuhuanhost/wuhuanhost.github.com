@@ -1,0 +1,17 @@
+<%- partial('_partial/head') %>
+
+<body>
+<!--页头-->
+  <header id="header"><%- partial('_partial/header') %></header>
+<!--内容区-->    
+    <div class="container">
+        <%- body %>
+    </div>
+<!--页脚-->
+  <footer id="footer">
+	<div class="inner"><%- partial('_partial/footer') %>
+	</div>
+  </footer>
+  <%- partial('_partial/after_footer') %>
+</body>
+</html>

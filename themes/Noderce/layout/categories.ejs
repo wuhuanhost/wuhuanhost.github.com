@@ -1,0 +1,14 @@
+<div id="main-col" class="alignleft"><div id="wrapper"><h2 class="archive-title"><a href='/archives'>归档</a><a href='/categories' style='color:#CF4646 !important;font-weight:bold !important;margin-left:30px;'>分类</a><a href='/tags' style='margin-left:30px;'>标签</a></h2>
+  <article class="archive">
+  <section class="layout-wrap">
+  <div class="layout-title">
+<!--     <span><%= page.title %></span> -->
+  </div>
+  <div class="layout-wrap-inner">
+    <% if(site.categories.length) { %>
+      <%- list_categories(site.categories) %>
+    <% } %>
+  </div>
+</section>
+</div>
+</div>
