@@ -3,7 +3,7 @@ layout: post
 title: "Express连接mysql数据库实现简单的数据查询"
 date: 2015-12-25 11:32:23
 description: "Express连接mysql数据库实现简单的数据查询"
-category: JavaScript
+category: Node
 tags: [node.js,mysql,express]
 mathjax: false
 toc: false
