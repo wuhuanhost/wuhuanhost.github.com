@@ -5,7 +5,7 @@ subtitle: ""
 date: "2016-12-27 15:32:23"
 description: "对Node.js分页查询（mysql）的封装"
 category: Node
-tags: [node.js,mysql]
+tags: [node.js,mysql,分页查询]
 mathjax: false
 toc: false
 highlight: true
