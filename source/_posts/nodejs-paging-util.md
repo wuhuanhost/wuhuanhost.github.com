@@ -259,14 +259,43 @@ highlight: true
 			.setTable("books")//查询books表
 			.setOrderBy("id")//按照id排序
 			.paging(function(err, result) {//分页查询后的回调函数
-			    console.log(result)
-			    //{"pagingData":[{"id":3,"book_name":"编程珠玑（第2版·修订版）","book_author":"[美]乔恩·本特利（Jon Bentley）","book_press":"人民邮电出版社","book_isbn":"9787115357618"},{"id":4,"book_name":"深入浅出Node.js","book_author":"朴灵","book_press":"人民邮电出版社","book_isbn":"9787115335500"}],"currentPage":2,"totalPages":5,"totalRows":9,"hasNextPage":true,"hasPrevPage":true,"pageSize":2,"startRow":2}
+			    console.log(result);
 			    cb(null, result)
 			})
 		}
 
+### 查询返回的数据
 
-### 测试数据截图
+		{
+		    "pagingData": [
+			{
+			    "id": 3,
+			    "book_name": "编程珠玑（第2版·修订版）",
+			    "book_author": "[美]乔恩·本特利（Jon Bentley）",
+			    "book_press": "人民邮电出版社",
+			    "book_isbn": "9787115357618"
+			},
+			{
+			    "id": 4,
+			    "book_name": "深入浅出Node.js",
+			    "book_author": "朴灵",
+			    "book_press": "人民邮电出版社",
+			    "book_isbn": "9787115335500"
+			}
+		    ],
+		    "currentPage": 2,
+		    "totalPages": 5,
+		    "totalRows": 9,
+		    "hasNextPage": true,
+		    "hasPrevPage": true,
+		    "pageSize": 2,
+		    "startRow": 2
+		}
+
+
+
+
+### 数据库测试数据
 
 ![分页查询](http://ofjiy8hta.bkt.clouddn.com/images/%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E6%88%AA%E5%9B%BE.jpg)
 
