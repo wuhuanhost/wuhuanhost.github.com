@@ -20,7 +20,6 @@ highlight: true
 
 ## 代码实现
 
-
 		var db = require('./db');
 		var async = require('async');
 		/**
@@ -44,9 +43,18 @@ highlight: true
 		    this.orderBy = ""; //排序
 		    this.countSql = ""; //查询总条数的sql
 		    this.pagingSql = ""; //分页sql
+		    this.sortBy = ""; //排序类型
 		    this.debug = false; //是否开启调试模式
 		}
 
+		/**
+		 * 排序类型
+		 * @param {[type]} sortBy [description]
+		 */
+		PagingUtil.prototype.setSortBy = function(sortBy) {
+		    this.sortBy = sortBy;
+		    return this;
+		}
 
 		/**
 		 * 设置按照什么字段排序
@@ -57,8 +65,6 @@ highlight: true
 		    return this;
 		}
 
-
-
 		/**
 		 * 设置要查询的字段
 		 * @param {[type]} filed [description]
@@ -66,10 +72,7 @@ highlight: true
 		PagingUtil.prototype.setQueryFiled = function(queryFiled) {
 		    this.queryFiled = queryFiled;
 		    return this;
-
 		}
-
-
 
 		/**
 		 * 设置查询条件
@@ -80,8 +83,6 @@ highlight: true
 		    return this;
 		}
 
-
-
 		/**
 		 * 设置要查询的表
 		 * @param {[type]} table [description]
@@ -89,10 +90,7 @@ highlight: true
 		PagingUtil.prototype.setTable = function(table) {
 		    this.table = table;
 		    return this;
-
 		}
-
-
 
 		/**
 		 * 获取分页sql
@@ -101,12 +99,20 @@ highlight: true
 		PagingUtil.prototype.getPagingSql = function() {
 		    this.queryFiled = this.queryFiled || "*";
 		    this.condition = this.condition || "";
-		    var orderBy = this.orderBy === "" ? "" : "ORDER BY " + this.orderBy;
+		    this.sortBy = this.sortBy || "ASC";
+		    var orderBy = "";
+		    if (this.orderBy === "" && this.sortBy === "") {
+			orderBy = "";
+		    } else {
+			if (this.orderBy === "") {
+			    orderBy = "";
+			} else {
+			    orderBy = "ORDER BY " + this.orderBy + " " + this.sortBy;
+			}
+		    }
 		    this.pagingSql = "SELECT " + this.queryFiled + " FROM " + this.table + " " + this.condition + " " + orderBy + " LIMIT ?,?";
 		    return this;
 		}
-
-
 
 		/**
 		 * 获取计算总条数的sql
@@ -117,7 +123,6 @@ highlight: true
 		    this.countSql = "SELECT COUNT(1) AS count FROM " + this.table;
 		    return this;
 		}
-
 
 		/**
 		 * 获取数据
@@ -133,7 +138,6 @@ highlight: true
 		PagingUtil.prototype.setPageSize = function(pageSize) {
 		    this.pageSize = pageSize;
 		    return this;
-
 		}
 
 		/**
@@ -145,7 +149,6 @@ highlight: true
 		    totalPages = parseInt((this.totalRows - 1) / this.pageSize) + 1;
 		    this.totalPages = totalPages;
 		};
-
 
 		/**
 		 * 设置当前第几页
@@ -163,7 +166,6 @@ highlight: true
 		PagingUtil.prototype.setDebug = function(boolean) {
 		    this.debug = boolean;
 		    return this;
-
 		}
 
 		/**
@@ -172,24 +174,23 @@ highlight: true
 		 */
 		PagingUtil.prototype.computedStartRow = function() {
 		    if (this.currentPage === 1) { //第一页
-			this.startRow = 0; //设置起始条数
-			this.hasPrevPage = false;
+				this.startRow = 0; //设置起始条数
+				this.hasPrevPage = false;
 			if (this.totalPages > 1) {
-			    this.hasNextPage = true;
+				this.hasNextPage = true;
 			} else {
-			    this.hasNextPage = false;
+				this.hasNextPage = false;
 			}
 		    } else if (1 < this.currentPage && this.currentPage < this.totalPages) { //中间页
-			this.hasNextPage = true;
-			this.hasPrevPage = true;
-			this.startRow = (this.currentPage - 1) * this.pageSize;
+				this.hasNextPage = true;
+				this.hasPrevPage = true;
+				this.startRow = (this.currentPage - 1) * this.pageSize;
 		    } else if (this.currentPage === this.totalPages) { //最后一页
-			this.startRow = (this.currentPage - 1) * this.pageSize;
-			this.hasNextPage = false;
-			this.hasPrevPage = true;
+				this.startRow = (this.currentPage - 1) * this.pageSize;
+				this.hasNextPage = false;
+				this.hasPrevPage = true;
 		    }
 		}
-
 
 		/**
 		 * 分页方法
@@ -210,7 +211,7 @@ highlight: true
 		    }, function(callback) {
 			//分页sql语句
 			var sql2 = _this.getPagingSql().pagingSql;
-			var sqlParam=[_this.startRow,_this.pageSize];
+			var sqlParam = [_this.startRow, _this.pageSize];
 			if (_this.debug) {
 			    console.warn("分页sql语句>>>:::::::::::::::::::::::::::::::::");
 			    console.log(sql2);
@@ -245,24 +246,28 @@ highlight: true
 
 
 
+
 ## 使用
 
 		var PagingUtil=require('./paging_util');
 
 		//使用方法
+
 		exports.test = function(cb) {
 		    var pageing = new page(); //实例化分页对象
 		    pageing
-			.setDebug(true)//开启调试模式,打印分页sql语句
-			.setCurrentPage(2)//显示第二页的数据
-			.setPageSize(2)//每页显示的条数
-			.setTable("books")//查询books表
-			.setOrderBy("id")//按照id排序
-			.paging(function(err, result) {//分页查询后的回调函数
-			    console.log(result);
+			.setDebug(true)//开启调试模式
+			.setCurrentPage(2)//显示第2页
+			.setPageSize(2)//每页显示2条
+			.setTable("books")//books表
+			.setOrderBy("ID")//排序字段
+			.setSortBy("ASC")//升序排列
+			.paging(function(err, result) {
+			    console.log(result)
 			    cb(null, result)
 			})
 		}
+
 
 ### 查询返回的数据
 
@@ -297,7 +302,7 @@ highlight: true
 
 ### 数据库测试数据
 
-![分页查询](http://ofjiy8hta.bkt.clouddn.com/images/%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E6%88%AA%E5%9B%BE.jpg)
+![分页查询](/images/%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E6%88%AA%E5%9B%BE.jpg)
 
 
 ### [源码见github](https://github.com/wuhuanhost/node-utils/blob/master/src/paging_util.js)
