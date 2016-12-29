@@ -176,11 +176,11 @@ highlight: true
 		    if (this.currentPage === 1) { //第一页
 				this.startRow = 0; //设置起始条数
 				this.hasPrevPage = false;
-			if (this.totalPages > 1) {
-				this.hasNextPage = true;
-			} else {
-				this.hasNextPage = false;
-			}
+				if (this.totalPages > 1) {
+					this.hasNextPage = true;
+				} else {
+					this.hasNextPage = false;
+				}
 		    } else if (1 < this.currentPage && this.currentPage < this.totalPages) { //中间页
 				this.hasNextPage = true;
 				this.hasPrevPage = true;
