@@ -53,14 +53,13 @@ cdn: 'header-on'
 
 ### 初始化
 
-``` glide init
-glide init #glide会扫描代码目录，创建一个glide.yaml文件，记录项目依赖
-```
+		glide init  #glide会扫描代码目录，创建一个glide.yaml文件，记录项目依赖
+
 
 ### 安装指定依赖包
 
 
-		# #后面的0.9.2表示版本号，如果团队协作开发的时候最好指定版本号
+		# "#"后面的0.9.2表示版本号，如果团队协作开发的时候最好指定版本号
 		glide get github.com/json-iterator/go#0.9.2
 
 
@@ -148,7 +147,7 @@ glide init #glide会扫描代码目录，创建一个glide.yaml文件，记录�
 
 这里我推荐使用`sublime text3`当然你也可以使用其它的编辑器如`vscode`，`atom`等，按照自己喜好来，我使用sublime text2主要是因为平时用它比较的多。		
 
-## hello world golang
+## hello world
 
 > 环境搭建好了，下面通过一个“hello world”正式进入go语言编程的世界。
 
