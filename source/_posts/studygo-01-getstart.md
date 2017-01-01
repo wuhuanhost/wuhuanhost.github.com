@@ -166,36 +166,3 @@ cdn: 'header-on'
 运行`go run hello-world.go`
 
 ![go env](/images/go-01-getstart/02.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
-```
