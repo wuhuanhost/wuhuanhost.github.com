@@ -8,10 +8,13 @@ tags: [go语言]
 mathjax: false
 toc: true
 highlight: true
-
+header-img: banner_16.jpg
+cdn: 'header-on'
 ---
 
-## 下载安装golang ([http://www.golangtc.com/download](http://www.golangtc.com/download))
+## 下载安装golang 
+
+下载地址:[http://www.golangtc.com/download](http://www.golangtc.com/download)
 
 通过上面的网址下载你操作系统对应的版本的程序进行安装，由于我用的window7所以下载了`go1.7.4.windows-386.msi`这个包，根据安装提示进行安装，安装好之后go使用的一些系统变量也会被设置好。但是我们需要自己设置一个gopath的环境变量。
 
