@@ -8,7 +8,7 @@ tags: [go语言]
 mathjax: false
 toc: true
 highlight: true
-header-img: banner_16.jpg
+header-img: banner_golang.jpg
 cdn: 'header-on'
 ---
 
