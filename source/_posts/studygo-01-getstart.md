@@ -104,7 +104,7 @@ cdn: 'header-on'
 				    + biz   # 源码目录
 				    - a.go  
 				    - b.go  
-							- hello-world.go  
+				    - hello-world.go  
 				    - glide.yaml  # glide配置文件
 				    + vendor  # glide安装的项目依赖都在这个文件夹里
 				    - glide.lock
