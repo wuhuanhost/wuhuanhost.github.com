@@ -49,7 +49,7 @@ cdn: 'header-on'
 
 ## 包管理的安装
 
-> go语言到目前为止，官方还没有提供包管理工具，Go提供了 GO15VENDOREXPERIMENT 环境变量，用于将go build时的应用路径搜索调整成为当前项目目录/vendor目录方式，但是go社区却有很多的第三方包管理的工具可以使用，这里我选择使用[glide]([https://github.com/Masterminds/glide](https://github.com/Masterminds/glide))这个工具来管理go下载的第三方的包。
+> 在使用过nodejs的包管理工具npm，python的包管理工具pip,和ruby的包管理工具gem后,他们安装依赖的方式是那么的简单和方便，以至于现在学习go的时候的第一件就是去寻找购go的包管理工具，但是发现go语言到目前为止，官方还没有提供包管理工具，但是Go1.5引入了go vendor目录，用于将go编译时的应用路径搜索调整成为当前`项目目录/vendor目录`的方式。查资料发现go社区有很多基于此的第三方包管理的工具可以使用，这里就选择了[glide][https://github.com/Masterminds/glide](https://github.com/Masterminds/glide) 这个工具来管理go项目的依赖。
 
 ### 初始化
 
@@ -141,7 +141,7 @@ cdn: 'header-on'
 
 * 一、由于ide集成东西比较多，体积大，占用内存多，响应速度慢。
 
-* 二、ide会帮你完成很多的工作，程序编译-》执行的过程会被屏蔽掉，使你不能感受和理解整个编译过程。
+* 二、ide会帮你完成很多的工作，程序编译到执行的过程会被隐藏，使你不能感受和理解整个程序从代码到执行完成的整个过程。
 
 > 当然如果对一门语言熟练掌握了，用它来开发大型系统的时候在去使用ide，那会帮你节省很多时间。
 
