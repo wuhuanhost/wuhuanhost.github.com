@@ -3,7 +3,7 @@ layout: post
 title: "golang学习笔记（一）开发环境的搭建"
 date: 2017-01-01 15:36:36
 description: "golang学习笔记（一）开发环境的搭建"
-category: golang笔记
+category: golang学习笔记
 tags: [go语言]
 mathjax: false
 toc: true
