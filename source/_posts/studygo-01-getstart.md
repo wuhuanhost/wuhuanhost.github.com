@@ -34,7 +34,7 @@ cdn: 'header-on'
 ### go语言项目基本目录结构介绍
 
 
-		E:\\study-go  # 环境变量中设置的GOPATH路径
+		E:\study-go  # 环境变量中设置的GOPATH路径
 		     + bin    # 存放编译后的二进制可执行文件
 		     + pkg    # 存放编译后的包文件
 		     - src    # 源码目录（必须创建）
@@ -95,7 +95,7 @@ cdn: 'header-on'
 
 ### 使用包管理后的工作目录的结构
 
-		E:\\study-go  # 环境变量中设置的GOPATH路径
+		E:\study-go  # 环境变量中设置的GOPATH路径
 		     + bin    # 存放编译后的二进制可执行文件
 		     + pkg    # 存放编译后的包文件
 		     - src    # 源码目录
