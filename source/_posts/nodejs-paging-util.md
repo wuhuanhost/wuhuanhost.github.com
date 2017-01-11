@@ -29,12 +29,12 @@ highlight: true
 		 * @param {[type]} pageSize    每页显示的条数
 		 */
 		function PagingUtil(currentPage, pageSize) {
-		    this.currentPage = currentPage === undefined ? 1 : currentPage; //当前是第几页,默认为第一页
+		    this.currentPage = currentPage === undefined ? 1 : parseInt(currentPage); //当前是第几页,默认为第一页
 		    this.totalPages = 1; //最多能分多少页
 		    this.totalRows = 0; //总数据条数
 		    this.hasNextPage = false; //是否有下一页
 		    this.hasPrevPage = false; //是否有上一页
-		    this.pageSize = pageSize === undefined ? 10 : pageSize; //每页显示几条数据，默认为10条
+		    this.pageSize = pageSize === undefined ? 10 : parseInt(pageSize); //每页显示几条数据，默认为10条
 		    this.startRow = 0; //起始行
 		    // this.endRow = 0; //结束行
 		    this.table = ""; //要查询的表
@@ -136,7 +136,7 @@ highlight: true
 		 * 设置每页需要显示的条数
 		 */
 		PagingUtil.prototype.setPageSize = function(pageSize) {
-		    this.pageSize = pageSize;
+		    this.pageSize = parseInt(pageSize);
 		    return this;
 		}
 
@@ -155,7 +155,7 @@ highlight: true
 		 * @param {[type]} currentPage [description]
 		 */
 		PagingUtil.prototype.setCurrentPage = function(currentPage) {
-		    this.currentPage = currentPage;
+		    this.currentPage = parseInt(currentPage);
 		    return this;
 		}
 
