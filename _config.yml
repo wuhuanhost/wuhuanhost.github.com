@@ -30,6 +30,7 @@ permalink_defaults:
 # SNS settings
 # RSS:
 weibo_username: 1985520460
+jianshu_username: 小厨笔记
 zhihu_username: wuhuan
 github_username: wuhuanhost
 instagram_username: dreamer.wuhuan
