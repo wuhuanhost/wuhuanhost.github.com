@@ -36,6 +36,18 @@
                     </li>
                 <% } %>
 
+		<% if (config.jianshu_username) { %>
+                    <li>
+                        <a target="_blank" href="http://www.jianshu.com/users/DDgRpF/timeline">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">简</i>
+                            </span>
+                        </a>
+                    </li>
+                <% } %>
+
+
                 <% if (config.weibo_username) { %>
                     <li>
                         <a target="_blank" href="http://weibo.com/<%= config.weibo_username %>">
@@ -46,18 +58,6 @@
                         </a>
                     </li>
                 <% } %>
-
-                <% if (config.jianshu_username) { %>
-                    <li>
-                        <a target="_blank" href="http://www.jianshu.com/users/DDgRpF/timeline">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-fa-bookmark fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                <% } %>
-
 
                 <% if (config.facebook_username) { %>
                     <li>

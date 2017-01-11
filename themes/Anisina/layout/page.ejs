@@ -191,6 +191,7 @@ layout: layout
                             </a>
                         </li>
                         <% } %>
+
                         <% if (config.zhihu_username) { %>
                         <li>
                             <a target="_blank" href="https://www.zhihu.com/people/<%= config.zhihu_username %>">
@@ -201,6 +202,18 @@ layout: layout
                             </a>
                         </li>
                         <% } %>
+
+                        <% if (config.jianshu_username) { %>
+                        <li>
+                            <a target="_blank" href="http://www.jianshu.com/users/DDgRpF/timeline">
+                                        <span class="fa-stack fa-lg">
+                                            <i class="fa fa-circle fa-stack-2x"></i>
+                                            <i class="fa  fa-stack-1x fa-inverse">简</i>
+                                        </span>
+                            </a>
+                        </li>
+                        <% } %>
+
 
                         <% if (config.weibo_username) { %>
                         <li>
