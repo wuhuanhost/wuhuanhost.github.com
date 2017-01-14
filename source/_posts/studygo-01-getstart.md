@@ -37,19 +37,20 @@ cdn: 'header-on'
 		E:\study-go  # 环境变量中设置的GOPATH路径
 		     + bin    # 存放编译后的二进制可执行文件
 		     + pkg    # 存放编译后的包文件
-		     - src    # 源码目录（必须创建）
+		     + src    # 源码目录（必须创建）
+			+ github.com # 存放github上go的第三方包
 
 
 ### go语言常用的命令
 
 * `go run test.go`运行test.go
 * `go build test.go `编译test.go
-* `go get 'github.com/'  `安装github的第三方包
+* `go get 'github.com/[第三方包名称]'  `安装github的第三方包
 * `go help`查看更多的go命令
 
 ## 包管理的安装
 
-> 在使用过nodejs的包管理工具npm，python的包管理工具pip,和ruby的包管理工具gem后,他们安装依赖的方式是那么的简单和方便，以至于现在学习go的时候的第一件就是去寻找购go的包管理工具，但是发现go语言到目前为止，官方还没有提供包管理工具，但是Go1.5引入了go vendor目录，用于将go编译时的应用路径搜索调整成为当前`项目目录/vendor目录`的方式。查资料发现go社区有很多基于此的第三方包管理的工具可以使用，这里就选择了[glide][https://github.com/Masterminds/glide](https://github.com/Masterminds/glide) 这个工具来管理go项目的依赖。
+> go语言通过`go get`命令安装的第三方会放在src目录下，这样团队开发的时候会把这些第三方包添加进版本控制里面，更新第三方包的时候会比较麻烦。在使用过nodejs的包管理工具npm，python的包管理工具pip,和ruby的包管理工具gem后,他们安装依赖的方式是那么的简单和方便，以至于现在学习go的时候的第一件就是去寻找购go的包管理工具，但是发现go语言到目前为止，官方还没有提供包管理工具，但是Go1.5引入了go vendor目录，用于将go编译时的应用路径搜索调整成为当前`项目目录/vendor目录`的方式。查资料发现go社区有很多基于此的第三方包管理的工具可以使用，这里就选择了[glide][https://github.com/Masterminds/glide](https://github.com/Masterminds/glide) 这个工具来管理go项目的依赖。
 
 ### 初始化
 
@@ -124,9 +125,9 @@ cdn: 'header-on'
 
 打开命令窗口，执行上面的命令，打开浏览器输入：https://localhost:6060 就可以浏览go的官方文档了。
 
-###　其它文档
+### 其它文档
 
-对于阅读英文原文文档有障碍的可以看下面这些网站。
+下面是一些国内的关于golang的社区和资源。
 
 * go官方文档中文版 ：[http://zh-golang.appsp0t.com/](http://zh-golang.appsp0t.com/)
 * golang中文社区：[http://studygolang.com/](http://studygolang.com/)
