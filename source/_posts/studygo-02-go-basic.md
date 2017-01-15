@@ -16,6 +16,7 @@ cdn: 'header-on'
 
 go语言中一共有25个标识符（关键字）他们分别是：
 var、const、type、package、import、func、return、defer、go、select、interface、struct、break、case、continue、for、fallthrough、else、if、switch、goto、default、chan、type、map、range。
+[关键字的作用见文章末尾附录](#4-1、go中关键字的解释)
 
 ## 2、go程序的组成
 
@@ -31,14 +32,14 @@ var、const、type、package、import、func、return、defer、go、select、in
 
 ### 2.1、包的声明
 
-go语言中通过关键字`package`来声明一个包，语法：`package`+空格+包名，假如我们声明一个main包`package main`，需要注意的是，包的声明语句必须文件的最上面，不然编译器就会报错。
+go语言中通过关键字`package`来声明一个包，语法：`package <包名>`，假如我们声明一个main包`package main`，需要注意的是，包的声明语句必须文件的最上面，不然编译器就会报错。
 > 注意：声明为main包的文件中必须存在一个mian方法（入口方法），并且一个程序中有且只有一个main包和main方法。
 
 ### 2.2、包的导入
 
 #### 2.2.1、基本方式导入包
 
-导入包使用关键字`import`，语法`import`+空格+包名，例如导入`fmt`、`time`包的语句：
+导入包使用关键字`import`，语法`import <包名>`，例如导入`fmt`、`time`包的语句：
 
 		import "fmt"
 		import "time"
@@ -228,7 +229,7 @@ go语言中约定如果命名首字母大写那么它就是`public`的，所有�
 |func|定义函数和方法|
 |return|定义函数返回值|
 |defer|在函数退出之前执行|
-|go|并行|
+|go|并行执行|
 |select| 用于选择不同类型的通讯|
 |interface|定义接口|
 |struct|定义抽象数据类型|
