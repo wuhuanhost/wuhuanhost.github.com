@@ -6,6 +6,7 @@
     "version": "3.2.2"
   },
   "dependencies": {
+    "cheerio": "^0.22.0",
     "hexo": "^3.2.2",
     "hexo-all-minifier": "0.0.14",
     "hexo-deployer-git": "^0.1.0",
@@ -21,6 +22,5 @@
     "hexo-server": "^0.2.0",
     "hexo-wordcount": "^1.2.3"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
