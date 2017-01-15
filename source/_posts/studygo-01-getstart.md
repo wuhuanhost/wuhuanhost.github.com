@@ -38,7 +38,7 @@ cdn: 'header-on'
 		     + bin    # 存放编译后的二进制可执行文件
 		     + pkg    # 存放编译后的包文件
 		     + src    # 源码目录（必须创建）
-			+ github.com # 存放github上go的第三方包
+				+ github.com # 存放github上go的第三方包
 
 
 ### go语言常用的命令
