@@ -20,13 +20,15 @@ var、const、type、package、import、func、return、defer、go、select、in
 
 ## 2、go程序的组成
 
-下面就是一个简单的go程序，从下面的源码我们可以看出，一个基本的go程序由以下几部分组成，分别是**包的声明**、**包的导入**、**变量的声明**、**注释**、**函数**等组成，下面我们将详细的介绍go程序的组成部分。
+下面就是一个简单的go程序，从下面的源码我们可以看出，一个基本的go程序由以下几部分组成，分别是**包的声明**、**包的导入**、**常量的定义**、**变量的声明**、**注释**、**函数**等组成，下面我们将详细的介绍go程序的组成部分。
 
 		package main  #声明包
 
 		import "fmt"  #导入包
+
+		const ID int = 100
 			
-		var userName string="李明"  #声明一个全局变量userName并且赋值
+		var userName string = "李明"  #声明一个全局变量userName并且赋值
 
 		func main(){
 		     fmt.Println("hello world!!!");
