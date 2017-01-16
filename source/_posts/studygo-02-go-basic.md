@@ -14,9 +14,8 @@ cdn: 'header-on'
 
 ## 1、go语言中的关键字
 
-go语言中一共有25个标识符（关键字）他们分别是：
-var、const、type、package、import、func、return、defer、go、select、interface、struct、break、case、continue、for、fallthrough、else、if、switch、goto、default、chan、type、map、range。
-[关键字的作用见文章末尾附录](#4-1、go中关键字的解释)
+go语言中一共有25个标识符（关键字）他们分别是：var、const、type、package、import、func、return、defer、go、select、interface、struct、break、case、continue、for、fallthrough、else、if、switch、goto、default、chan、type、map、range。
+[关键字的作用见文章末尾附录](#4-2、go中关键字的解释)
 
 ## 2、go程序的组成
 
@@ -36,8 +35,9 @@ var、const、type、package、import、func、return、defer、go、select、in
 
 ### 2.1、包的声明
 
-go语言中通过关键字`package`来声明一个包，语法：`package <包名>`，假如我们声明一个main包`package main`，需要注意的是，包的声明语句必须文件的最上面，不然编译器就会报错。
-> 注意：声明为main包的文件中必须存在一个mian方法（入口方法），并且一个程序中有且只有一个main包和main方法。
+> go语言中通过关键字`package`来声明一个包，语法：`package <包名>`。
+
+假如我们声明一个main包`package main`，需要注意的是，包的声明语句必须文件的最上面，不然编译器就会报错。**注意：声明为main包的文件中必须存在一个mian方法（入口方法），并且一个程序中有且只有一个main包和main方法。**
 
 ### 2.2、包的导入
 
@@ -76,7 +76,7 @@ go语言中通过关键字`package`来声明一个包，语法：`package <包�
 
 ### 2.3、代码注释
 
-go语言的注释比较简单，和大多数编程语言差不多。
+代码注释也是go程序中的一部分。大型项目以后需要维护的时候，通过注释可以帮助我们快速理解程序。go语言的注释比较简单，和大多数编程语言差不多。
 
 		package main
 
@@ -118,7 +118,7 @@ go语言的注释比较简单，和大多数编程语言差不多。
 
 声明一个变量并且赋值
 
-		var i int=10; //声明一个整形变量，并且为它赋值为10
+		var i int=10 //声明一个整形变量，并且为它赋值为10
 
 声明多个变量和赋值
 
@@ -142,9 +142,7 @@ go语言的注释比较简单，和大多数编程语言差不多。
 
 		name :="李明" //等价于 var name string="liming"
 
-### 2.5、变量作用域
-
-#### 2.5.1、全局变量
+#### 2.5.1、声明全局变量
 
 在函数体外声明的变量都是全局变量，全局变量可以在所有的函数中使用。
 
@@ -160,7 +158,7 @@ go语言的注释比较简单，和大多数编程语言差不多。
 
 > 注意：全局变量的声明不能省略var关键字
 
-#### 2.5.2、局部变量
+#### 2.5.2、声明局部变量
 
 在函数体内定义的变量都是局部变量，包括函数的参数和返回值参数。它们只能在当前函数使用。
 
@@ -199,7 +197,6 @@ go语言的注释比较简单，和大多数编程语言差不多。
 
 		var param string = "这是一个全局变量，该变量可以在所有函数中使用"
 
-
 		func myfunc(){
 		   var param string = "这是一个局部变量,变量的作用域在此函数中有效"
 		   fmt.Println(param)  // 打印出  "这是一个局部变量,变量的作用域在此函数中有效"
@@ -224,7 +221,13 @@ go语言中约定如果命名首字母大写那么它就是`public`的，所有�
 
 ## 4、附录
 
-### 4.1、go中关键字的解释
+
+### 4.1 go语言语句结尾的分号";"
+
+go语言的语句结尾的分号可写可不写，因为编译器在编译源码的时候会默认在语句的结尾加上分号";",为了减少前键盘的次数，建议不要自己加分号。
+
+
+### 4.2、go中关键字的解释
 
 |关键字|作用|
 |---------|---------------|
@@ -242,3 +245,7 @@ go语言中约定如果命名首字母大写那么它就是`public`的，所有�
 |type|声明自定义类型|
 |map|声明map类型数据|
 |range|读取slice、map等|
+
+
+
+
