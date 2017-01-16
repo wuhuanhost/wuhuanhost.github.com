@@ -233,10 +233,10 @@ go语言的语句结尾的分号可写可不写，因为编译器在编译源码
 |---------|---------------|
 |var和const|变量和常量的声明|
 |package和import|包的声明和导入|
-|func|定义函数和方法|
+|func|声明函数和方法|
 |return|定义函数返回值|
-|defer|在函数退出之前执行|
-|go|并行执行|
+|defer|延时执行|
+|go|用于并发编程|
 |select| 用于选择不同类型的通讯|
 |interface|定义接口|
 |struct|定义抽象数据类型|
@@ -244,7 +244,7 @@ go语言的语句结尾的分号可写可不写，因为编译器在编译源码
 |chan|channel通讯|
 |type|声明自定义类型|
 |map|声明map类型数据|
-|range|读取slice、map等|
+|range|迭代slice、map等数据|
 
 
 
