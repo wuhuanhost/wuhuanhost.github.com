@@ -16,6 +16,8 @@ html5,css3开发备忘......
 
 <!-- more -->
 
+## 通用
+
 ### **单行文字垂直居中**
 
 `html代码`
@@ -121,14 +123,14 @@ html5,css3开发备忘......
 
 
 
-### ios系统浏览器滚动不流畅解决方法
+## ios系统
+
+> safari浏览器下div中的滚动不流畅解决方法
 
 		-webkit-overflow-scrolling: touch;
 		或者使用
 		iscroll.js
 
-
-### ios系统
 
 
 
