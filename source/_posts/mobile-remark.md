@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "html5，css3前端开发Tips【持续整理】"
+title: "html5，css3前端开发Tips【持续整理添加】"
 date: 2016-01-11 11:06:30
-description: "html5，css3前端开发Tips【持续整理】"
+description: "html5，css3前端开发Tips【持续整理添加】"
 category: html5笔记
 tags: [tips]
 mathjax: false
@@ -118,6 +118,18 @@ html5,css3开发备忘......
 		hr{
 		    height: 1px; background:#ccc; border:0;
 		}
+
+
+
+### ios系统浏览器滚动不流畅解决方法
+
+		-webkit-overflow-scrolling: touch;
+		或者使用
+		iscroll.js
+
+
+### ios系统
+
 
 
 
