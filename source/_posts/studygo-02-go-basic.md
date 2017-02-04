@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "golang学习笔记（二）go语言基础知识"
-date: 2017-01-01 15:36:36
+date: 2017-01-10 15:36:36
 description: "golang学习笔记（二）go语言基础知识"
 category: golang学习笔记
 tags: [go语言]
