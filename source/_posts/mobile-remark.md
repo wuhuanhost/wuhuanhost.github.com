@@ -12,7 +12,7 @@ cdn: "header-on"
 header-img: banner_2.jpg
 ---
 
-html5,css3开发备忘......
+web、webapp开发过程中遇到的问题的处理方式整理。
 
 <!-- more -->
 
@@ -137,7 +137,6 @@ html5,css3开发备忘......
 
 
 [查看效果](/demo/mobile-remark.html)
-
 
 ## 备注
 
