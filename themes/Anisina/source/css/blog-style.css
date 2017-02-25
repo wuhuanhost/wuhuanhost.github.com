@@ -1016,6 +1016,9 @@ img::-moz-selection {
     text-align: center;
 }
 
+.short-about p {
+    text-align: center;
+}
 
 @media screen and (max-width: 768px) {
     .intro-header .post-heading .subheading {
