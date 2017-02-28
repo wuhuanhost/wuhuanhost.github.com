@@ -2,7 +2,7 @@
 layout: post
 title: "html5，css3前端开发Tips【持续整理添加】"
 date: 2016-01-11 11:06:30
-description: "html5，css3前端开发Tips【持续整理添加】"
+description: "html5，css3前端开发相关内容整理（持续更新）"
 category: html5笔记
 tags: [tips]
 mathjax: false
@@ -114,6 +114,8 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 		}
 
 
+## 移动端
+
 
 ### 禁止长按链接与图片弹出菜单
 
@@ -121,14 +123,11 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 		    -webkit-touch-callout: none; 
 		}
 
-## ios系统
-
-> safari浏览器下div中的滚动不流畅解决方法
+###  safari浏览器下div中的滚动不流畅解决方法
 
 		-webkit-overflow-scrolling: touch;
 		或者使用
 		iscroll.js
-
 
 
 
