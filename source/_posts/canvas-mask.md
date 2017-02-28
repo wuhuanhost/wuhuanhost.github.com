@@ -4,7 +4,7 @@ title: "canvas中遮罩效果的实现方法"
 date: 2015-12-31 10:20:25
 description: "canvas中遮罩效果的实现方法"
 category: html5笔记
-tags: [canvas,编程,学习]
+tags: [canvas,Demo]
 mathjax: false
 toc: false
 highlight: true

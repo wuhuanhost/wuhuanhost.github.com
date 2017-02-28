@@ -4,7 +4,7 @@ title: "gulp使用笔记"
 date: 2015-09-24 15:15:36
 description: "随笔..."
 category: 前端开发
-tags: [前端工具,web前端]
+tags: [前端工具,前端笔记]
 mathjax: false
 toc: true
 highlight: true

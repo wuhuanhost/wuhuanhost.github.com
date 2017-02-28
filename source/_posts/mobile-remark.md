@@ -4,7 +4,7 @@ title: "html5，css3前端开发相关内容整理（持续更新）"
 date: 2016-01-11 11:06:30
 description: "html5，css3前端开发相关内容整理（持续更新）"
 category: html5笔记
-tags: [tips,web前端]
+tags: [tips,前端笔记]
 mathjax: false
 toc: true
 highlight: true

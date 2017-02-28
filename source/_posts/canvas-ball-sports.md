@@ -4,7 +4,7 @@ title: "canvas绘制小球运动"
 date: 2016-01-05 13:13:30
 description: "canvas绘制小球运动"
 category: html5笔记
-tags: [canvas,编程,Demo]
+tags: [canvas,Demo]
 mathjax: false
 toc: false
 highlight: true

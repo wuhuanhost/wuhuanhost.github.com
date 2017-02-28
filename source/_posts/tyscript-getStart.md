@@ -4,7 +4,7 @@ title: "使用TypeScript来写javascript代码"
 date: 2016-03-15 14:21:36
 description: "TypeScript使用笔记"
 category: 前端开发
-tags: [前端工具,web前端]
+tags: [前端工具,前端笔记]
 mathjax: false
 toc: true
 highlight: true
