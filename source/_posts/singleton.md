@@ -4,7 +4,7 @@ title: "设计模式（一）之单例模式"
 date: 2014-06-17 14:21:36
 description: "设计模式之单例模式"
 category: 设计模式
-tags: [单例模式,JAVA]
+tags: [设计模式,JAVA]
 mathjax: false
 toc: false
 highlight: true

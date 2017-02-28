@@ -4,7 +4,7 @@ title: "设计模式（二）之观察者模式"
 date: 2014-07-07 16:52:36
 description: "设计模式之观察者模式"
 category: 设计模式
-tags: [观察者模式,JAVA]
+tags: [设计模式,JAVA]
 mathjax: false
 highlight: true
 ---
