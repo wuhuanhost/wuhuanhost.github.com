@@ -20,9 +20,9 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **单行文字垂直居中**
 
-
+`html`
 			 <div class="row">单行文字垂直居中，单行文字垂直居中，单行文字垂直居中</div>
-
+`css`
 	
 		.row {
 			display: block;
@@ -34,12 +34,12 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **多行文字垂直居中**
 
-	
+`html`	
 		    <div class="wrap">
 				<div id="content">多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中</div>
 		    </div>
 
-
+`css`
 	
 			.wrap {
 				display: table;
@@ -56,11 +56,11 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **单行文本溢出**
 
-
+`html`
 			<div class='text-overflow'> 单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出 </div>
 
 
-
+`css`
 			    .text-overflow {
 					width: 200px;/**设置显示的长度**/
 					overflow: hidden;
@@ -81,12 +81,12 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **多行文本溢出**
 
-
+`html`
 			<div class='more-text-overflow'>
 				webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出
 			 </div>		
 
-	
+`css`	
 			    .more-text-overflow {
 					width: 600px;
 					display: -webkit-box;
@@ -109,9 +109,9 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### hr细边框
 
-		hr{
-		    height: 1px; background:#ccc; border:0;
-		}
+				hr{
+				    height: 1px; background:#ccc; border:0;
+				}
 
 
 ## 移动端
@@ -119,15 +119,15 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### 禁止长按链接与图片弹出菜单
 
-		a, img {
-		    -webkit-touch-callout: none; 
-		}
+				a, img {
+				    -webkit-touch-callout: none; 
+				}
 
 ###  safari浏览器下div中的滚动不流畅解决方法
 
-		-webkit-overflow-scrolling: touch;
-		或者使用
-		iscroll.js
+				-webkit-overflow-scrolling: touch;
+				或者使用
+				iscroll.js
 
 
 
