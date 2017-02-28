@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "html5，css3前端开发Tips【持续整理添加】"
+title: "html5，css3前端开发相关内容整理（持续更新）"
 date: 2016-01-11 11:06:30
 description: "html5，css3前端开发相关内容整理（持续更新）"
 category: html5笔记
-tags: [tips]
+tags: [tips,web前端]
 mathjax: false
 toc: true
 highlight: true
@@ -12,7 +12,7 @@ cdn: "header-on"
 header-img: banner_2.jpg
 ---
 
-web、webapp开发过程中遇到的问题的处理方式整理。
+web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 <!-- more -->
 
