@@ -20,13 +20,11 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **单行文字垂直居中**
 
-`html代码`
 
-			 <div id="row">单行文字垂直居中，单行文字垂直居中，单行文字垂直居中</div>
+			 <div class="row">单行文字垂直居中，单行文字垂直居中，单行文字垂直居中</div>
 
-`css代码`
 	
-		#row {
+		.row {
 			display: block;
 			height: 100px;
 			line-height: 100px;
@@ -36,16 +34,14 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **多行文字垂直居中**
 
-`html代码`
 	
-		    <div id="wrap">
+		    <div class="wrap">
 				<div id="content">多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中，多行文字垂直居中</div>
 		    </div>
 
 
-`css代码`
 	
-			#wrap {
+			.wrap {
 				display: table;
 				width: 600px;
 				height: 150px;
@@ -60,14 +56,12 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **单行文本溢出**
 
-`html代码`
 
-			<div id='text-overflow'> 单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出 </div>
+			<div class='text-overflow'> 单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出，单行文本溢出 </div>
 
 
-`css代码`
 
-			    #text-overflow {
+			    .text-overflow {
 					width: 200px;/**设置显示的长度**/
 					overflow: hidden;
 					white-space: nowrap;
@@ -87,15 +81,13 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 ### **多行文本溢出**
 
-`html代码`
 
-			<div id='more-text-overflow'>
+			<div class='more-text-overflow'>
 				webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出，webkit浏览器多行文本溢出
 			 </div>		
 
-`css代码`
 	
-			    #more-text-overflow {
+			    .more-text-overflow {
 					width: 600px;
 					display: -webkit-box;
 					-webkit-line-clamp: 3;/*显示的行数,多余的行数将被隐藏*/
@@ -123,6 +115,12 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 
 
 
+### 禁止长按链接与图片弹出菜单
+
+		a, img {
+		    -webkit-touch-callout: none; 
+		}
+
 ## ios系统
 
 > safari浏览器下div中的滚动不流畅解决方法
@@ -130,7 +128,6 @@ web、webapp开发过程中遇到的问题的处理方式整理。
 		-webkit-overflow-scrolling: touch;
 		或者使用
 		iscroll.js
-
 
 
 
