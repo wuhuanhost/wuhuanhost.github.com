@@ -67,6 +67,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 
 `css`
+
 			    .text-overflow {
 					width: 200px;/**设置显示的长度**/
 					overflow: hidden;
@@ -95,6 +96,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 
 `css`	
+
 			    .more-text-overflow {
 					width: 600px;
 					display: -webkit-box;
