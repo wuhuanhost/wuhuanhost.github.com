@@ -141,6 +141,10 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 
 
+### 微信浏览器页面禁止下拉显示网址信息
+
+> [禁止下拉显示网址信息](https://gist.github.com/wuhuanhost/f978f14976a59bd96dbb567be594dee5)
+
 
 [查看效果](/demo/mobile-remark.html)
 
