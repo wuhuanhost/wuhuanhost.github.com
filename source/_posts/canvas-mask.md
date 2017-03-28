@@ -10,13 +10,13 @@ toc: false
 highlight: true
 ---
 
-最近做的一个项目需要支持多终端，html5移动版需要用到html5中canvas画布对一组数据进行渲染还原，但是在实际实现过程中遇到了一个问题，canvas中没有mask（遮罩）层的概念，所以一些效果实现不了，最后翻看文档的时候发现可以通过Context对象的`globalCompositeOperation`属性或者Context的`clip()`裁剪路径方法实现遮罩的效果。
+最近做的一个项目需要支持多终端，网页版需要使用html5中canvas画布对象对一组数据进行渲染还原，但是在实际实现过程中遇到了一个问题，canvas中没有mask（遮罩）层的概念，所以一些效果实现不了，最后翻看文档的时候发现可以通过Context对象的`globalCompositeOperation`属性或者Context的`clip()`裁剪路径方法实现遮罩的效果。
 
 <!-- more -->
 
 ## globalCompositeOperation属性介绍
 
-接下来先详细了解下Context的`globalCompositeOperation`的各种值描述，然后通过它实现一个**刮刮卡**的效果。
+接下来先详细了解下Context的`globalCompositeOperation`的各种值描述，由于项目不便演示最后我们通过它来实现一个**刮刮卡**的效果。
 
 属性值|描述|显示效果
 :------|:------|------:|
