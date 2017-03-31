@@ -17,7 +17,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 <!-- more -->
 
 
-### **单行文字垂直居中**
+### **1、单行文字垂直居中**
 
 `html`
 
@@ -33,7 +33,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 			background-color: #d5effc;
 		    }
 
-### **多行文字垂直居中**
+### **2、多行文字垂直居中**
 
 `html`	
 
@@ -57,7 +57,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 			    }
 
 
-### **单行文本溢出**
+### **3、单行文本溢出**
 
 `html`
 
@@ -83,7 +83,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 			    }
 
 
-### **文本内容自动换行**
+### **4、文本内容自动换行**
 
 			word-break{
 				word-wrap: break-word; 
@@ -92,7 +92,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 
 
-### **多行文本溢出**
+### **5、多行文本溢出**
 
 `html`
 
@@ -113,7 +113,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 			    }
 
 
-### **表格细边框设置**
+### **6、表格细边框设置**
 
 
 `css样式代码`
@@ -124,35 +124,37 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 			    }
 
 
-### hr细边框
+### **7、hr细边框**
 
 				hr{
 				    height: 1px; background:#ccc; border:0;
 				}
 
 
-### 禁止长按链接与图片弹出菜单
+### **8、禁止长按链接与图片弹出菜单**
 
 				a, img {
 				    -webkit-touch-callout: none; 
 				}
 
 
-###  safari浏览器下div中的滚动不流畅解决方法
+###  **9、safari浏览器下div中的滚动不流畅解决方法**
 
 				-webkit-overflow-scrolling: touch;
-				或者使用
-				iscroll.js
 
 
-### 清除手机点击页面标签时候出现高亮
+
+> 或者使用**iscroll.js**
+
+
+### **10、清除手机点击页面标签时候出现高亮**
 
 			* {
 			       -webkit-tap-highlight-color: rgba(0,0,0,0);
 			}
 
 
-### 改变选中的内容的样式
+### **11、改变选中的内容的样式**
 
 		::selection
 			{
@@ -165,14 +167,14 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 			}
 
 
-### 禁止用户选中文本内容
+### **12、禁止用户选中文本内容**
 
-.content {
-	-webkit-user-select:none;
-	-moz-user-select:none;
-	-o-user-select:none;
-	user-select:none;
-}
+		.content {
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-o-user-select:none;
+			user-select:none;
+		}
 
 
 ### 微信浏览器页面禁止下拉显示网址信息
