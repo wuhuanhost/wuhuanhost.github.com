@@ -16,7 +16,6 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 <!-- more -->
 
-## 通用
 
 ### **单行文字垂直居中**
 
@@ -84,6 +83,13 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 			    }
 
 
+### **文本内容自动换行**
+
+			word-break{
+				word-wrap: break-word; 
+				word-break: normal; 
+			}
+
 
 
 ### **多行文本溢出**
@@ -109,6 +115,7 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 ### **表格细边框设置**
 
+
 `css样式代码`
 
 			    table,table th,table td{
@@ -124,14 +131,12 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 				}
 
 
-## 移动端
-
-
 ### 禁止长按链接与图片弹出菜单
 
 				a, img {
 				    -webkit-touch-callout: none; 
 				}
+
 
 ###  safari浏览器下div中的滚动不流畅解决方法
 
@@ -139,6 +144,35 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 				或者使用
 				iscroll.js
 
+
+### 清除手机点击页面标签时候出现高亮
+
+			* {
+			       -webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+
+
+### 改变选中的内容的样式
+
+		::selection
+			{
+				color:#ff0000;
+			}
+
+		::-moz-selection
+			{
+				color:#ff0000;
+			}
+
+
+### 禁止用户选中文本内容
+
+.content {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
 
 
 ### 微信浏览器页面禁止下拉显示网址信息
