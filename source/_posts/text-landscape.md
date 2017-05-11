@@ -8,10 +8,12 @@ tags: [前端笔记]
 mathjax: false
 toc: true
 highlight: true
+header-img: banner_3.jpg
+cdn: 'header-on'
 ---
 
 
-![网页文字竖排效果截图](/images/text_landscape/cover.jpg)
+![网页文字竖排效果截图](/images/text-landscape/cover.jpg)
 
 古时候的书籍里面文字的书写方式都是从上到下从右向左书写的，我们可不可以在网页上实现这种文字排版效果，虽然现在竖排在网页上用的比较的少，但是我们可以在我们自己的个人网站或者博客介绍页面用竖排来排版，使网页样式看起来更加的丰富和复古！
 
