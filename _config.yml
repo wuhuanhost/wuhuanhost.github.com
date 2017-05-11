@@ -44,12 +44,12 @@ anchorjs: false                        # if you want to customize anchor. check 
 
 
 # Disqus settings 
-disqus_username: 
+# disqus_username: ithinkblog
 
 # Duoshuo settings
 duoshuo_username: mengxiangjia
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+duoshuo_share: false                     # set to false if you want to use Comment without Sharing
 
 
 # Analytics settings
@@ -120,14 +120,6 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 
-markdown:
-  plugins:
-    - markdown-it-abbr
-    - markdown-it-footnote
-    - markdown-it-ins
-    - markdown-it-sub
-    - markdown-it-sup
-    - markdown-it-emoji
 
 ## Themes: https://hexo.io/themes/
 theme: Anisina
