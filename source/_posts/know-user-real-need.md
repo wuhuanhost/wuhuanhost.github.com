@@ -4,7 +4,7 @@ title: "你以为你真理解用户的需求吗？"
 date: 2017-04-13 10:21:36
 description: "你以为你真理解用户的需求吗？"
 category: 产品思考
-tags: [用户需求，用户体验]
+tags: [用户需求,用户体验]
 mathjax: false
 toc: true
 highlight: true
