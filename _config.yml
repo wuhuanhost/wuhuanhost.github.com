@@ -164,6 +164,7 @@ archive:
     description: 归档
 
 
+#博客文章图片cdn
 postcdn:
   enable: true                              #开启CDN慢加载
   tagclass: lazy                    #配置图片的CLASS属性，此部分方便您在启用图片LAZYLOAD的时候只针对此CLASS的图片
@@ -172,6 +173,5 @@ postcdn:
  #cdnlink:
 
 
-
 # 开启动态背景
-canvas_nest: true
+canvas_nest: false
