@@ -43,15 +43,16 @@ linkedin_username:
 anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
 
 
-wangyiyungengtie_username: 132132
+# 网易云跟帖评论
+wangyiyungengtie: true
 
 # Disqus settings 
 # disqus_username: ithinkblog
 
 # Duoshuo settings
-duoshuo_username: mengxiangjia
+# duoshuo_username: mengxiangjia
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: false                     # set to false if you want to use Comment without Sharing
 
 
 # Analytics settings
