@@ -186,6 +186,22 @@ layout: layout
     </div>
 </article>
 
+<% if(config['wangyiyungengtie_username']) { %>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "5f72e37fb83d461fa507e50fdf3a1801",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<% } %>
+
+
+
 <% if(config['duoshuo_username']) { %>
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

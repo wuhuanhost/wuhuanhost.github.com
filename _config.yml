@@ -43,6 +43,8 @@ linkedin_username:
 anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
 
 
+wangyiyungengtie_username: 132132
+
 # Disqus settings 
 # disqus_username: ithinkblog
 
@@ -171,6 +173,7 @@ postcdn:
   tmpimglink: http://ofjiy8hta.bkt.clouddn.com/images/loading.gif          #临时图片就是没加载原始图片前的图片
   cdnlink: http://ofjiy8hta.bkt.clouddn.com #CDN服务器地址，本例为七牛的CDN地址
  #cdnlink:
+
 
 
 # 开启动态背景
