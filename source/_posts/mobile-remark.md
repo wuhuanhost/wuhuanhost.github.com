@@ -184,12 +184,6 @@ web、webapp前端开发过程中遇到的问题的常用处理方式整理。
 
 [查看效果](/demo/mobile-remark.html)
 
-## 备注
-
-* 原文链接：[http://www.mengxiangjia.info/2016/01/11/mobile-remark/](http://www.mengxiangjia.info/2016/01/11/mobile-remark/) 
-* 版权声明：自由转载-非商用-非衍生-保持署名 | <a href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
-
-
 
 
 

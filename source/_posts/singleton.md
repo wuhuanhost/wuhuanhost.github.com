@@ -144,8 +144,3 @@ highlight: true
 
 * 设计模式没有想象中的复杂它其实就是一套编程大师在以前的开发过程中对如何写出健壮、稳定、可靠、易于扩展、易于维护的一套代码设计经验的总结。
 
-## 备注
-
-* 原文链接：[http://www.mengxiangjia.info/2014/06/17/singleton/](http://www.mengxiangjia.info/2014/06/17/singleton/) 
-* 版权声明：自由转载-非商用-非衍生-保持署名 | <a href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
-

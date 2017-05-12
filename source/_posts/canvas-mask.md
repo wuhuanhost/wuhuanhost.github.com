@@ -157,8 +157,3 @@ javascript代码
 	   
 canvas参考文档 [canvas api](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
 
-## 备注
-
-* 原文链接：[http://www.mengxiangjia.info/2015/12/31/canvas-mask/](http://www.mengxiangjia.info/2015/12/31/canvas-mask/) 
-* 版权声明：自由转载-非商用-非衍生-保持署名 | <a href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
-

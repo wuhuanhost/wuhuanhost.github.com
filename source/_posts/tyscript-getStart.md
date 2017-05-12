@@ -183,9 +183,3 @@ highlight: true
 
 更多关于的文档可以去TypeScript官网查看，或者[TypeScript中文手册](https://zhongsp.gitbooks.io/TypeScript-handbook/content/doc/handbook/Enums.html)
 
-## 备注
-
-* 原文链接：[http://www.mengxiangjia.info/2016/03/15/tyscript-getStart//](http://www.mengxiangjia.info/2016/03/15/tyscript-getStart/) 
-* 版权声明：自由转载-非商用-非衍生-保持署名 | <a href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
-
-

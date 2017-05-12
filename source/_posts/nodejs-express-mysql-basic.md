@@ -275,8 +275,3 @@ highlight: true
 
 * node.js参考文档见 [**node.js中文网**](http://nodejs.cn/)
 
-## 备注
-
-* 原文链接：[http://www.mengxiangjia.info/2015/12/25/nodejs-express-mysql-basic-md/](http://www.mengxiangjia.info/2015/12/25/nodejs-express-mysql-basic-md/) 
-* 版权声明：自由转载-非商用-非衍生-保持署名 | <a href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
-

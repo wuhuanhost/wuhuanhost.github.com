@@ -90,8 +90,3 @@ mathjax: false
 
 * 在设计**记住密码**这个功能的时候，一定不要把用户的密码保存到本地，即使是加过密的密码！
 
-## 备注
-
-* 原文链接：[http://www.mengxiangjia.info/2014/07/15/login/](http://www.mengxiangjia.info/2014/07/15/login/) 
-* 版权声明：自由转载-非商用-非衍生-保持署名 | <a href='http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh'>Creative Commons BY-NC-ND 3.0</a>
-
