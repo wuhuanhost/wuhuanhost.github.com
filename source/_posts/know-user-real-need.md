@@ -8,12 +8,10 @@ tags: [用户需求,用户体验]
 mathjax: false
 toc: true
 highlight: true
-header-img: banner_4.jpg
+header-img: images/know-user-real-need/cover.jpg
 cdn: 'header-on'
 ---
 
-
-![理解用户的真实需求](/images/know-user-real-need/cover.jpg)
 
 ## 前言
 

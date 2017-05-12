@@ -256,3 +256,15 @@ $(function() {
 
 <!--访问统计-->
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<% if (page.mathjax){ %>
+<!-- 数学公式插件 -->
+<%- partial('./plugins/mathjax') %>
+<% } %>
+
+
+<% if (config.canvas_nest){ %>
+<!-- 动态背景效果 -->
+<%- partial('./plugins/canvas_nest') %>
+<% } %>
