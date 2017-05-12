@@ -74,20 +74,6 @@ layout: layout
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <%- page.content %>
                 <hr>
-                <% if(config.wangyiyungengtie) { %>
-                <!-- 网易云跟帖 Share start -->
-		<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-		<script>
-		  var cloudTieConfig = {
-		    url: document.location.href, 
-		    sourceId: "",
-		    productKey: "5f72e37fb83d461fa507e50fdf3a1801",
-		    target: "cloud-tie-wrapper"
-		  };
-		</script>
-		<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-                <!-- 网易云跟帖 Share end-->
-                <% } %>
 
                 <ul class="pager">
                     <% if (page.prev){ %>
@@ -103,6 +89,33 @@ layout: layout
                     </li>
                     <% } %>
                 </ul>
+
+		<% if(config.wangyiyungengtie) { %>
+                <!-- 网易云跟帖 Share start -->
+		<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+		<script>
+		  var cloudTieConfig = {
+		    url: document.location.href, 
+		    sourceId: <%- page.path %>,
+		    productKey: "5f72e37fb83d461fa507e50fdf3a1801",
+		    target: "cloud-tie-wrapper"
+		  };
+		</script>
+		<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+                <!-- 网易云跟帖 Share end-->
+                <% } %>
+
+		<!--云跟帖热文-->
+		<div id="hot-news-wrap"></div>
+		<script>var yunModuleEnv = true;</script>
+		<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+		<script>
+		  var yunTieProductKey = "5f72e37fb83d461fa507e50fdf3a1801";  
+		  var yunHotNewsWrap = "hot-news-wrap";   //放置的DOM节点ID 或 样式类
+		  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2hvdF9uZXdzX3NjcmlwdC5odG1s", true);
+		</script>
+
+
             </div>
 
             <div class="hidden-xs col-sm-3 toc-col">
