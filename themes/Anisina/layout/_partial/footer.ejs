@@ -206,7 +206,7 @@ $(function() {
   });
 </script>
 
-<% if(config.wangyiyungengtie) { %>
+<% if(config.wangyiyungengtie&&!is_home()) { %>
 <!-- 网易云跟帖 Share start -->
 <script>
 var cloudTieConfig = {
@@ -217,7 +217,6 @@ target: "cloud-tie-wrapper"
 };
 </script>
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-<!-- 网易云跟帖 Share end-->
 <!--云跟帖热文-->
 <script>var yunModuleEnv = true;</script>
 <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
