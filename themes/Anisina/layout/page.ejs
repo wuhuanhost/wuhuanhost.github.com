@@ -4,6 +4,17 @@ layout: layout
 
 <% if(is_home()){ %>
 <style>
+@media (max-width: 989px) {
+        /*去掉诗歌的背景图片*/
+       .custom-haojen-container .post-preview {
+          background-image: none !important;
+        }
+
+        .short-about hr{
+	   display:none;
+        }
+}	
+@media (min-width: 990px) {
 
     .custom-haojen-container .post-preview:nth-of-type(1),
     .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
@@ -81,46 +92,6 @@ layout: layout
     .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
         color: #0e2231;
     }
-
-    @media (max-width: 768px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 240px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 28px !important;
-            margin-top: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 18px;
-            font-weight: 400;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-of-type(1) > a {
-            padding: 20px
-        }
-    }
-
-    /*手机屏幕*/
-    @media (max-width: 400px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 195px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 20px !important;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 16px;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) a {
-            padding: 30px 20px;
-        }
     }
 </style>
 <% } %>
