@@ -107,6 +107,19 @@ layout: layout
 
 
 
+		<% if(config.baidushare) { %>
+		<!--百度分享-->
+		<br>
+		<div class="bdsharebuttonbox" style="float:right;bottom:110px;position:relative;top:6px;">
+			<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+			<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+			<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+			<a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣"></a>
+			<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+			<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到qq"></a>			
+		</div>
+	        <% } %>
+	
 		<% if(config.wangyiyungengtie) { %>
 		<!--云跟帖热文-->
 		<div id="hot-news-wrap"></div>
@@ -115,7 +128,6 @@ layout: layout
 		<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <!-- 网易云跟帖 Share end-->
                 <% } %>
-
 
             </div>
 

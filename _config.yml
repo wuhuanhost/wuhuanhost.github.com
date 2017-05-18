@@ -41,7 +41,7 @@ linkedin_username:
 
 # Build settings
 anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
-
+baidushare: true                       #百度分享
 
 # 网易云跟帖评论
 wangyiyungengtie: true
