@@ -16,9 +16,14 @@ header-img: http://ofjiy8hta.bkt.clouddn.com/header.jpg
 email: post.thinking@gmail.com
 description: "梦想.家的个人主页，一个记录分享生活学习过程中所感、所想、所悟和乐趣的网站，内容与读书学习、编程开发、系统设计、旅行、摄影、美食心得等自己喜欢的事物相关"
 keyword: 梦想家,梦想家随笔,博客,随笔,生活,摄影,旅行,美食,读书,编程,设计,学习
-
 favicon: /favicon.ico
-# custom end
+
+#nofollow标签是由谷歌领头创新的一个“反垃圾链接”的标签，并被百度、yahoo等各大搜索引擎广泛支持，引用nofollow标签的目的是：用于指示搜索引擎不要追踪（即抓取）网页上的带有nofollow属性的任何出站链接，以减少垃圾链接的分散网站权重。
+nofollow:
+    enable: true
+    exclude: # 例外的链接，可将友情链接放置此处
+    - exclude1.com
+    - exclude2.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -27,8 +32,8 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
-# SNS settings
-# RSS:
+
+#社交链接设置
 weibo_username: 1985520460
 jianshu_username: 
 zhihu_username: wuhuan
@@ -39,27 +44,23 @@ facebook_username:
 linkedin_username:
 
 
-# Build settings
+#百度分享设置
 anchorjs: false                        # if you want to customize anchor. check out line:181 of `post.html`
 baidushare: true                       #百度分享
 
+
 # 网易云跟帖评论
 wangyiyungengtie: true
-
-# Disqus settings 
+# Disqus评论设置
 # disqus_username: ithinkblog
+                 
 
-# Duoshuo settings
-# duoshuo_username: mengxiangjia
-# Share component is depend on Comment so we can NOT use share only.
-# duoshuo_share: false                     # set to false if you want to use Comment without Sharing
-
-
-# Analytics settings
+#页面分析设置
 # Baidu Analytics
 ba_track_id:
 # Google Analytics
 google_analytics: UA-52788998-1
+
 
 # Sidebar settings
 sidebar-about-description: 非宁静无以致远
@@ -70,22 +71,28 @@ sidebar-avatar: http://ofjiy8hta.bkt.clouddn.com/images/ava.jpg
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
-# friends
+#友情链接设置
 #friends: [
 # {"title":"梦想.家",
 #  "href":"http://www.mengxiangjia.info"
 # }
 #]
 
-# Directory
+
+#目录设置
 source_dir: source
 public_dir: public
 tag_dir: tags
 archive_dir: archives
-category_dir: categories
+#category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+#归档设置 
+archive:
+    title: archives
+    description: 归档
+
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -104,7 +111,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+#default_category: uncategorized
 category_map:
 tag_map:
 
@@ -115,10 +122,12 @@ tag_map:
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
+
 # Pagination
 ## Set per_page to 0 to disable pagination
 per_page: 8
 pagination_dir: page
+
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -127,7 +136,8 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: Anisina
 
-# Deployment
+
+#部署设置
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
@@ -137,7 +147,6 @@ deploy:
     coding: git@git.coding.net:think365/think365.coding.me.git,master
     #github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,master
     
-
 
 # img CDN path
 # cdn-url: http://www.mengxiangjia.info/images
@@ -152,30 +161,36 @@ clip-avatar: "?imageView2/2/w/300/h/300/interlace/1/q/90"
 clip-home-post-bg: "?imageView2/1/w/800/h/300/interlace/1/q/70"
 
 
-# search api , set your custom key
-swiftype: false
-#swiftype_key: 
+#algolia搜索设置
+search_online: true
+algolia:
+  applicationID: '0PURAMFJYA'
+  apiKey: '63904ccf33bee6405c6535951941d040'
+  adminApiKey: '1341d52b0a046b9bd1e521308fcdfae1f'
+  indexName: 'blog'
+  chunkSize: 5000
 
 
-# post default images
+#文章默认页头大banner
 post-default-img: http://ofjiy8hta.bkt.clouddn.com/default.jpg
 post-default-img-mobile: http://ofjiy8hta.bkt.clouddn.com/default.jpg
-
-# archive page title 
-archive:
-    title: archives
-    description: 归档
 
 
 #博客文章图片cdn
 postcdn:
-  enable: true                              #开启CDN慢加载
+  enable: true                      #开启CDN慢加载
   tagclass: lazy                    #配置图片的CLASS属性，此部分方便您在启用图片LAZYLOAD的时候只针对此CLASS的图片
   tmpimglink: http://ofjiy8hta.bkt.clouddn.com/images/loading.gif          #临时图片就是没加载原始图片前的图片
   cdnlink: http://ofjiy8hta.bkt.clouddn.com #CDN服务器地址，本例为七牛的CDN地址
  #cdnlink:
 
 
-
 # 开启动态背景
 canvas_nest: false
+
+
+#站点备份
+backup:
+    type: git
+    repository:
+       bitbucket: git@bitbucket.org:wuhuanhost/myblog.git,master

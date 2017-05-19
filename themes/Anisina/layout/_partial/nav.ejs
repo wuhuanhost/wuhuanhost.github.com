@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "<%- is_post() %>" data-istags="<%- is_tag() %>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="nav-top" data-ispost = "<%- is_post() %>" data-istags="<%- is_tag() %>
 " data-ishome = "<%- is_home() %>" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -49,6 +49,14 @@
 							<a href="<%- url_for(config.root + 'about') %>">About</a>
 						</li>
 					<% } %>
+
+			<% if(config.search_online){%>
+			
+			    <li>
+				<a href="#" class="popup-trigger">Search</a>
+			    </li>
+
+			<%}%>
                 </ul>
             </div>
         </div>
