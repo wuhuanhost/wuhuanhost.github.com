@@ -239,24 +239,24 @@ $(document).ready(function () {
 var CONFIG = {
     root: '/',
     algolia: {
-          applicationID: '<%= config.algolia.applicationID %>',
-          apiKey: '<%= config.algolia.apiKey %>',
+          id: '<%= config.algolia.applicationID %>',
+          tempstr: '<%= config.algolia.apiKey %>',
           indexName: '<%= config.algolia.indexName %>',
           hits: {"per_page":10},
           labels: {"input_placeholder":"搜索...","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
         }
   };
   var algoliaSettings = CONFIG.algolia;
-  var isAlgoliaSettingsValid = algoliaSettings.applicationID &&
-    algoliaSettings.apiKey &&
+  var isAlgoliaSettingsValid = algoliaSettings.id &&
+    algoliaSettings.tempstr &&
     algoliaSettings.indexName;
   if (!isAlgoliaSettingsValid) {
     window.console.error('Algolia Settings are invalid.');
     return;
   }
   var search = instantsearch({
-    appId: algoliaSettings.applicationID,
-    apiKey: algoliaSettings.apiKey,
+    appId: algoliaSettings.id,
+    apiKey: algoliaSettings.tempstr,
     indexName: algoliaSettings.indexName,
     searchFunction: function (helper) {
       var searchInput = $('#algolia-search-input').find('input');
