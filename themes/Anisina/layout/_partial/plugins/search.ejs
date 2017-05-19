@@ -125,7 +125,7 @@ a.search-result {
 .algolia-popup .popup-btn-close {
   padding-left: 15px;
   border-left: 1px solid #eee;
-  top: 10px;
+  top: 18px;
 }
 .algolia-popup .popup-btn-close .fa {
   color: #999;
@@ -135,8 +135,7 @@ a.search-result {
   color: #222;
 }
 .algolia-search {
-  /**padding: 10px 15px 5px;**/
-  padding: 0px 15px 0px;
+  padding: 10px 15px 5px;
   max-height: 50px;
   border-bottom: 1px solid #ccc;
   background: #f5f5f5;
@@ -185,6 +184,7 @@ a.search-result {
   font-size: inherit;
   color: #f00;
   font-weight:bold;
+	
 }
 .algolia-hits {
   margin-top: 20px;
@@ -200,9 +200,11 @@ a.search-result {
   transition-delay: 0s;
 }
 .algolia-pagination .pagination {
-  margin-top: 40px auto 0 auto;
+  margin-top: 40px;
   border-top: none;
   padding: 0;
+  display: block;
+  text-align: center;
 }
 .algolia-pagination .pagination-item {
   display: inline-block;
@@ -215,6 +217,11 @@ a.search-result {
 }
 .algolia-pagination .disabled-item {
   visibility: hidden;
+}
+
+.pagination>li>a, .pagination>li>span {
+   border:0;
+   text-decoration:none;
 }
 </style>
 <div class="algolia-popup popup search-popup">
