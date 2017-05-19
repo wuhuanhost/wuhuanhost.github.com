@@ -145,7 +145,7 @@ deploy:
   #branch: master
   repo:
     coding: git@git.coding.net:think365/think365.coding.me.git,master
-    #github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,master
+    github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,master
     
 
 # img CDN path
@@ -194,3 +194,4 @@ backup:
     type: git
     repository:
        bitbucket: git@bitbucket.org:wuhuanhost/myblog.git,master
+       #github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,blog
