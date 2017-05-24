@@ -131,6 +131,15 @@
 <!--<%- js('js/bootstrap.min.js') %>-->
 <script src="http://ofn9sc7gl.bkt.clouddn.com/bootstrap.min.js"></script>
 
+<!--文章中的标题显示"#"锚点-->
+<script>
+$(".post-container h1,.post-container h2,.post-container h3,.post-container h4,.post-container h5,.post-container h6").each(function(index,element){
+	var a=$(this).find("a").html("#");
+	$(this).find("a").remove();
+	$(this).append(a);
+});
+</script>
+
 <!-- Custom Theme JavaScript -->
 <!--<%- js('js/blog.js') %>-->
 <script src="http://ofn9sc7gl.bkt.clouddn.com/blog.js"></script>
