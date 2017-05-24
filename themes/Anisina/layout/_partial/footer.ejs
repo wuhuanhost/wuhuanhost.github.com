@@ -326,3 +326,20 @@ Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2hvdF9uZXdzX3NjcmlwdC5o
   })();
 </script>
 <% } %>
+
+<!--添加了网页阅读进度-->
+<script>
+$("body").prepend("<div id='progress-load' style='position:fixed;width:0px;height:2px;top:0;background-color:#337AB7;z-index:10000000;'></div>");
+var windowHeight=$(document).height();
+$(window).on('scroll',function(){
+	var currentHeight=$(document).scrollTop();
+	var currentRatio=parseFloat(currentHeight)/parseFloat(windowHeight)*100;
+	console.log(currentRatio)
+	
+	if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+	    $("#progress-load").width("100%");
+	}else{
+	    $("#progress-load").width(currentRatio+"%");
+	}
+});
+</script>
