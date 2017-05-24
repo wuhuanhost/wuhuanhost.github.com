@@ -232,6 +232,7 @@ article blockquote footer{
     margin-top: 20px;
 }
 
+
 @media only screen and (max-width: 767px) {
     .navbar-default .navbar-collapse {
         border: none;
