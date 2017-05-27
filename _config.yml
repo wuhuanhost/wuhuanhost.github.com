@@ -189,9 +189,9 @@ postcdn:
 canvas_nest: false
 
 
-#站点备份
+#站点备份(根目录不能有已经初始化的.git文件夹)
 backup:
     type: git
     repository:
-       #bitbucket: git@bitbucket.org:wuhuanhost/mengxiangjia.info.git,blog
-       github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,blog
+       bitbucket: git@bitbucket.org:wuhuanhost/mengxiangjia.info.git,master
+       #github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,blog
