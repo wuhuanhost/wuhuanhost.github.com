@@ -193,5 +193,5 @@ canvas_nest: false
 backup:
     type: git
     repository:
-       bitbucket: git@bitbucket.org/wuhuanhost/mengxiangjia.info.git,blog
+       bitbucket: git@bitbucket.org:wuhuanhost/mengxiangjia.info.git,blog
        #github: git@github.com:wuhuanhost/wuhuanhost.github.com.git,blog
