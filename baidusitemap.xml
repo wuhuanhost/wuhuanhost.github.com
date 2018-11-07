@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2018/03/15/git-use-note/</loc>
+    <lastmod>2018-11-07T06:16:09.914Z</lastmod>
+    <data>
+        <display>
+        <title>git使用笔记</title>
+        <pubTime>2018-03-15T12:00:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>开发工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/09/24/gulp-one/</loc>
+    <lastmod>2018-11-01T03:11:31.441Z</lastmod>
+    <data>
+        <display>
+        <title>gulp使用笔记</title>
+        <pubTime>2015-09-24T07:15:36.000Z</pubTime>
+        
+        <tag>开发工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/06/15/java-no-main-fun-run/</loc>
+    <lastmod>2018-11-01T02:49:44.297Z</lastmod>
+    <data>
+        <display>
+        <title>java没有main方法也可以运行</title>
+        <pubTime>2014-06-15T12:00:00.000Z</pubTime>
+        
+        <tag>JAVA</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2017/04/05/text-landscape/</loc>
+    <lastmod>2018-10-31T00:48:38.991Z</lastmod>
+    <data>
+        <display>
+        <title>网页文字竖排的几种实现方式</title>
+        <pubTime>2017-04-05T02:21:36.000Z</pubTime>
+        
+        <tag>前端笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2017/01/10/studygo-02-go-basic/</loc>
+    <lastmod>2018-10-31T00:48:38.989Z</lastmod>
+    <data>
+        <display>
+        <title>golang学习笔记（二）go语言基础知识</title>
+        <pubTime>2017-01-10T07:36:36.000Z</pubTime>
+        
+        <tag>go语言</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2017/01/01/studygo-01-getstart/</loc>
+    <lastmod>2018-10-31T00:48:38.988Z</lastmod>
+    <data>
+        <display>
+        <title>golang学习笔记（一）开发环境的搭建</title>
+        <pubTime>2017-01-01T07:36:36.000Z</pubTime>
+        
+        <tag>go语言</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2017/07/20/node-receive-mail/</loc>
+    <lastmod>2018-10-31T00:48:38.986Z</lastmod>
+    <data>
+        <display>
+        <title>Node接收电子邮件</title>
+        <pubTime>2017-07-20T02:21:36.000Z</pubTime>
+        
+        <tag>电子邮件</tag>
+         
+        <tag>node.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2017/06/20/node-post-mail/</loc>
+    <lastmod>2018-10-31T00:48:38.985Z</lastmod>
+    <data>
+        <display>
+        <title>Node发送电子邮件</title>
+        <pubTime>2017-06-20T02:21:36.000Z</pubTime>
+        
+        <tag>nodemailer</tag>
+         
+        <tag>电子邮件</tag>
+         
+        <tag>node.js</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2016/01/11/mobile-remark/</loc>
+    <lastmod>2018-10-31T00:48:38.983Z</lastmod>
+    <data>
+        <display>
+        <title>html5，css3前端开发相关内容整理（持续更新）</title>
+        <pubTime>2016-01-11T03:06:30.000Z</pubTime>
+        
+        <tag>tips</tag>
+         
+        <tag>前端笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2017/04/13/know-user-real-need/</loc>
+    <lastmod>2018-10-31T00:48:38.981Z</lastmod>
+    <data>
+        <display>
+        <title>你以为你真理解用户的需求吗？</title>
+        <pubTime>2017-04-13T02:21:36.000Z</pubTime>
+        
+        <tag>用户体验</tag>
+         
+        <tag>心得总结</tag>
+         
+        <tag>用户需求</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品思考" url="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2016/02/11/js-comm-remark/</loc>
+    <lastmod>2018-10-31T00:48:38.978Z</lastmod>
+    <data>
+        <display>
+        <title>js常用的工具函数整理</title>
+        <pubTime>2016-02-11T03:06:30.000Z</pubTime>
+        
+        <tag>tips</tag>
+         
+        <tag>前端笔记</tag>
+         
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2018/01/22/mongodb-001/</loc>
+    <lastmod>2018-10-31T00:48:38.976Z</lastmod>
+    <data>
+        <display>
+        <title>mongodb基础知识</title>
+        <pubTime>2018-01-22T02:21:36.000Z</pubTime>
+        
+        <tag>数据库</tag>
+         
+        <tag>mongodb</tag>
+         
+        <tag>nosql</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>https://www.wuhuan.me/2017/04/01/create-image-by-pillow/</loc>
+    <lastmod>2018-10-29T07:31:28.468Z</lastmod>
+    <data>
+        <display>
+        <title>使用pillow生成分享图片</title>
+        <pubTime>2017-04-01T12:05:36.000Z</pubTime>
+        
+        <tag>pillow</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>https://www.wuhuan.me/2016/12/27/nodejs-paging-util/</loc>
+    <lastmod>2018-09-27T04:10:44.004Z</lastmod>
+    <data>
+        <display>
+        <title>对Node.js分页查询（mysql）的封装</title>
+        <pubTime>2016-12-27T07:32:23.000Z</pubTime>
+        
+        <tag>node.js</tag>
+         
+        <tag>mysql</tag>
+         
+        <tag>分页查询</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/06/17/singleton/</loc>
+    <lastmod>2018-09-27T04:10:14.887Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式（一）之单例模式</title>
+        <pubTime>2014-06-17T06:21:36.000Z</pubTime>
+        
+        <tag>JAVA</tag>
+         
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/07/15/login/</loc>
+    <lastmod>2018-09-27T04:04:44.756Z</lastmod>
+    <data>
+        <display>
+        <title>对于系统登录流程的一些理解和总结</title>
+        <pubTime>2014-07-15T06:25:36.000Z</pubTime>
+        
+        <tag>用户体验</tag>
+         
+        <tag>网站安全</tag>
+         
+        <tag>系统设计</tag>
+         
+        <tag>心得总结</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品思考" url="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/07/07/observer/</loc>
+    <lastmod>2018-09-27T04:02:24.995Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式（二）之观察者模式</title>
+        <pubTime>2014-07-07T08:52:36.000Z</pubTime>
+        
+        <tag>JAVA</tag>
+         
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2016/03/15/tyscript-getStart/</loc>
+    <lastmod>2018-09-27T03:55:30.756Z</lastmod>
+    <data>
+        <display>
+        <title>使用TypeScript来写javascript代码</title>
+        <pubTime>2016-03-15T06:21:36.000Z</pubTime>
+        
+        <tag>前端笔记</tag>
+         
+        <tag>前端工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/12/25/nodejs-express-mysql-basic/</loc>
+    <lastmod>2018-09-27T03:54:45.180Z</lastmod>
+    <data>
+        <display>
+        <title>Express连接mysql数据库实现简单的数据查询</title>
+        <pubTime>2015-12-25T03:32:23.000Z</pubTime>
+        
+        <tag>node.js</tag>
+         
+        <tag>mysql</tag>
+         
+        <tag>express</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/12/31/canvas-mask/</loc>
+    <lastmod>2018-09-27T01:15:23.978Z</lastmod>
+    <data>
+        <display>
+        <title>canvas中遮罩效果的实现方法</title>
+        <pubTime>2015-12-31T02:20:25.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+        <tag>Demo</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2016/01/05/canvas-ball-sports/</loc>
+    <lastmod>2018-09-27T01:15:23.975Z</lastmod>
+    <data>
+        <display>
+        <title>canvas绘制运动的小球</title>
+        <pubTime>2016-01-05T05:13:30.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+        <tag>Demo</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+    
+    
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
+    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
+    <data>
+        <display>
+        <title>ruby解析json</title>
+        <pubTime>2015-09-25T08:39:36.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/06/10/myfirstblog/</loc>
+    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
+    <data>
+        <display>
+        <title>测试文章</title>
+        <pubTime>2014-06-10T05:52:36.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="个人随笔" url="https://www.wuhuan.me/categories/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/08/07/about-programming-language/</loc>
+    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
+    <data>
+        <display>
+        <title>对编程语言的一些新的认识</title>
+        <pubTime>2015-08-07T10:00:36.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="个人随笔" url="https://www.wuhuan.me/categories/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
