@@ -58,8 +58,10 @@ function scrollCheck(scrollTarget, toggleClass, scrollHeight){
 
 //主页
 (function(){
+	//console.log(isPages('data-ispost'))
     if(!isPages('data-ispost')){
-        var navbar = document.querySelector('.navbar.navbar-custom')
+        var navbar = document.querySelector('.navbar.navbar-custom');
+		//console.log(navbar.classList)
         navbar.classList.add('is-fixed');
     }
 
@@ -129,9 +131,9 @@ function getScrollDirection( fn ) {
  * },200)
  */
 function debounce(method,delay) {
-    let timer = null;
+    var timer = null;
     return function () {
-        let self = this,
+        var self = this,
             args = arguments;
         timer && clearTimeout(timer);
         timer = setTimeout(function () {
