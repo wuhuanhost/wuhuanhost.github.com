@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>https://www.wuhuan.me/2016/02/11/js-comm-remark/</loc>
+    <lastmod>2018-11-09T01:09:10.094Z</lastmod>
+    <data>
+        <display>
+        <title>js常用的工具函数整理</title>
+        <pubTime>2016-02-11T03:06:30.000Z</pubTime>
+        
+        <tag>tips</tag>
+         
+        <tag>前端笔记</tag>
+         
+        <tag>javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>https://www.wuhuan.me/2018/03/15/git-use-note/</loc>
     <lastmod>2018-11-08T01:55:19.958Z</lastmod>
     <data>
@@ -211,30 +236,6 @@
            
              
               <breadCrumb title="产品思考" url="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2016/02/11/js-comm-remark/</loc>
-    <lastmod>2018-10-31T00:48:38.978Z</lastmod>
-    <data>
-        <display>
-        <title>js常用的工具函数整理</title>
-        <pubTime>2016-02-11T03:06:30.000Z</pubTime>
-        
-        <tag>tips</tag>
-         
-        <tag>前端笔记</tag>
-         
-        <tag>javascript</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
           
         </display>
     </data>
@@ -484,9 +485,6 @@
     
     
     
-    
-    
-    
   <url>
     <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
     <lastmod>2018-06-11T08:52:04.073Z</lastmod>
@@ -501,6 +499,8 @@
     </data>
     </url>
 
+    
+    
     
   <url>
     <loc>https://www.wuhuan.me/2014/06/10/myfirstblog/</loc>
@@ -537,4 +537,5 @@
     </data>
     </url>
 
+    
 </urlset>
