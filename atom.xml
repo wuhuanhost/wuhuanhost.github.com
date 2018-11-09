@@ -34,9 +34,9 @@
       <category term="编程手册" scheme="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
     
     
-      <category term="开发工具" scheme="https://www.wuhuan.me/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="git" scheme="https://www.wuhuan.me/tags/git/"/>
+    
+      <category term="开发工具" scheme="https://www.wuhuan.me/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -108,11 +108,11 @@
       <category term="后端开发" scheme="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="nodemailer" scheme="https://www.wuhuan.me/tags/nodemailer/"/>
-    
       <category term="电子邮件" scheme="https://www.wuhuan.me/tags/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/"/>
     
       <category term="node.js" scheme="https://www.wuhuan.me/tags/node-js/"/>
+    
+      <category term="nodemailer" scheme="https://www.wuhuan.me/tags/nodemailer/"/>
     
   </entry>
   
