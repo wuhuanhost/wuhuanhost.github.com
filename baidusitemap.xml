@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://www.wuhuan.me/2018/03/15/git-use-note/</loc>
+    <lastmod>2018-11-13T06:36:42.778Z</lastmod>
+    <data>
+        <display>
+        <title>git使用笔记</title>
+        <pubTime>2018-03-15T12:00:00.000Z</pubTime>
+        
+        <tag>开发工具</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.wuhuan.me/2016/02/11/js-comm-remark/</loc>
     <lastmod>2018-11-09T01:09:10.094Z</lastmod>
     <data>
@@ -27,28 +49,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://www.wuhuan.me/2018/03/15/git-use-note/</loc>
-    <lastmod>2018-11-08T01:55:19.958Z</lastmod>
-    <data>
-        <display>
-        <title>git使用笔记</title>
-        <pubTime>2018-03-15T12:00:00.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>开发工具</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://www.wuhuan.me/2015/09/24/gulp-one/</loc>
@@ -180,11 +180,11 @@
         <title>Node发送电子邮件</title>
         <pubTime>2017-06-20T02:21:36.000Z</pubTime>
         
+        <tag>nodemailer</tag>
+         
         <tag>电子邮件</tag>
          
         <tag>node.js</tag>
-         
-        <tag>nodemailer</tag>
          
          
            
@@ -226,11 +226,11 @@
         <title>你以为你真理解用户的需求吗？</title>
         <pubTime>2017-04-13T02:21:36.000Z</pubTime>
         
-        <tag>用户需求</tag>
-         
         <tag>用户体验</tag>
          
         <tag>心得总结</tag>
+         
+        <tag>用户需求</tag>
          
          
            
@@ -348,11 +348,11 @@
         
         <tag>用户体验</tag>
          
-        <tag>心得总结</tag>
-         
         <tag>网站安全</tag>
          
         <tag>系统设计</tag>
+         
+        <tag>心得总结</tag>
          
          
            
@@ -482,22 +482,6 @@
     
     
     
-  <url>
-    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
-    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
-    <data>
-        <display>
-        <title>ruby解析json</title>
-        <pubTime>2015-09-25T08:39:36.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
     
     
     
@@ -519,6 +503,22 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
+    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
+    <data>
+        <display>
+        <title>ruby解析json</title>
+        <pubTime>2015-09-25T08:39:36.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://www.wuhuan.me/2014/06/10/myfirstblog/</loc>
