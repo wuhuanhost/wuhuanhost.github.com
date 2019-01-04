@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.wuhuan.me/"/>
-  <updated>2019-01-04T06:49:01.036Z</updated>
+  <updated>2019-01-04T06:51:40.036Z</updated>
   <id>https://www.wuhuan.me/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>h5使用canvas画布实现手势解锁笔记</title>
+    <title>h5使用canvas画布实现手势解锁</title>
     <link href="https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/"/>
     <id>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</id>
     <published>2018-11-02T02:20:25.000Z</published>
-    <updated>2019-01-04T06:49:01.036Z</updated>
+    <updated>2019-01-04T06:51:40.036Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近做的一个app项目使用的 apicloud 来实现跨平台开发，现在需要为这个 app 添加手势（九宫格）解锁的功能，apicloud 已经有一些第三方的原生实现的手势解锁插件，因为是原生的性能也比较好，调用也比较方便，但是都不能对它们的样式做修改，所以就打算自己来实现这个功能。这篇文章将实现过程整理分享出来，希望有需要的可以了解。分享出来的代码只实现了最基本的<code>设置密码功能</code>、<code>解锁功能</code>、<code>比较密码</code>的功能等，一些高级功能例如:不能限制一个点最多经过多少次、限制用户设置密码的长度。</p><p><img src="/2018-11-02-00.gif" alt="demo版解锁效果演示"></p><blockquote><p>原生实现还是其它方式实现？</p></blockquote><p>1、使用 android 和 ios 对应的平台通过原生代码来写手势解锁插件。体验好，但是开发周期长，需要处理各平台的兼容性问题，并且需要学习apicloud平台插件编写方法。（放弃）</p><p>2、使用 html5 的 canvas 画布来实现。开发周期短，不需要过多的处理兼容性问题，体验好。（选择）</p><h2 id="原理分析"><a href="#原理分析" class="headerlink" title="原理分析"></a>原理分析</h2><p><img src="/2018-11-02-01.png" alt="手势解锁"></p><p>通过手指将屏幕上的九个点依次连接起来形成一个图案，所以叫图案解锁。如上图每一个解锁圆圈后面其实都是一个数字，每次比较的并不是是用户画出来的图案，而是每次手指经过图案时串联起来的圆圈下的数字组成的密码字符串，本质上我们比较的还是字符串的密码，只不过站在用户的角度看是绘制出来的图案。图案的记忆远比数字字符串记的牢固。</p><h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><h3 id="绘制密码盘"><a href="#绘制密码盘" class="headerlink" title="绘制密码盘"></a>绘制密码盘</h3><p>密码盘的绘制比较简单，唯一需要注意需要通过动态计算使九个点围成的正方式始终在屏幕的中间位置，在手机上还需要减去状态栏的高度。</p><pre><code class="javascript">var width = $(document).width();var height = $(document).height() - 40; //减去手机状态栏的高度//九宫格其实就是九个点，9个点的坐标对象var lockCicle = {    x: 0, //x坐标    y: 0, //y坐标    color: &quot;#999999&quot;,    state: &quot;1&quot; //状态当前点是否已经被链接过};var offset = (width - height) / 2; //计算偏移量var arr = []; //九个点的坐标数组//计算九个点坐标的方法for (var i = 1; i &lt;= 3; i++) {    //每一行    for (var j = 1; j &lt;= 3; j++) {        //每一行的每一个        var lockCicle = {};        //横屏        if (offset &gt; 0) {            lockCicle.x = (height / 4) * j + Math.abs(offset);            lockCicle.y = (height / 4) * i;            lockCicle.state = 0;            //竖屏        } else {            lockCicle.x = (width / 4) * j;            lockCicle.y = (width / 4) * i + Math.abs(offset);            lockCicle.state = 0;        }        arr.push(lockCicle);    }}//初始化界面的方法function init() {    ctx.clearRect(0, 0, width, height); //清空画布    pointerArr = []; //清楚绘制路径    for (var i = 0; i &lt; arr.length; i++) {        arr[i].state = 0; //清除绘制状态        drawPointer(i);    }}//绘制九宫格解锁界面function drawPointer(i) {    ctx.save();    var radius = 0;    if (hastouch) {        radius = width / 12;    } else {        radius = 24;    }    var _fillStyle = &quot;#dd514c&quot;;    var _strokeStyle = &quot;#dd514c&quot;;    //不同状态显示不同颜色    if (arr[i].state == 1) {        _strokeStyle = &quot;#1bd6c5&quot;;    }    //绘制原点    ctx.beginPath();    ctx.fillStyle = _fillStyle;    ctx.arc(arr[i].x, arr[i].y, 6, 0, Math.PI * 2, false);    ctx.fill();    ctx.closePath();    //绘制圆圈    ctx.beginPath();    ctx.strokeStyle = _strokeStyle;    ctx.lineWidth = 0.3;    ctx.lineCap = &quot;round&quot;;    ctx.lineJoin = &quot;round&quot;;    ctx.arc(arr[i].x, arr[i].y, radius, 0, Math.PI * 2, false);    ctx.stroke();    ctx.closePath();    ctx.restore();}//初始化界面init();</code></pre><h3 id="绘制连线"><a href="#绘制连线" class="headerlink" title="绘制连线"></a>绘制连线</h3><h4 id="绘制连线的方法"><a href="#绘制连线的方法" class="headerlink" title="绘制连线的方法"></a>绘制连线的方法</h4><pre><code class="javascript">var pointerArr = []; //连接线点的坐标数组var startX, startY; //线条起始点var puts = []; //经过的九个点的数组var currentPointer; //当前点是否已经连接var pwd = []; //密码var confirmPwd = []; //确认密码var unlockFlag = false; //是否解锁的标志/** ** 绘制链接线的方法，将坐标数组中的点绘制在canvas画布中 **/function drawLinePointer(x, y, flag) {    ctx.clearRect(0, 0, width, height);    ctx.save();    ctx.beginPath();    ctx.strokeStyle = &quot;#1bd6c5&quot;;    ctx.lineWidth = 5;    ctx.lineCap = &quot;round&quot;;    ctx.lineJoin = &quot;round&quot;;    for (var i = 0; i &lt; pointerArr.length; i++) {        if (i == 0) {            ctx.moveTo(pointerArr[i].x, pointerArr[i].y);        } else {            ctx.lineTo(pointerArr[i].x, pointerArr[i].y);        }    }    ctx.stroke();    ctx.closePath();    ctx.restore();    for (var i = 0; i &lt; arr.length; i++) {        drawPointer(i); //绘制圆圈和原点        if (ctx.isPointInPath(x, y) &amp;&amp; currentPointer != i) {            //判断鼠标点击是否在圆中            pointerArr.push({                x: arr[i].x,                y: arr[i].y            });            currentPointer = i;            puts.push(i + 1);            startX = arr[i].x;            startY = arr[i].y;            arr[i].state = 1;        }    }    if (flag) {        ctx.save();        ctx.beginPath();        ctx.globalCompositeOperation = &quot;destination-over&quot;;        ctx.strokeStyle = &quot;#e2e0e0&quot;;        ctx.lineWidth = 5;        ctx.lineCap = &quot;round&quot;;        ctx.lineJoin = &quot;round&quot;;        ctx.moveTo(startX, startY);        ctx.lineTo(x, y);        ctx.stroke();        ctx.beginPath();        ctx.restore();    }}</code></pre><h4 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h4><p>连线的过程就是将 3 个 touch（移动端） 事件组合起来获取当前位置的坐标放入数组中，然后将这些坐标渲染到界面上的过程。</p><ul><li><p>touchstart (mousedown) 当手指（鼠标）按下时设置 isMouseDown=true，同时将该点的坐标保存到线条数组中，并将数组中的点绘制出来。</p></li><li><p>touchmove (mousemove) 当 isMouseDown=true 时 将手指（鼠标）移动过程中所有的坐标点都保存到萧条数组中，并将数组中的点绘制出来。</p></li><li><p>mouseup (mouseup) 当手指（鼠标）松开后设置 isMouseDown=fasle.将数组中的所有点绘制出来，清空 pointerArr 数组，然后比较连接的点的数量如果小于 6（自己设置，一般密码 6 位以上）给一个密码长度不够的提示，清空 puts 数组，重新调用 init 方法初始化界面，如果大于等于 6 则密码设置成功。</p></li></ul><pre><code class="javascript">//兼容移动触摸的事件写法var hastouch = &quot;ontouchstart&quot; in window ? true : false,    tapstart = hastouch ? &quot;touchstart&quot; : &quot;mousedown&quot;,    tapmove = hastouch ? &quot;touchmove&quot; : &quot;mousemove&quot;,    tapend = hastouch ? &quot;touchend&quot; : &quot;mouseup&quot;;//绑定按下事件lockCnavs.addEventListener(tapstart, function(e) {    isMouseDown = true;    var x1 = hastouch        ? e.targetTouches[0].pageX        : e.clientX - canvas.offsetLeft;    var y1 = hastouch ? e.targetTouches[0].pageY : e.clientY - canvas.offsetTop;    drawLinePointer(x1, y1, true);});//移动时候，将经过的坐标点全部保存起来lockCnavs.addEventListener(tapmove, function(e) {    if (isMouseDown) {        var x1 = hastouch            ? e.targetTouches[0].pageX            : e.clientX - canvas.offsetLeft;        var y1 = hastouch            ? e.targetTouches[0].pageY            : e.clientY - canvas.offsetTop;        drawLinePointer(x1, y1, true);    }});//取消lockCnavs.addEventListener(tapend, function(e) {    drawLinePointer(0, 0, false);    isMouseDown = false;    pointerArr = [];    if (puts.length &gt;= 6) {        alert(&quot;你的图案密码是: [   &quot; + puts.join(&quot;    &gt;   &quot;) + &quot;   ]&quot;);        if (unlockFlag) {            //解锁            unlock();        } else {            //设置解锁密码            settingUnlockPwd();        }    } else {        if (puts.length &gt;= 1) {            alert(&quot;你的图案密码太简单了~~~&quot;);            init();        }    }    puts = [];});</code></pre><h3 id="实现解锁逻辑"><a href="#实现解锁逻辑" class="headerlink" title="实现解锁逻辑"></a>实现解锁逻辑</h3><p>通过上面几步的操作，九宫格解锁每一次绘图之后的数据和显示效果都有了，现在只需要在关键地方添加相应逻辑代码就可以了，这里主要介绍它的实现逻辑就不对代码做封装了。</p><h4 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h4><pre><code class="javascript">//设置解锁密码和解锁测试function settingUnlockPwd() {    if (pwd.length &lt;= 0) {        pwd = puts;        init();        $(&quot;header&quot;).text(&quot;再次绘制解锁图案&quot;);    } else if (confirmPwd.length &lt;= 0) {        confirmPwd = puts;    }    console.log(pwd + &quot;  &quot; + confirmPwd);    //笔记两次密码是否正确    if (pwd.length &gt; 0 &amp;&amp; confirmPwd.length &gt; 0) {        if (compareArr(pwd, confirmPwd)) {            $(&quot;header&quot;).text(&quot;解锁图案绘制成功&quot;);            init();        } else {            $(&quot;header&quot;).text(&quot;两次绘制的解锁图案不一致&quot;);            init();            confirmPwd = [];        }    }}//解锁function unlock() {    console.log(&quot;解锁密码：&quot; + puts + &quot;  &quot; + confirmPwd);    if (compareArr(puts, confirmPwd)) {        $(&quot;header&quot;).text(&quot;解锁成功!页面跳转中......&quot;);    } else {        $(&quot;header&quot;).text(&quot;解锁图案不正确！！！&quot;);        init();    }}$(&quot;footer&quot;).click(function() {    if ($(this).text() === &quot;解锁&quot;) {        unlockFlag = true;        init();        $(&quot;header&quot;).text(&quot;绘制解锁图案&quot;);    }});//比较两个数组（Number）是否相等function compareArr(arr1, arr2) {    return arr1.toString() === arr2.toString();}</code></pre><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="/demo/picture-unlock-demo.html">本文完整 demo 在线演示地址</a></p><h3 id="canvas-相关文章"><a href="#canvas-相关文章" class="headerlink" title="canvas 相关文章"></a>canvas 相关文章</h3><ul><li><p><a href="/2016/01/05/canvas-ball-sports/">canvas 绘制运动的小球</a></p></li><li><p><a href="/2015/12/31/canvas-mask/">canvas 遮罩效果</a></p></li></ul>]]></content>
     
     <summary type="html">
     
-      h5使用canvas画布实现手势解锁笔记
+      h5使用canvas画布实现手势解锁
     
     </summary>
     
@@ -56,9 +56,9 @@
       <category term="编程手册" scheme="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
     
     
-      <category term="开发工具" scheme="https://www.wuhuan.me/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="git" scheme="https://www.wuhuan.me/tags/git/"/>
+    
+      <category term="开发工具" scheme="https://www.wuhuan.me/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -156,11 +156,11 @@
       <category term="产品思考" scheme="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
     
     
+      <category term="用户需求" scheme="https://www.wuhuan.me/tags/%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82/"/>
+    
       <category term="用户体验" scheme="https://www.wuhuan.me/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
     
       <category term="心得总结" scheme="https://www.wuhuan.me/tags/%E5%BF%83%E5%BE%97%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="用户需求" scheme="https://www.wuhuan.me/tags/%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82/"/>
     
   </entry>
   

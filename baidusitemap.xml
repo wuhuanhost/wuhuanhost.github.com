@@ -5,10 +5,10 @@
     
   <url>
     <loc>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</loc>
-    <lastmod>2019-01-04T06:49:01.036Z</lastmod>
+    <lastmod>2019-01-04T06:51:40.036Z</lastmod>
     <data>
         <display>
-        <title>h5使用canvas画布实现手势解锁笔记</title>
+        <title>h5使用canvas画布实现手势解锁</title>
         <pubTime>2018-11-02T02:20:25.000Z</pubTime>
         
         <tag>canvas</tag>
@@ -54,9 +54,9 @@
         <title>git使用笔记</title>
         <pubTime>2018-03-15T12:00:00.000Z</pubTime>
         
-        <tag>开发工具</tag>
-         
         <tag>git</tag>
+         
+        <tag>开发工具</tag>
          
          
            
@@ -247,11 +247,11 @@
         <title>你以为你真理解用户的需求吗？</title>
         <pubTime>2017-04-13T02:21:36.000Z</pubTime>
         
+        <tag>用户需求</tag>
+         
         <tag>用户体验</tag>
          
         <tag>心得总结</tag>
-         
-        <tag>用户需求</tag>
          
          
            
@@ -369,11 +369,11 @@
         
         <tag>用户体验</tag>
          
+        <tag>心得总结</tag>
+         
         <tag>网站安全</tag>
          
         <tag>系统设计</tag>
-         
-        <tag>心得总结</tag>
          
          
            
@@ -504,21 +504,6 @@
     
     
   <url>
-    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
-    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
-    <data>
-        <display>
-        <title>ruby解析json</title>
-        <pubTime>2015-09-25T08:39:36.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.wuhuan.me/2014/06/10/myfirstblog/</loc>
     <lastmod>2018-06-11T08:52:04.073Z</lastmod>
     <data>
@@ -535,8 +520,6 @@
     </data>
     </url>
 
-    
-    
     
     
   <url>
@@ -556,6 +539,23 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
+    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
+    <data>
+        <display>
+        <title>ruby解析json</title>
+        <pubTime>2015-09-25T08:39:36.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
     
     
 </urlset>
