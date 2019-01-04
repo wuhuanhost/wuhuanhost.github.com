@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.wuhuan.me/"/>
-  <updated>2018-11-13T06:36:42.778Z</updated>
+  <updated>2019-01-04T06:45:10.445Z</updated>
   <id>https://www.wuhuan.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>h5使用canvas画布实现手势解锁笔记</title>
+    <link href="https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/"/>
+    <id>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</id>
+    <published>2018-11-02T02:20:25.000Z</published>
+    <updated>2019-01-04T06:45:10.445Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>公司有一个 app 使用的 apicloud 来实现跨平台开发，现在需要为这个 App 添加手势（九宫格）解锁的功能，apicloud 已经有一些第三方的原生实现的手势解锁插件，因为是原生的性能也比较好，调用也比较方便，但是都不能对它们的样式做修改，所以就打算自己来实现这个功能。这篇文章将实现过程整理分享出来，希望有需要的可以了解。分享出来的代码只实现了最基本的<code>设置密码功能</code>、<code>解锁功能</code>、<code>比较密码</code>的功能等，一些高级功能例如:不能限制一个点最多经过多少次、限制用户设置密码的长度。</p><p><img src="/2018-11-02-00.gif" alt="demo版解锁效果演示"></p><blockquote><p>原生实现还是其它方式实现？</p></blockquote><p>1、使用 android 和 ios 对应的平台通过原生代码来写手势解锁插件。体验好，但是开发周期长，需要处理各平台的兼容性问题，并且需要学习apicloud平台插件编写方法。（放弃）</p><p>2、使用 html5 的 canvas 画布来实现。开发周期短，不需要过多的处理兼容性问题，体验好。（选择）</p><h2 id="原理分析"><a href="#原理分析" class="headerlink" title="原理分析"></a>原理分析</h2><p><img src="/2018-11-02-01.png" alt="手势解锁"></p><p>通过手指将屏幕上的九个点依次连接起来形成一个图案，所以叫图案解锁。如上图每一个解锁圆圈后面其实都是一个数字，每次比较的并不是是用户画出来的图案，而是每次手指经过图案时串联起来的圆圈下的数字组成的密码字符串，本质上我们比较的还是字符串的密码，只不过站在用户的角度看是绘制出来的图案。图案的记忆远比数字字符串记的牢固。</p><h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><h3 id="绘制密码盘"><a href="#绘制密码盘" class="headerlink" title="绘制密码盘"></a>绘制密码盘</h3><p>密码盘的绘制比较简单，唯一需要注意需要通过动态计算使九个点围成的正方式始终在屏幕的中间位置，在手机上还需要减去状态栏的高度。</p><pre><code class="javascript">var width = $(document).width();var height = $(document).height() - 40; //减去手机状态栏的高度//九宫格其实就是九个点，9个点的坐标对象var lockCicle = {    x: 0, //x坐标    y: 0, //y坐标    color: &quot;#999999&quot;,    state: &quot;1&quot; //状态当前点是否已经被链接过};var offset = (width - height) / 2; //计算偏移量var arr = []; //九个点的坐标数组//计算九个点坐标的方法for (var i = 1; i &lt;= 3; i++) {    //每一行    for (var j = 1; j &lt;= 3; j++) {        //每一行的每一个        var lockCicle = {};        //横屏        if (offset &gt; 0) {            lockCicle.x = (height / 4) * j + Math.abs(offset);            lockCicle.y = (height / 4) * i;            lockCicle.state = 0;            //竖屏        } else {            lockCicle.x = (width / 4) * j;            lockCicle.y = (width / 4) * i + Math.abs(offset);            lockCicle.state = 0;        }        arr.push(lockCicle);    }}//初始化界面的方法function init() {    ctx.clearRect(0, 0, width, height); //清空画布    pointerArr = []; //清楚绘制路径    for (var i = 0; i &lt; arr.length; i++) {        arr[i].state = 0; //清除绘制状态        drawPointer(i);    }}//绘制九宫格解锁界面function drawPointer(i) {    ctx.save();    var radius = 0;    if (hastouch) {        radius = width / 12;    } else {        radius = 24;    }    var _fillStyle = &quot;#dd514c&quot;;    var _strokeStyle = &quot;#dd514c&quot;;    //不同状态显示不同颜色    if (arr[i].state == 1) {        _strokeStyle = &quot;#1bd6c5&quot;;    }    //绘制原点    ctx.beginPath();    ctx.fillStyle = _fillStyle;    ctx.arc(arr[i].x, arr[i].y, 6, 0, Math.PI * 2, false);    ctx.fill();    ctx.closePath();    //绘制圆圈    ctx.beginPath();    ctx.strokeStyle = _strokeStyle;    ctx.lineWidth = 0.3;    ctx.lineCap = &quot;round&quot;;    ctx.lineJoin = &quot;round&quot;;    ctx.arc(arr[i].x, arr[i].y, radius, 0, Math.PI * 2, false);    ctx.stroke();    ctx.closePath();    ctx.restore();}//初始化界面init();</code></pre><h3 id="绘制连线"><a href="#绘制连线" class="headerlink" title="绘制连线"></a>绘制连线</h3><h4 id="绘制连线的方法"><a href="#绘制连线的方法" class="headerlink" title="绘制连线的方法"></a>绘制连线的方法</h4><pre><code class="javascript">var pointerArr = []; //连接线点的坐标数组var startX, startY; //线条起始点var puts = []; //经过的九个点的数组var currentPointer; //当前点是否已经连接var pwd = []; //密码var confirmPwd = []; //确认密码var unlockFlag = false; //是否解锁的标志/** ** 绘制链接线的方法，将坐标数组中的点绘制在canvas画布中 **/function drawLinePointer(x, y, flag) {    ctx.clearRect(0, 0, width, height);    ctx.save();    ctx.beginPath();    ctx.strokeStyle = &quot;#1bd6c5&quot;;    ctx.lineWidth = 5;    ctx.lineCap = &quot;round&quot;;    ctx.lineJoin = &quot;round&quot;;    for (var i = 0; i &lt; pointerArr.length; i++) {        if (i == 0) {            ctx.moveTo(pointerArr[i].x, pointerArr[i].y);        } else {            ctx.lineTo(pointerArr[i].x, pointerArr[i].y);        }    }    ctx.stroke();    ctx.closePath();    ctx.restore();    for (var i = 0; i &lt; arr.length; i++) {        drawPointer(i); //绘制圆圈和原点        if (ctx.isPointInPath(x, y) &amp;&amp; currentPointer != i) {            //判断鼠标点击是否在圆中            pointerArr.push({                x: arr[i].x,                y: arr[i].y            });            currentPointer = i;            puts.push(i + 1);            startX = arr[i].x;            startY = arr[i].y;            arr[i].state = 1;        }    }    if (flag) {        ctx.save();        ctx.beginPath();        ctx.globalCompositeOperation = &quot;destination-over&quot;;        ctx.strokeStyle = &quot;#e2e0e0&quot;;        ctx.lineWidth = 5;        ctx.lineCap = &quot;round&quot;;        ctx.lineJoin = &quot;round&quot;;        ctx.moveTo(startX, startY);        ctx.lineTo(x, y);        ctx.stroke();        ctx.beginPath();        ctx.restore();    }}</code></pre><h4 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h4><p>连线的过程就是将 3 个 touch（移动端） 事件组合起来获取当前位置的坐标放入数组中，然后将这些坐标渲染到界面上的过程。</p><ul><li><p>touchstart (mousedown) 当手指（鼠标）按下时设置 isMouseDown=true，同时将该点的坐标保存到线条数组中，并将数组中的点绘制出来。</p></li><li><p>touchmove (mousemove) 当 isMouseDown=true 时 将手指（鼠标）移动过程中所有的坐标点都保存到萧条数组中，并将数组中的点绘制出来。</p></li><li><p>mouseup (mouseup) 当手指（鼠标）松开后设置 isMouseDown=fasle.将数组中的所有点绘制出来，清空 pointerArr 数组，然后比较连接的点的数量如果小于 6（自己设置，一般密码 6 位以上）给一个密码长度不够的提示，清空 puts 数组，重新调用 init 方法初始化界面，如果大于等于 6 则密码设置成功。</p></li></ul><pre><code class="javascript">//兼容移动触摸的事件写法var hastouch = &quot;ontouchstart&quot; in window ? true : false,    tapstart = hastouch ? &quot;touchstart&quot; : &quot;mousedown&quot;,    tapmove = hastouch ? &quot;touchmove&quot; : &quot;mousemove&quot;,    tapend = hastouch ? &quot;touchend&quot; : &quot;mouseup&quot;;//绑定按下事件lockCnavs.addEventListener(tapstart, function(e) {    isMouseDown = true;    var x1 = hastouch        ? e.targetTouches[0].pageX        : e.clientX - canvas.offsetLeft;    var y1 = hastouch ? e.targetTouches[0].pageY : e.clientY - canvas.offsetTop;    drawLinePointer(x1, y1, true);});//移动时候，将经过的坐标点全部保存起来lockCnavs.addEventListener(tapmove, function(e) {    if (isMouseDown) {        var x1 = hastouch            ? e.targetTouches[0].pageX            : e.clientX - canvas.offsetLeft;        var y1 = hastouch            ? e.targetTouches[0].pageY            : e.clientY - canvas.offsetTop;        drawLinePointer(x1, y1, true);    }});//取消lockCnavs.addEventListener(tapend, function(e) {    drawLinePointer(0, 0, false);    isMouseDown = false;    pointerArr = [];    if (puts.length &gt;= 6) {        alert(&quot;你的图案密码是: [   &quot; + puts.join(&quot;    &gt;   &quot;) + &quot;   ]&quot;);        if (unlockFlag) {            //解锁            unlock();        } else {            //设置解锁密码            settingUnlockPwd();        }    } else {        if (puts.length &gt;= 1) {            alert(&quot;你的图案密码太简单了~~~&quot;);            init();        }    }    puts = [];});</code></pre><h3 id="实现解锁逻辑"><a href="#实现解锁逻辑" class="headerlink" title="实现解锁逻辑"></a>实现解锁逻辑</h3><p>通过上面几步的操作，九宫格解锁每一次绘图之后的数据和显示效果都有了，现在只需要在关键地方添加相应逻辑代码就可以了，这里主要介绍它的实现逻辑就不对代码做封装了。</p><h4 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h4><pre><code class="javascript">//设置解锁密码和解锁测试function settingUnlockPwd() {    if (pwd.length &lt;= 0) {        pwd = puts;        init();        $(&quot;header&quot;).text(&quot;再次绘制解锁图案&quot;);    } else if (confirmPwd.length &lt;= 0) {        confirmPwd = puts;    }    console.log(pwd + &quot;  &quot; + confirmPwd);    //笔记两次密码是否正确    if (pwd.length &gt; 0 &amp;&amp; confirmPwd.length &gt; 0) {        if (compareArr(pwd, confirmPwd)) {            $(&quot;header&quot;).text(&quot;解锁图案绘制成功&quot;);            init();        } else {            $(&quot;header&quot;).text(&quot;两次绘制的解锁图案不一致&quot;);            init();            confirmPwd = [];        }    }}//解锁function unlock() {    console.log(&quot;解锁密码：&quot; + puts + &quot;  &quot; + confirmPwd);    if (compareArr(puts, confirmPwd)) {        $(&quot;header&quot;).text(&quot;解锁成功!页面跳转中......&quot;);    } else {        $(&quot;header&quot;).text(&quot;解锁图案不正确！！！&quot;);        init();    }}$(&quot;footer&quot;).click(function() {    if ($(this).text() === &quot;解锁&quot;) {        unlockFlag = true;        init();        $(&quot;header&quot;).text(&quot;绘制解锁图案&quot;);    }});//比较两个数组（Number）是否相等function compareArr(arr1, arr2) {    return arr1.toString() === arr2.toString();}</code></pre><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p><a href="/demo/picture-unlock-demo.html">本文完整 demo 在线演示地址</a></p><h3 id="canvas-相关文章"><a href="#canvas-相关文章" class="headerlink" title="canvas 相关文章"></a>canvas 相关文章</h3><ul><li><p><a href="/2016/01/05/canvas-ball-sports/">canvas 绘制运动的小球</a></p></li><li><p><a href="/2015/12/31/canvas-mask/">canvas 遮罩效果</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      h5使用canvas画布实现手势解锁笔记
+    
+    </summary>
+    
+      <category term="前端开发" scheme="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="canvas" scheme="https://www.wuhuan.me/tags/canvas/"/>
+    
+  </entry>
   
   <entry>
     <title>git使用笔记</title>
@@ -108,11 +130,11 @@
       <category term="后端开发" scheme="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
     
+      <category term="nodemailer" scheme="https://www.wuhuan.me/tags/nodemailer/"/>
+    
       <category term="电子邮件" scheme="https://www.wuhuan.me/tags/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/"/>
     
       <category term="node.js" scheme="https://www.wuhuan.me/tags/node-js/"/>
-    
-      <category term="nodemailer" scheme="https://www.wuhuan.me/tags/nodemailer/"/>
     
   </entry>
   
@@ -463,34 +485,6 @@
     
       <category term="个人随笔" scheme="https://www.wuhuan.me/categories/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>对于系统登录流程的一些理解和总结</title>
-    <link href="https://www.wuhuan.me/2014/07/15/login/"/>
-    <id>https://www.wuhuan.me/2014/07/15/login/</id>
-    <published>2014-07-15T06:25:36.000Z</published>
-    <updated>2018-09-27T04:04:44.756Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="登录的意义"><a href="#登录的意义" class="headerlink" title="登录的意义"></a>登录的意义</h2><p>我们常常会发现在一些网站上登录是非必须的，比如一些浏览性的网站（网易新闻，百度图片），但是用户在使用像QQ空间，微博，人人网等这些网站的时候必须要用户登录后才能使用！暂且不分析为什么有的网站需要登录有的不需要登录，这和每个网站的理念也是有关系的，所以我们只着重分析登录的作用和意义，在我看来登录的作用应该有以下几点：</p><ol><li><p>登录过程其实是一个对用户身份认证的过程，只有登录了系统，系统才会识别出你是谁，谁在使用自己！例如现在大数据时代已经到来，用户登录后才能分析每个用户的用户习惯！</p></li><li><p>登录过程后才能针对不同的用户进行相应的权限控制！例如一些OA系统登录用户不同那么登录成功后所看到的东西是不一样的。</p></li><li><p>登录过程后才能针对不同的用户产生的信息（资源）进行管理！例如像博客，sns,微博这样的网站登录后都会给你生成一个个人主页，你可以查看和修改自己的资源，也可以在别人的主页去查看别人你可以查看的资源</p></li></ol><p><strong>上面列举了这几点其实总结下核心就一条，“登录过程是区分系统与用户，用户与用户之间的唯一凭证”。</strong></p><blockquote><p>百度百科对于<strong>登录</strong>的解释：供多人使用的网站或程序应用系统为每位用户配置了一套独特的用户名和密码，用户可以使用各自的这套用户名和密码来使用系统，以便<strong>系统能识别该用户的身份</strong>，从而保持该用户的使用习惯或使用数据。用户使用这套用户名和密码来进入系统的过程，以及系统验证进入是成功或失败的过程，称为“登录”。</p></blockquote><a id="more"></a><h2 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h2><p>一个简单的登录流程如下图所示，用户输入用户名和密码开始登录，用户名和密码传递到后台进行判断，密码正确进入系统，密码错误返回登录页面，重新输入用户名和密码进行登录。</p><p><img src="/login.jpg" alt="login"></p><h2 id="登录过程的安全性"><a href="#登录过程的安全性" class="headerlink" title="登录过程的安全性"></a>登录过程的安全性</h2><p>对于绝大多数网站和系统的登录过程是必须的而且在一个系统中是非常重要的，尤其像网上银行，支付宝，社交网站，这些网站上都有用户的敏感信息以及账户金额等信息，如果帐号别人盗用，那么后果是不堪设想的!所以登录过程的安全性尤为重要，当然用户因为其它原因泄漏密码和用户名的情况不再本文的讨论范围之内，下面针对登录流程中涉及到的安全性问题进行简单的说明！</p><h3 id="暴力破解"><a href="#暴力破解" class="headerlink" title="暴力破解"></a>暴力破解</h3><p>上图简单的登录流程中其实是有很大的漏洞，因为可以在不知道用户名和密码的情况下进行无限次数的登录尝试，这样就可以用程序去写一个机器人去不断循环遍历密码进行暴力破解，下面我们就在这个基本的登录流程的基础上去一步步优化这个登录流程。</p><p>防止暴力破解现在很多网站用的一种方式就是在登录时候加一个图片验证码，加过验证码的登录流程图如下：</p><p><img src="/login1.jpg" alt="login"></p><p>加入图片验证码后每次登录时不但要输入用户名，密码，还要输入图片验证码上面的内容，然后把这些数据提交到后台，首先判断验证码是否正确，如果正确，程序就直接返回验证码有误,如果验证码正确，然后才判断用户名和密码是否正确，密码正确才进入系统。</p><p>修改后的登录流程已经可以防止暴力破解了，普通的系统和网站使用这样的方式已经可以了，但是对于银行和支付宝等这些安全性更高的网站来说还是不够的，那么银行和支付宝这些网站是怎么做的呢，限制用户密码输错的次数！下面看看如果这样修改后系统的登录流程。流程图如下：</p><p><img src="/login2.jpg" alt="login"></p><p>经过修改后的流程图中可以看出，即使可以伪造或者读取验证码绕过验证码这一层，那么最多也就10次尝试的机会，输错10次后今天就不能在登录了。</p><h3 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h3><p>通过上面登录流程的修改暴力破解已经得到了有效的控制，但是还有一个安全性的问题那就是sql注入，不过现在的网站上已经很少存在这种情况了，sql注入这一块主要注意的就是要把用户的输入中的特殊的字符给过滤掉，sql语句中需要的值通过参数的形式传递进去，不要用字符串的形式去拼一个sql语句，由于这块涉及到具体的编程一两句话也说不清楚就不详细写了，<strong>只要保证用户输入的数据是合法的，那么就不会存在SQL注入</strong>。</p><h3 id="网络传输的安全性"><a href="#网络传输的安全性" class="headerlink" title="网络传输的安全性"></a>网络传输的安全性</h3><p>传统的HTTP协议在网络中传输数据的时候都是明文传输，那么通过网络抓包工具抓住登录时候发送的数据包那么就可以获取里面的明文的用户名和密码，所以登录使用HTTPS(安全的超文本传输协议)，使用HTTPS后即使通过网络抓包工具抓到数据包，那么数据包里面的内容也是加过密的，是没有利用价值的。</p><h2 id="登陆过程中的用户体验"><a href="#登陆过程中的用户体验" class="headerlink" title="登陆过程中的用户体验"></a>登陆过程中的用户体验</h2><p>安全性很重要，上面改进过的登录过程已经很安全了，至少不会存在暴力破解了，但是用户体验在现在的互联网中也是很重要的，所以我们就要在安全性和用户体验中寻找一个平衡点，所以还要对上面的安全验证做一些改进，以至于达到我们理想的需求。</p><p>对用户体验的改进目前就想到了验证码，比如当用户名或者密码输错3次后才显示验证码，这样子对于真正的用户来说，避免了他输入没有意义的验证码。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过安全性和用户体验对登录流程做了一些简单介绍，这些都是在实际的项目中和在使用别人的软件的时候总结出来的，当然具体实现的时候还有很多的具体的细节需要去注意和完善。任何一个小的系统或者模块把它做好，做到极致都是不容易的，你需要去花费很多的时间和精力去设计它。</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ul><li><p>使用单点登录，这样同一时刻一个账户只能在一个地方登录，当你登录系统的时候，过一会发现自己被踢下线，那么说明你的帐号已经在别处登录，如果不是用户自己在其它浏览器中登录，那么用户就应该想到自己的账户是否已经被盗！</p></li><li><p>国外的一些网站，如google,dropbox,evernote等，都有一个二次验证机制，当用户正确输入用户名称和密码的时候，如果用户开启了二次验证，还会要求用户输入一个手机接收到的具有有效期的验证码！evernote的这项服务需要高级用户才能使用。</p></li><li><p>有一些网站的验证码不是纯碎的一些字母，而是一个问题或者一道数学题，比如5+7=？用户只需要填写答案就行，这也有效的提高了破解验证码的难度。</p></li><li><p>网易将军令这种动态密码保护器也是有效降低帐号被盗风险的一种好的方式。</p></li><li><p>在设计<strong>记住密码</strong>这个功能的时候，一定不要把用户的密码保存到本地，即使是加过密的密码！</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      对于系统登录流程的一些理解和总结
-    
-    </summary>
-    
-      <category term="产品思考" scheme="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
-    
-    
-      <category term="用户体验" scheme="https://www.wuhuan.me/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
-    
-      <category term="心得总结" scheme="https://www.wuhuan.me/tags/%E5%BF%83%E5%BE%97%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="网站安全" scheme="https://www.wuhuan.me/tags/%E7%BD%91%E7%AB%99%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="系统设计" scheme="https://www.wuhuan.me/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   

@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</loc>
+    <lastmod>2019-01-04T06:45:10.445Z</lastmod>
+    <data>
+        <display>
+        <title>h5使用canvas画布实现手势解锁笔记</title>
+        <pubTime>2018-11-02T02:20:25.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.wuhuan.me/2016/01/11/mobile-remark/</loc>
     <lastmod>2018-11-23T02:25:44.548Z</lastmod>
     <data>
@@ -203,11 +223,11 @@
         <title>Node发送电子邮件</title>
         <pubTime>2017-06-20T02:21:36.000Z</pubTime>
         
+        <tag>nodemailer</tag>
+         
         <tag>电子邮件</tag>
          
         <tag>node.js</tag>
-         
-        <tag>nodemailer</tag>
          
          
            
