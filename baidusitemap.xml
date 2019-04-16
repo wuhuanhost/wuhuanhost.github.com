@@ -72,9 +72,9 @@
         <title>git使用笔记</title>
         <pubTime>2018-03-15T12:00:00.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>开发工具</tag>
+         
+        <tag>git</tag>
          
          
            
@@ -219,9 +219,9 @@
         <title>Node接收电子邮件</title>
         <pubTime>2017-07-20T02:21:36.000Z</pubTime>
         
-        <tag>电子邮件</tag>
-         
         <tag>node.js</tag>
+         
+        <tag>电子邮件</tag>
          
          
            
@@ -241,11 +241,11 @@
         <title>Node发送电子邮件</title>
         <pubTime>2017-06-20T02:21:36.000Z</pubTime>
         
-        <tag>电子邮件</tag>
-         
         <tag>node.js</tag>
          
         <tag>nodemailer</tag>
+         
+        <tag>电子邮件</tag>
          
          
            
