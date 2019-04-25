@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.wuhuan.me/2016/03/15/tyscript-getStart/</loc>
+    
+    <lastmod>2019-04-25T03:57:46.015Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuhuan.me/2017/01/10/studygo-02-go-basic/</loc>
     
     <lastmod>2019-04-24T09:43:12.837Z</lastmod>
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://www.wuhuan.me/2016/03/15/tyscript-getStart/</loc>
-    
-    <lastmod>2018-09-27T03:55:30.756Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.wuhuan.me/2015/12/25/nodejs-express-mysql-basic/</loc>
     
     <lastmod>2018-09-27T03:54:45.180Z</lastmod>
@@ -219,20 +219,6 @@
   </url>
   
   <url>
-    <loc>https://www.wuhuan.me/about/index.html</loc>
-    
-    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
-    
-    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.wuhuan.me/2015/08/07/about-programming-language/</loc>
     
     <lastmod>2018-06-11T08:52:04.073Z</lastmod>
@@ -247,7 +233,21 @@
   </url>
   
   <url>
+    <loc>https://www.wuhuan.me/about/index.html</loc>
+    
+    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.wuhuan.me/404.html</loc>
+    
+    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
     
     <lastmod>2018-06-11T08:52:04.073Z</lastmod>
     
