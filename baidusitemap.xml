@@ -4,6 +4,267 @@
 
     
   <url>
+    <loc>https://www.wuhuan.me/2014/06/10/myfirstblog/</loc>
+    <lastmod>2019-04-30T02:11:47.883Z</lastmod>
+    <data>
+        <display>
+        <title>测试文章</title>
+        <pubTime>2014-06-10T05:52:36.000Z</pubTime>
+        
+        <tag>测试</tag>
+         
+        <tag>哈哈</tag>
+         
+         
+           
+             
+              <breadCrumb title="个人随笔" url="https://www.wuhuan.me/categories/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/06/15/java-no-main-fun-run/</loc>
+    <lastmod>2019-04-30T02:07:59.292Z</lastmod>
+    <data>
+        <display>
+        <title>java没有main方法也可以运行</title>
+        <pubTime>2014-06-15T12:00:00.000Z</pubTime>
+        
+        <tag>JAVA</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/06/17/singleton/</loc>
+    <lastmod>2019-04-30T02:04:21.471Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式（一）之单例模式</title>
+        <pubTime>2014-06-17T06:21:36.000Z</pubTime>
+        
+        <tag>JAVA</tag>
+         
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
+    <lastmod>2019-04-30T02:04:21.470Z</lastmod>
+    <data>
+        <display>
+        <title>ruby解析json</title>
+        <pubTime>2015-09-25T08:39:36.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/07/07/observer/</loc>
+    <lastmod>2019-04-30T02:04:21.468Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式（二）之观察者模式</title>
+        <pubTime>2014-07-07T08:52:36.000Z</pubTime>
+        
+        <tag>JAVA</tag>
+         
+        <tag>设计模式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2016/12/27/nodejs-paging-util/</loc>
+    <lastmod>2019-04-30T02:04:21.465Z</lastmod>
+    <data>
+        <display>
+        <title>对Node.js分页查询（mysql）的封装</title>
+        <pubTime>2016-12-27T07:32:23.000Z</pubTime>
+        
+        <tag>node.js</tag>
+         
+        <tag>mysql</tag>
+         
+        <tag>分页查询</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/12/25/nodejs-express-mysql-basic/</loc>
+    <lastmod>2019-04-30T02:04:21.463Z</lastmod>
+    <data>
+        <display>
+        <title>Express连接mysql数据库实现简单的数据查询</title>
+        <pubTime>2015-12-25T03:32:23.000Z</pubTime>
+        
+        <tag>node.js</tag>
+         
+        <tag>mysql</tag>
+         
+        <tag>express</tag>
+         
+         
+           
+             
+              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2014/07/15/login/</loc>
+    <lastmod>2019-04-30T02:04:21.462Z</lastmod>
+    <data>
+        <display>
+        <title>对于系统登录流程的一些理解和总结</title>
+        <pubTime>2014-07-15T06:25:36.000Z</pubTime>
+        
+        <tag>用户体验</tag>
+         
+        <tag>心得总结</tag>
+         
+        <tag>网站安全</tag>
+         
+        <tag>系统设计</tag>
+         
+         
+           
+             
+              <breadCrumb title="产品思考" url="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</loc>
+    <lastmod>2019-04-30T02:04:21.458Z</lastmod>
+    <data>
+        <display>
+        <title>h5使用canvas画布实现手势解锁</title>
+        <pubTime>2018-11-02T02:20:25.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2015/12/31/canvas-mask/</loc>
+    <lastmod>2019-04-30T02:04:21.456Z</lastmod>
+    <data>
+        <display>
+        <title>canvas中遮罩效果的实现方法</title>
+        <pubTime>2015-12-31T02:20:25.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+        <tag>Demo</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2016/01/05/canvas-ball-sports/</loc>
+    <lastmod>2019-04-30T02:04:21.453Z</lastmod>
+    <data>
+        <display>
+        <title>canvas绘制运动的小球</title>
+        <pubTime>2016-01-05T05:13:30.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+        <tag>Demo</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.wuhuan.me/2018/03/15/git-use-note/</loc>
+    <lastmod>2019-04-30T01:48:32.157Z</lastmod>
+    <data>
+        <display>
+        <title>git使用笔记</title>
+        <pubTime>2018-03-15T12:00:00.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+        <tag>开发工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.wuhuan.me/2017/01/10/studygo-02-go-basic/</loc>
     <lastmod>2019-04-25T07:33:36.303Z</lastmod>
     <data>
@@ -66,28 +327,6 @@
 
     
   <url>
-    <loc>https://www.wuhuan.me/2018/03/15/git-use-note/</loc>
-    <lastmod>2019-04-24T09:32:15.740Z</lastmod>
-    <data>
-        <display>
-        <title>git使用笔记</title>
-        <pubTime>2018-03-15T12:00:00.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>开发工具</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.wuhuan.me/2017/07/20/node-receive-mail/</loc>
     <lastmod>2019-04-24T09:22:45.174Z</lastmod>
     <data>
@@ -103,44 +342,6 @@
            
              
               <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</loc>
-    <lastmod>2019-03-05T03:42:31.657Z</lastmod>
-    <data>
-        <display>
-        <title>h5使用canvas画布实现手势解锁</title>
-        <pubTime>2018-11-02T02:20:25.000Z</pubTime>
-        
-        <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2014/06/10/myfirstblog/</loc>
-    <lastmod>2019-02-19T07:08:53.843Z</lastmod>
-    <data>
-        <display>
-        <title>测试文章</title>
-        <pubTime>2014-06-10T05:52:36.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="个人随笔" url="https://www.wuhuan.me/categories/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
@@ -209,26 +410,6 @@
            
              
               <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2014/06/15/java-no-main-fun-run/</loc>
-    <lastmod>2018-11-01T02:49:44.297Z</lastmod>
-    <data>
-        <display>
-        <title>java没有main方法也可以运行</title>
-        <pubTime>2014-06-15T12:00:00.000Z</pubTime>
-        
-        <tag>JAVA</tag>
-         
-         
-           
-             
-              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
           
         </display>
     </data>
@@ -353,187 +534,12 @@
     
     
     
-  <url>
-    <loc>https://www.wuhuan.me/2016/12/27/nodejs-paging-util/</loc>
-    <lastmod>2018-09-27T04:10:44.004Z</lastmod>
-    <data>
-        <display>
-        <title>对Node.js分页查询（mysql）的封装</title>
-        <pubTime>2016-12-27T07:32:23.000Z</pubTime>
-        
-        <tag>node.js</tag>
-         
-        <tag>mysql</tag>
-         
-        <tag>分页查询</tag>
-         
-         
-           
-             
-              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2014/06/17/singleton/</loc>
-    <lastmod>2018-09-27T04:10:14.887Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式（一）之单例模式</title>
-        <pubTime>2014-06-17T06:21:36.000Z</pubTime>
-        
-        <tag>JAVA</tag>
-         
-        <tag>设计模式</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2014/07/15/login/</loc>
-    <lastmod>2018-09-27T04:04:44.756Z</lastmod>
-    <data>
-        <display>
-        <title>对于系统登录流程的一些理解和总结</title>
-        <pubTime>2014-07-15T06:25:36.000Z</pubTime>
-        
-        <tag>用户体验</tag>
-         
-        <tag>心得总结</tag>
-         
-        <tag>网站安全</tag>
-         
-        <tag>系统设计</tag>
-         
-         
-           
-             
-              <breadCrumb title="产品思考" url="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2014/07/07/observer/</loc>
-    <lastmod>2018-09-27T04:02:24.995Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式（二）之观察者模式</title>
-        <pubTime>2014-07-07T08:52:36.000Z</pubTime>
-        
-        <tag>JAVA</tag>
-         
-        <tag>设计模式</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2015/12/25/nodejs-express-mysql-basic/</loc>
-    <lastmod>2018-09-27T03:54:45.180Z</lastmod>
-    <data>
-        <display>
-        <title>Express连接mysql数据库实现简单的数据查询</title>
-        <pubTime>2015-12-25T03:32:23.000Z</pubTime>
-        
-        <tag>node.js</tag>
-         
-        <tag>mysql</tag>
-         
-        <tag>express</tag>
-         
-         
-           
-             
-              <breadCrumb title="后端开发" url="https://www.wuhuan.me/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2015/12/31/canvas-mask/</loc>
-    <lastmod>2018-09-27T01:15:23.978Z</lastmod>
-    <data>
-        <display>
-        <title>canvas中遮罩效果的实现方法</title>
-        <pubTime>2015-12-31T02:20:25.000Z</pubTime>
-        
-        <tag>canvas</tag>
-         
-        <tag>Demo</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2016/01/05/canvas-ball-sports/</loc>
-    <lastmod>2018-09-27T01:15:23.975Z</lastmod>
-    <data>
-        <display>
-        <title>canvas绘制运动的小球</title>
-        <pubTime>2016-01-05T05:13:30.000Z</pubTime>
-        
-        <tag>canvas</tag>
-         
-        <tag>Demo</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
     
     
     
     
     
-  <url>
-    <loc>https://www.wuhuan.me/2015/09/25/ruby-json/</loc>
-    <lastmod>2018-06-11T08:52:04.073Z</lastmod>
-    <data>
-        <display>
-        <title>ruby解析json</title>
-        <pubTime>2015-09-25T08:39:36.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
     
     
@@ -555,7 +561,5 @@
     </data>
     </url>
 
-    
-    
     
 </urlset>
