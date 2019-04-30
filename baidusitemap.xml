@@ -334,9 +334,9 @@
         <title>Node接收电子邮件</title>
         <pubTime>2017-07-20T02:21:36.000Z</pubTime>
         
-        <tag>node.js</tag>
-         
         <tag>电子邮件</tag>
+         
+        <tag>node.js</tag>
          
          
            
@@ -444,11 +444,11 @@
         <title>Node发送电子邮件</title>
         <pubTime>2017-06-20T02:21:36.000Z</pubTime>
         
-        <tag>node.js</tag>
+        <tag>nodemailer</tag>
          
         <tag>电子邮件</tag>
          
-        <tag>nodemailer</tag>
+        <tag>node.js</tag>
          
          
            
