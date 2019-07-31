@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</loc>
+    <lastmod>2019-07-09T07:32:23.747Z</lastmod>
+    <data>
+        <display>
+        <title>h5使用canvas画布实现手势解锁</title>
+        <pubTime>2018-11-02T02:20:25.000Z</pubTime>
+        
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.wuhuan.me/2014/06/10/myfirstblog/</loc>
-    <lastmod>2019-04-30T04:09:08.727Z</lastmod>
+    <lastmod>2019-07-05T08:19:16.948Z</lastmod>
     <data>
         <display>
         <title>测试文章</title>
@@ -24,6 +44,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://www.wuhuan.me/2018/03/15/git-use-note/</loc>
@@ -194,26 +215,6 @@
            
              
               <breadCrumb title="产品思考" url="https://www.wuhuan.me/categories/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</loc>
-    <lastmod>2019-04-30T02:04:21.458Z</lastmod>
-    <data>
-        <display>
-        <title>h5使用canvas画布实现手势解锁</title>
-        <pubTime>2018-11-02T02:20:25.000Z</pubTime>
-        
-        <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端开发" url="https://www.wuhuan.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
           
         </display>
     </data>
@@ -509,7 +510,6 @@
 
     
     
-    
   <url>
     <loc>https://www.wuhuan.me/2017/04/01/create-image-by-pillow/</loc>
     <lastmod>2018-10-29T07:31:28.468Z</lastmod>
@@ -541,6 +541,10 @@
     
     
     
+    
+    
+    
+    
   <url>
     <loc>https://www.wuhuan.me/2015/08/07/about-programming-language/</loc>
     <lastmod>2018-06-11T08:52:04.073Z</lastmod>
@@ -558,8 +562,4 @@
     </data>
     </url>
 
-    
-    
-    
-    
 </urlset>
