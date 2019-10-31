@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="description" content="设计模式之观察者模式"><meta name="keywords" content="JAVA,设计模式"><meta name="theme-color" content="#600090"><meta name="msapplication-navbutton-color" content="#600090"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#600090"><meta name="screen-orientation" content="portrait"><meta name="full-screen" content="yes"><meta name="browsermode" content="application"><meta name="x5-orientation" content="portrait"><meta name="x5-fullscreen" content="true"><meta name="x5-page-mode" content="app"><link rel="shortcut icon" href="/favicon.ico"><link rel="alternate" type="application/atom+xml" title="梦想.家" href="/atom.xml"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css"><title>设计模式（二）之观察者模式｜梦想.家</title><link rel="canonical" href="https://www.wuhuan.me/2014/07/07/observer/"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/blog-style.css"><link rel="stylesheet" href="/css/github.css"><script src="/js/jquery.min.js"></script></head><style>header.intro-header{background-image:url(https://www.wuhuan.me/images/header.jpg)}.toc-wrap .nav>li>a{padding:4px!important;color:#333!important}.toc-wrap .nav>.active:focus>a,.toc-wrap .nav>.active:hover>a,.toc-wrap .nav>.active>a{padding-left:9px!important;font-weight:700;color:#e15059;background-color:transparent;border-left:2px solid #e15059}.container .toc-wrap .toc-level-1>a{font-size:1.5rem!important}.container .toc-wrap .toc-level-2>a{font-size:1.5rem!important}.container .toc-wrap .toc-level-3>a{font-size:1.5rem!important;padding-left:100px}.container .toc-wrap .toc-level-4>a{font-size:1.4rem!important}.container .toc-wrap .toc-level-5>a{font-size:1.4rem!important}.container .toc-wrap .toc-level-6>a{font-size:1.4rem!important}.toc-wrap .toc-link{width:278px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-overflow:ellipsis;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;-moz-binding:url(ellipsis.xml#ellipsis)}body{scroll-behavior:smooth!important;overflow-y:scroll;scroll-behavior:smooth}</style><body ontouchstart="" class="animated fadeIn" data-spy="scroll" data-target=".toc-wrap"><nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="nav-top" data-ispost="true" data-istags="false
-" data-ishome="false"><div class="container-fluid"><div class="navbar-header page-scroll"><button type="button" class="navbar-toggle"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand animated pulse" href="/"><span class="brand-logo">梦想.家 </span>'s Blog</a></div><div id="huxblog_navbar"><div class="navbar-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a></li><li><a href="/archives/"><i class="fa fa-archive" aria-hidden="true"></i> 归档</a></li><li><a href="/photos/"><i class="fa fa-camera-retro" aria-hidden="true"></i> 相册</a></li><li><a href="#" class="popup-trigger"><i class="fa fa-search" aria-hidden="true"></i> 搜索</a></li></ul></div></div></div></nav><script>function handleMagic(e){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}var $toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic)</script><img class="wechat-title-img" src="https://www.wuhuan.me/images/default.jpg"><style>header.intro-header{background-image:url(https://www.wuhuan.me/images/default.jpg)}article li a{word-break:break-all}h1,h2,h3,h4,h5,h6{font-weight:400;margin:20px 0;line-height:1.3}#post-relative-time{color:#f93131;margin:0 5px;font-weight:700}</style><header class="intro-header"><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center"><div class="post-heading"><h1>设计模式（二）之观察者模式</h1><span class="meta"><span>作者 梦想.家</span> <span>日期 2014-07-07 </span><span class="post-count">字数 2k</span></span><div class="tags text-center"><a class="tag" href="/tags/#JAVA" title="JAVA">JAVA</a> <a class="tag" href="/tags/#设计模式" title="设计模式">设计模式</a></div></div></div></div></div><div class="post-title-haojen"><span>设计模式（二）之观察者模式</span></div></header><article><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container"><h2>生活中的观察者模式</h2><p>例如一个订阅者A在某出版社订阅了一份一年期的xxxx报纸，那么出版社每次出版新版本的报纸的时候就会给订阅者A送过去，另外一个订阅者B也在该出版社订阅一份半年期的xxxx报纸，同样的出版社出版新报纸后也会给订阅者B送过去，半年时间过去了由于订阅者B没有续订，那么出版社不会在给B送报纸。</p><p>在上面这个过程中出版社和订阅者A，B其实就是一种观察者模式，订阅者A，B（观察者）先在出版社（主题）登记订阅报纸成为订阅者（观察者对象），然后出版社（主题）的状态（报纸）一旦更新就会给订阅者A，B（观察者）送过去，<strong>观察者必须要注册成为主题的观察者对象之后，主题对象的状态发生变化才能通知到所有观察者</strong>，（就好比你不去出版社告诉你需要订阅报纸，出版社有新报纸出版的时候是不会给你送去的，因为根本不知道给谁送）。半年后订阅者B（观察者）订阅时间到期不再续订，那么出版社（主题）就取消用户B（观察者）的订阅，将订阅者从被订阅者中移除！</p><h2>观察者模式的定义</h2><p>观察者模式（有时又被称为发布-订阅Subscribe&gt;模式、模型-视图View&gt;模式、源-收听者Listener&gt;模式或从属者模式）是软件设计模式中的一种。观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，让他们能够自动更新自己。</p><p>&lt;!--more--&gt;</p><h2>观察者模式的类图</h2><p><img src="https://www.wuhuan.me/images/loading.gif" alt="单例模式类图" class="'lazy'" data-original="https://www.wuhuan.me/images//observer.jpg"></p><p>Ps:类图使用在线做图工具 <a href="http://www.processon.com/" rel="external nofollow noopener noreferrer" target="_blank">processon</a> 绘制。</p><h2>观察者模式的组成</h2><ol><li><p><strong>抽象主题(Subject)角色</strong>：抽象主题角色把所有对观察者对象的引用保存在一个聚集放在一个集合对象ArrayList对象里，每个主题都可以有任何数量的观察者。抽象主题提供一个接口（也可以使一个抽象类），可以对观察者进行增加，删除，通知等操作。</p></li><li><p><strong>具体主题(ConcreteSubject)角色</strong>：将主题的状态存入具体观察者对象；在具体主题的内部状态改变时，给所有注册过的观察者发出通知。</p></li><li><p><strong>抽象观察者(Observer)角色</strong>：为所有的观察者提供一个接口，获得主题的通知时候自己更新自己。</p></li><li><p><strong>具体观察者(ConcreteObserver)角色</strong>：存储和主题状态相同的状态，具体观察者实现抽象观察者接口中的更新接口，使观察者自身的状态和主题的状态相协调。</p></li></ol><h2>观察者模式java实现方式</h2><p>为了便于理解使用上面的出版社和订阅者的例子来实现java的观察者模式代码。一共使用了五个类，1、抽象出版社类，2、具体出版社类，3、抽象订阅者，4、具体订阅者A，5、具体订阅者B。</p><p><strong>抽象出版社类</strong></p><pre><code>package Observer;
+" data-ishome="false"><div class="container-fluid"><div class="navbar-header page-scroll"><button type="button" class="navbar-toggle"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand animated pulse" href="/"><span class="brand-logo">梦想.家 </span>'s Blog</a></div><div id="huxblog_navbar"><div class="navbar-collapse"><ul class="nav navbar-nav navbar-right"><li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> 主页</a></li><li><a href="/archives/"><i class="fa fa-archive" aria-hidden="true"></i> 归档</a></li><li><a href="/photos/"><i class="fa fa-camera-retro" aria-hidden="true"></i> 相册</a></li><li><a href="#" class="popup-trigger"><i class="fa fa-search" aria-hidden="true"></i> 搜索</a></li></ul></div></div></div></nav><script>function handleMagic(e){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}var $toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic)</script><img class="wechat-title-img" src="https://www.wuhuan.me/images/default.jpg"><style>header.intro-header{background-image:url(https://www.wuhuan.me/images/default.jpg)}article li a{word-break:break-all}h1,h2,h3,h4,h5,h6{font-weight:400;margin:20px 0;line-height:1.3}#post-relative-time{color:#f93131;margin:0 5px;font-weight:700}</style><header class="intro-header"><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center"><div class="post-heading"><h1>设计模式（二）之观察者模式</h1><span class="meta"><span>作者 梦想.家</span> <span>日期 2014-07-07 </span><span class="post-count">字数 2k</span></span><div class="tags text-center"><a class="tag" href="/tags/#JAVA" title="JAVA">JAVA</a> <a class="tag" href="/tags/#设计模式" title="设计模式">设计模式</a></div></div></div></div></div><div class="post-title-haojen"><span>设计模式（二）之观察者模式</span></div></header><article><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container"><h2 id="生活中的观察者模式"><a href="#生活中的观察者模式" class="headerlink" title="生活中的观察者模式"></a>生活中的观察者模式</h2><p>例如一个订阅者A在某出版社订阅了一份一年期的xxxx报纸，那么出版社每次出版新版本的报纸的时候就会给订阅者A送过去，另外一个订阅者B也在该出版社订阅一份半年期的xxxx报纸，同样的出版社出版新报纸后也会给订阅者B送过去，半年时间过去了由于订阅者B没有续订，那么出版社不会在给B送报纸。</p><p>在上面这个过程中出版社和订阅者A，B其实就是一种观察者模式，订阅者A，B（观察者）先在出版社（主题）登记订阅报纸成为订阅者（观察者对象），然后出版社（主题）的状态（报纸）一旦更新就会给订阅者A，B（观察者）送过去，<strong>观察者必须要注册成为主题的观察者对象之后，主题对象的状态发生变化才能通知到所有观察者</strong>，（就好比你不去出版社告诉你需要订阅报纸，出版社有新报纸出版的时候是不会给你送去的，因为根本不知道给谁送）。半年后订阅者B（观察者）订阅时间到期不再续订，那么出版社（主题）就取消用户B（观察者）的订阅，将订阅者从被订阅者中移除！</p><h2 id="观察者模式的定义"><a href="#观察者模式的定义" class="headerlink" title="观察者模式的定义"></a>观察者模式的定义</h2><p>观察者模式（有时又被称为发布-订阅Subscribe&gt;模式、模型-视图View&gt;模式、源-收听者Listener&gt;模式或从属者模式）是软件设计模式中的一种。观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，让他们能够自动更新自己。</p><a id="more"></a><h2 id="观察者模式的类图"><a href="#观察者模式的类图" class="headerlink" title="观察者模式的类图"></a>观察者模式的类图</h2><p><img src="https://www.wuhuan.me/images/loading.gif" alt="单例模式类图" class="'lazy'" data-original="https://www.wuhuan.me/images//observer.jpg"></p><p>Ps:类图使用在线做图工具 <a href="http://www.processon.com/" rel="external nofollow noopener noreferrer" target="_blank">processon</a> 绘制。</p><h2 id="观察者模式的组成"><a href="#观察者模式的组成" class="headerlink" title="观察者模式的组成"></a>观察者模式的组成</h2><ol><li><p><strong>抽象主题(Subject)角色</strong>：抽象主题角色把所有对观察者对象的引用保存在一个聚集放在一个集合对象ArrayList对象里，每个主题都可以有任何数量的观察者。抽象主题提供一个接口（也可以使一个抽象类），可以对观察者进行增加，删除，通知等操作。</p></li><li><p><strong>具体主题(ConcreteSubject)角色</strong>：将主题的状态存入具体观察者对象；在具体主题的内部状态改变时，给所有注册过的观察者发出通知。</p></li><li><p><strong>抽象观察者(Observer)角色</strong>：为所有的观察者提供一个接口，获得主题的通知时候自己更新自己。</p></li><li><p><strong>具体观察者(ConcreteObserver)角色</strong>：存储和主题状态相同的状态，具体观察者实现抽象观察者接口中的更新接口，使观察者自身的状态和主题的状态相协调。</p></li></ol><h2 id="观察者模式java实现方式"><a href="#观察者模式java实现方式" class="headerlink" title="观察者模式java实现方式"></a>观察者模式java实现方式</h2><p>为了便于理解使用上面的出版社和订阅者的例子来实现java的观察者模式代码。一共使用了五个类，1、抽象出版社类，2、具体出版社类，3、抽象订阅者，4、具体订阅者A，5、具体订阅者B。</p><p><strong>抽象出版社类</strong></p><pre><code>package Observer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,13 +11,13 @@ import java.util.List;
  */
 public abstract class Press {
 
-	public List&lt;Subscribers&gt; list = new ArrayList&lt;Subscribers&gt;();// 观察者集合
+    public List&lt;Subscribers&gt; list = new ArrayList&lt;Subscribers&gt;();// 观察者集合
 
-	public abstract void add(Subscribers subscribers);// 添加观察者的方法
+    public abstract void add(Subscribers subscribers);// 添加观察者的方法
 
-	public abstract void remove(Subscribers subscribers);// 移除观察者的方法
+    public abstract void remove(Subscribers subscribers);// 移除观察者的方法
 
-	public abstract void Notify();// 通知观察者的方法
+    public abstract void Notify();// 通知观察者的方法
 
 }
 </code></pre><p><strong>具体出版社类</strong></p><pre><code>package Observer;
@@ -29,57 +29,57 @@ public abstract class Press {
  */
 public class PressABC extends Press {
 
-	
-	private String newspaper;// 主题的状态，报纸南方周末
 
-	/**
-	 * 主题发生变化，通知观察者
-	 */
-	public void setNewspaper(String newspaper) {
-		System.out.println(&quot;观察者的状态:&quot; + newspaper);
-		this.newspaper = newspaper;
-		Notify();
-	}
+    private String newspaper;// 主题的状态，报纸南方周末
 
-	/**
-	 * 构造方法
-	 */
-	public PressABC() {
-	}
+    /**
+     * 主题发生变化，通知观察者
+     */
+    public void setNewspaper(String newspaper) {
+        System.out.println(&quot;观察者的状态:&quot; + newspaper);
+        this.newspaper = newspaper;
+        Notify();
+    }
 
-	/**
-	 * 添加观察者
-	 */
-	public void add(Subscribers subscribers) {
-		list.add(subscribers);
-	}
+    /**
+     * 构造方法
+     */
+    public PressABC() {
+    }
 
-	/**
-	 * 移除观察者
-	 */
-	public void remove(Subscribers subscribers) {
-		int i = list.indexOf(subscribers);
-		if (i &gt; 0) {
-			list.remove(i);
-		}
+    /**
+     * 添加观察者
+     */
+    public void add(Subscribers subscribers) {
+        list.add(subscribers);
+    }
 
-	}
+    /**
+     * 移除观察者
+     */
+    public void remove(Subscribers subscribers) {
+        int i = list.indexOf(subscribers);
+        if (i &gt; 0) {
+            list.remove(i);
+        }
 
-	/**
-	 * 更新消息
-	 */
-	public void update() {
-		for (Subscribers subscribers : list) {
-			subscribers.update(newspaper);
-		}
-	}
+    }
 
-	/**
-	 * 通知观察者
-	 */
-	public void Notify() {
-		update();
-	}
+    /**
+     * 更新消息
+     */
+    public void update() {
+        for (Subscribers subscribers : list) {
+            subscribers.update(newspaper);
+        }
+    }
+
+    /**
+     * 通知观察者
+     */
+    public void Notify() {
+        update();
+    }
 }
 </code></pre><p><strong>抽象观察类</strong></p><pre><code>package Observer;
 
@@ -91,7 +91,7 @@ public class PressABC extends Press {
  */
 public interface Subscribers {
 
-	public void update(String newspaper);// 更新状态的方法
+    public void update(String newspaper);// 更新状态的方法
 
 }
 </code></pre><p><strong>具体观察者类A</strong></p><pre><code>package Observer;
@@ -104,38 +104,38 @@ public interface Subscribers {
  */
 public class SubscribersAImpl implements Subscribers {
 
-	private String newspaper;// 主题的状态
-	private Press press;// 主题对象
+    private String newspaper;// 主题的状态
+    private Press press;// 主题对象
 
-	/**
-	 * 构造方法
-	 * 
-	 * @param postOffice
-	 */
-	public SubscribersAImpl(Press press) {
-		this.press = press;
+    /**
+     * 构造方法
+     * 
+     * @param postOffice
+     */
+    public SubscribersAImpl(Press press) {
+        this.press = press;
 
-		press.add(this);
-	}
+        press.add(this);
+    }
 
-	/**
-	 * 更新状态
-	 */
-	public void update(String newspaper) {
+    /**
+     * 更新状态
+     */
+    public void update(String newspaper) {
 
-		this.newspaper = newspaper;
-		display();
+        this.newspaper = newspaper;
+        display();
 
-	}
+    }
 
-	/**
-	 * 通知订阅者的方法
-	 */
-	public void display() {
+    /**
+     * 通知订阅者的方法
+     */
+    public void display() {
 
-		System.out.println(&quot;A观察者接收到的状态&gt;&gt;&gt;&gt;&gt;&gt;:&quot; + newspaper);
+        System.out.println(&quot;A观察者接收到的状态&gt;&gt;&gt;&gt;&gt;&gt;:&quot; + newspaper);
 
-	}
+    }
 }
 </code></pre><p><strong>具体观察者B</strong></p><pre><code>package Observer;
 
@@ -147,37 +147,37 @@ public class SubscribersAImpl implements Subscribers {
  */
 public class SubscribersBImpl implements Subscribers {
 
-	private String newspaper;// 主题的状态
-	private Press press;// 主题对象
+    private String newspaper;// 主题的状态
+    private Press press;// 主题对象
 
-	/**
-	 * 构造方法
-	 * 
-	 * @param postOffice
-	 */
-	public SubscribersBImpl(Press press) {
-		this.press = press;
-		this.press.add(this);
-	}
+    /**
+     * 构造方法
+     * 
+     * @param postOffice
+     */
+    public SubscribersBImpl(Press press) {
+        this.press = press;
+        this.press.add(this);
+    }
 
-	/**
-	 * 更新对象状态
-	 */
-	public void update(String newspaper) {
+    /**
+     * 更新对象状态
+     */
+    public void update(String newspaper) {
 
-		this.newspaper = newspaper;
-		display();
+        this.newspaper = newspaper;
+        display();
 
-	}
+    }
 
-	/**
-	 * 通知订阅者的方法
-	 */
-	public void display() {
+    /**
+     * 通知订阅者的方法
+     */
+    public void display() {
 
-		System.out.println(&quot;B观察者接收到状态&gt;&gt;&gt;&gt;&gt;&gt;:&quot; + newspaper);
+        System.out.println(&quot;B观察者接收到状态&gt;&gt;&gt;&gt;&gt;&gt;:&quot; + newspaper);
 
-	}
+    }
 }
 </code></pre><p><strong>测试代码</strong></p><pre><code>package Observer;
 /**
@@ -188,22 +188,22 @@ public class SubscribersBImpl implements Subscribers {
  */
 public class Test {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		PressABC press = new PressABC();// 实例化主体对象
+        PressABC press = new PressABC();// 实例化主体对象
 
-		SubscribersAImpl pA = new SubscribersAImpl(press);// 实例化观察者对象A，并且将它加入到主题中
-		SubscribersBImpl pB = new SubscribersBImpl(press);// 实例化观察者对象B，并且将它加入到主题中
+        SubscribersAImpl pA = new SubscribersAImpl(press);// 实例化观察者对象A，并且将它加入到主题中
+        SubscribersBImpl pB = new SubscribersBImpl(press);// 实例化观察者对象B，并且将它加入到主题中
 
-		press.setNewspaper(&quot;南方周末第xxxxxxx期号已经出版......&quot;);// 修改主题的状态
-		System.out.println(&quot;----------------------------------------------------&quot;);
-		System.out
-				.println(&quot;------------------移除观察者B后--------------------------&quot;);
-		
-		System.out.println(&quot;----------------------------------------------------&quot;);
-		press.remove(pB);//移除观察者B
-		press.setNewspaper(&quot;南方周末第yyyyyyy期号已经出版......&quot;);// 修改主题的状态
+        press.setNewspaper(&quot;南方周末第xxxxxxx期号已经出版......&quot;);// 修改主题的状态
+        System.out.println(&quot;----------------------------------------------------&quot;);
+        System.out
+                .println(&quot;------------------移除观察者B后--------------------------&quot;);
 
-	}
+        System.out.println(&quot;----------------------------------------------------&quot;);
+        press.remove(pB);//移除观察者B
+        press.setNewspaper(&quot;南方周末第yyyyyyy期号已经出版......&quot;);// 修改主题的状态
+
+    }
 }
-</code></pre><p><strong>运行结果</strong></p><p><img src="https://www.wuhuan.me/images/loading.gif" alt="运行结果" class="'lazy'" data-original="https://www.wuhuan.me/images//observer_test.jpg"></p><h2>后记</h2><p>以前在一篇文章中看到这么一句话:<strong>“设计模式孜孜不倦追求的是调用者和被调用者之间的解耦”</strong>，上软件工程这门课关于面向对象的设计和分析的时候老师告诉我们一句话：<strong>“高内聚，低耦合”</strong>，就是模块和模块之间依赖联系尽量达到最低，模块内部的个元素联系和紧密程度尽量高，各个模块尽量独立存在，这样才可以使模块达到最大程度的复用，例如现在的电脑一般都是由主板，cpu,显卡，声卡，网卡，硬盘，输入输出设备等组成，这些东西之间就是低耦合的，他们之间依赖的是主板的接口，只要这些模块的接口和主板上接口一致那么都能组成一台电脑正常开机和使用，就算去掉一个声卡，电脑只不过是没声音而已，不会影响到其它的模块，所以在面向对象编程的时候就有这样一个原则:&quot;<strong>针对接口编程，而不是针对实现编程</strong>&quot;就是这个道理。观察者模式中就使用了这样的原则，主题对象不依赖于具体的观察者对象，而是依赖于一个抽象的观察者接口的集合。</p><p>其实java语言已经杜观察者模式提供支持，在java.util包中提供了一个Observable类以及一个Observer接口，使用的时候只需直接实现它就可以了。自己还是比较喜欢用原生的方法去实现，因为这样对观察者的原理理解的比较的透彻，而且更符合开发过程中实际的需求，原生实现定制性比较强。</p><h2>参考资料</h2><ol><li><p>《HeadFirst设计模式》中文版</p></li><li><p>观察者模式百度百科</p></li><li><p>博客园博客</p></li></ol><br><br><div id="appreciate-btn">本文完</div><br><blockquote class="post-remark" style="border:.3em solid #eee;word-wrap:break-word;font-weight:700;background-color:#fff!important"><p style="text-align:left">本文如有误，请不吝赐教！</p><p style="text-align:left">原文标题：<a href="https://www.wuhuan.me/2014/07/07/observer/">设计模式（二）之观察者模式</a></p><p style="text-align:left">原文链接：<a href="https://www.wuhuan.me/2014/07/07/observer/">https://www.wuhuan.me/2014/07/07/observer/</a></p><p style="text-align:left;color:grey">版权声明：保留署名-非商业性使用-禁止演绎 4.0 国际 | <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">Creative Commons BY-NC-ND 4.0</a></p></blockquote><ul class="pager"><li class="previous"><a href="/2014/07/15/login/" data-toggle="tooltip" data-placement="top" title="对于系统登录流程的一些理解和总结">&larr; Previous Post</a></li><li class="next"><a href="/2014/06/17/singleton/" data-toggle="tooltip" data-placement="top" title="设计模式（一）之单例模式">Next Post &rarr;</a></li></ul><br><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">&nbsp;分享到:</a> <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">&nbsp;qq空间</a> <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">&nbsp;新浪微博</a> <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">&nbsp;腾讯微博</a> <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣">&nbsp;豆瓣</a> <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">&nbsp;微信</a> <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到qq">&nbsp;qq</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTY0NC82MjEy"><noscript>为正常使用来必力评论功能请激活JavaScript</noscript></div></div><div class="hidden-xs col-sm-3 toc-col" id="catlog-content"><div class="toc-wrap"><p style="font-size:18px;color:#666;margin:0"><i class="fa fa-bookmark"></i> CATLOG</p><ol class="nav toc"><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#undefined"><span class="nav toc-text">生活中的观察者模式</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#undefined"><span class="nav toc-text">观察者模式的定义</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#undefined"><span class="nav toc-text">观察者模式的类图</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#undefined"><span class="nav toc-text">观察者模式的组成</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#undefined"><span class="nav toc-text">观察者模式java实现方式</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#undefined"><span class="nav toc-text">后记</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#undefined"><span class="nav toc-text">参考资料</span></a></li></ol></div></div><div id="go-top" class="hidden-xs" title="返回顶部"><i class="fa fa-angle-up"></i></div><div id="toggle-catlog" title="目录"><i class="fa fa-bars"></i></div></div><div class="row" style="display:none"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"><section><h5 class="text-center"><a href="/tags/">FEATURED TAGS</a></h5><div class="tags"><a class="tag" href="/tags/#JAVA" title="JAVA">JAVA</a> <a class="tag" href="/tags/#设计模式" title="设计模式">设计模式</a></div></section></div></div></div></article><script>$("#appreciate-btn").click(function(){$("#appreciate-content").toggle()});var catlogFlag=!1;$("#toggle-catlog").click(function(){catlogFlag?($("#catlog-content").show(),$(".post-container").removeClass("col-lg-offset-2"),$(".post-container").addClass("col-lg-offset-1"),catlogFlag=!1):($("#catlog-content").hide(),$(".post-container").removeClass("col-lg-offset-1"),$(".post-container").addClass("col-lg-offset-2"),catlogFlag=!0)}),$("#go-top").click(function(){$("html,body").animate({scrollTop:0},500)});var screenTopOffset=60;$(".post-container h1,.post-container h2,.post-container h3,.post-container h4,.post-container h5,.post-container h6").each(function(o,t){var c=$(this).find("a").text("#");$(c).attr("href","#link-"+o),$(this).find("a").remove(),$(this).append(c),$(this).find("a").click(function(){$("html,body").animate({scrollTop:$(this).offset().top-screenTopOffset},500)})}),$(window).width()>=1200&&$(".toc-link").each(function(o,t){$(this).click(function(){var t=$("a[href=#link-"+o+"]").offset().top;$("html,body").animate({scrollTop:t-60},500)})}),""===$(".toc-wrap").html()&&($(".toc-col").hide(),$(".post-container").removeClass("col-lg-offset-1"),$(".post-container").addClass("col-lg-offset-2"),$("#toggle-catlog").hide(),$("#go-top").css("bottom","40px"))</script><script src="/js/dayjs.min.js"></script><script>dayjs.locale("zh-cn"),dayjs.extend(dayjs_plugin_relativeTime);var postRelativeTime=dayjs("Mon Jul 07 2014 16:52:36 GMT+0800").fromNow();$("#post-relative-time").text(postRelativeTime.replace(" ",""))</script><footer><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center"><br><ul class="list-inline text-center"><li><a target="_blank" class="weixin" title="小厨笔记"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-weixin fa-stack-1x fa-inverse"></i></span></a></li><li><a target="_blank" href="http://weibo.com/1985520460" rel="external nofollow noopener noreferrer"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-weibo fa-stack-1x fa-inverse"></i></span></a></li><li><a target="_blank" href="https://github.com/wuhuanhost" rel="external nofollow noopener noreferrer"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a target="_blank" href="https://www.instagram.com/dreamer.wuhuan" rel="external nofollow noopener noreferrer"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted" style="line-height:24px"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">Copyright</a> &copy; 梦想.家 2019<br>Theme by <a href="https://haojen.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Haojen Ma</a> Modified by <a href="http://www.wuhuan.me/">梦想.家</a><br><span>Hosted by <a href="https://pages.coding.me" style="font-weight:200" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a></span></p></div></div></div></footer><script>console.log("%c Welcome To My Blog!!! ","background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;")</script><script src="/js/jquery.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/blog.js"></script><script>function async(e,n){var t=document,a="script",r=t.createElement(a),c=t.getElementsByTagName(a)[0];r.src=e,n&&r.addEventListener("load",function(e){n(null,e)},!1),c.parentNode.insertBefore(r,c)}</script><script>0!==$("#tag_cloud").length&&async("https://www.wuhuan.me/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js",function(){var c=document.querySelector("nav");c&&FastClick.attach(c)})</script><script>$("article p>img").each(function(){var t=$(this).attr("alt");""==t&&(t="wuhuan.me",$(this).attr("alt",t)),$(this).attr("title",t),$(this).parent().css({"text-align":"center"}),$(this).parent().after("<p style='text-align:center;padding:0 1em;margin-top:-1em;'><span style='display:inline-block;border-bottom:1px solid #CCCCCC;font-style:italic;color:#999999;min-width:160px;'>&nbsp;"+t+"&nbsp;</span></p>")})</script><script src="/js/jquery.lazyload.js"></script><script type="text/javascript" charset="utf-8">$(function(){$("p>img,td>img").lazyload({effect:"fadeIn",threshold:200})})</script><script type="text/javascript">!function(e,t){var n,c=e.getElementsByTagName(t)[0];"function"!=typeof LivereTower&&(n=e.createElement(t),n.src="https://cdn-city.livere.com/js/embed.dist.js",n.async=!0,c.parentNode.insertBefore(n,c))}(document,"script")</script><script src="https://www.wuhuan.me/js/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><style>ul.search-result-list{padding-left:0;margin:0 5px 0 8px}p.search-result{border-bottom:1px dashed #ccc;padding:5px 0}a.search-result-title{font-weight:700}a.search-result{border-bottom:transparent;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.search-keyword{border-bottom:1px dashed #4088b8;font-weight:700}#local-search-result{height:90%;overflow:auto}.popup{display:none;position:fixed;top:10%;left:50%;width:700px;height:80%;margin-left:-350px;padding:3px 0 0 10px;background:#fff;color:#333;z-index:9999;border-radius:5px}@media (max-width:767px){.popup{padding:3px;top:0;left:0;margin:0;width:100%;height:100%;border-radius:0}}.popoverlay{position:fixed;width:100%;height:100%;top:0;left:0;z-index:2080;background-color:rgba(0,0,0,.3)}#local-search-input{margin-bottom:10px;width:50%}.popup-btn-close{position:absolute;top:6px;right:14px;color:#4ebd79;font-size:14px;font-weight:700;text-transform:uppercase;cursor:pointer}#no-result{position:absolute;left:44%;top:42%;color:#ccc}.busuanzi-count:before{content:" ";float:left;width:260px;min-height:25px}@media (min-width:768px) and (max-width:991px){.busuanzi-count{width:auto}.busuanzi-count:before{display:none}}@media (max-width:767px){.busuanzi-count{width:auto}.busuanzi-count:before{display:none}}.page-pv,.site-pv,.site-uv{display:inline-block}.page-pv .busuanzi-value,.site-pv .busuanzi-value,.site-uv .busuanzi-value{margin:0 5px}.site-uv{margin-right:10px}.site-uv::after{content:"|";padding-left:10px}.algolia-popup{overflow:hidden;padding:0}.algolia-popup .popup-btn-close{padding-left:15px;border-left:1px solid #eee;top:17px}.algolia-popup .popup-btn-close .fa{color:#999;font-size:18px}.algolia-popup .popup-btn-close:hover .fa{color:#222}.algolia-search{padding:8px 15px 10px;max-height:50px;border-bottom:1px solid #ccc;background:#f5f5f5;border-top-left-radius:5px;border-top-right-radius:5px}.algolia-search-input-icon{display:inline-block;width:20px}.algolia-search-input-icon .fa{font-size:18px}.algolia-search-input{display:inline-block;width:calc(90% - 20px)}.algolia-search-input input{padding:5px 0;width:100%;outline:0;border:none;background:0 0}.algolia-powered{float:right}.algolia-powered img{display:inline-block;height:18px;vertical-align:middle}.algolia-results{position:relative;overflow:auto;padding:10px 30px;height:calc(100% - 50px)}.algolia-results hr{margin:10px 0}.algolia-results .highlight,.algolia-results em{font-style:normal;margin:0;padding:0 2px;font-size:inherit;color:red;font-weight:700}.algolia-hits{margin-top:20px}.algolia-hit-item{margin:15px 0}.algolia-hit-item-link{display:block;border-bottom:1px dashed #ccc;transition-duration:.2s;transition-timing-function:ease-in-out;transition-delay:0s}.algolia-pagination .pagination{margin-top:40px;border-top:none;padding:0;display:block;text-align:center}.algolia-pagination .pagination-item{display:inline-block}.algolia-pagination .page-number{border-top:none}.algolia-pagination .page-number:hover{border-bottom:1px solid #222}.algolia-pagination .disabled-item{visibility:hidden}.pagination>li>a,.pagination>li>span{border:0;text-decoration:none}</style><div class="algolia-popup popup search-popup"><div class="algolia-search"><div class="algolia-search-input-icon"><i class="fa fa-search"></i></div><div class="algolia-search-input" id="algolia-search-input"></div></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div id="algolia-pagination" class="algolia-pagination"></div></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><script src="//cdn.bootcss.com/instantsearch.js/1.5.1/instantsearch.min.js"></script><script type="text/javascript">$(document).ready(function(){var a={root:"/",algolia:{id:"IYWNTOB2G5",tempstr:"f42beba458cc25eff85950a0981e41cf",indexName:"blog-search",hits:{per_page:10},labels:{input_placeholder:"搜索...",hits_empty:"未发现与 「${query}」相关的内容",hits_stats:"${hits} 条相关条目，使用了 ${time} 毫秒"}}},e=a.algolia,i=e.id&&e.tempstr&&e.indexName;if(!i)return void window.console.error("Algolia Settings are invalid.");var t=instantsearch({appId:e.id,apiKey:e.tempstr,indexName:e.indexName,searchFunction:function(a){var e=$("#algolia-search-input").find("input");e.val()&&a.search()}});[instantsearch.widgets.searchBox({container:"#algolia-search-input",placeholder:e.labels.input_placeholder}),instantsearch.widgets.hits({container:"#algolia-hits",hitsPerPage:e.hits.per_page||10,templates:{item:function(e){var i=e.permalink?e.permalink:a.root+e.path;return'<a href="'+i+'" class="algolia-hit-item-link">'+e._highlightResult.title.value+"</a>"},empty:function(a){return'<div id="algolia-hits-empty">'+e.labels.hits_empty.replace(/\$\{query}/,a.query)+"</div>"}},cssClasses:{item:"algolia-hit-item"}}),instantsearch.widgets.stats({container:"#algolia-stats",templates:{body:function(i){var t=e.labels.hits_stats.replace(/\$\{hits}/,i.nbHits).replace(/\$\{time}/,i.processingTimeMS);return t+'<span class="algolia-powered">  <img src="'+a.root+'images/algolia_logo.svg" alt="Algolia" /></span><hr />'}}}),instantsearch.widgets.pagination({container:"#algolia-pagination",scrollTo:!1,showFirstLast:!1,labels:{first:'<i class="fa fa-angle-double-left"></i>',last:'<i class="fa fa-angle-double-right"></i>',previous:'<i class="fa fa-angle-left"></i>',next:'<i class="fa fa-angle-right"></i>'},cssClasses:{root:"pagination",item:"pagination-item",link:"page-number",active:"current",disabled:"disabled-item"}})].forEach(t.addWidget,t),t.start(),$(".popup-trigger").on("click",function(a){a.stopPropagation(),$("body").append('<div class="popoverlay">').css("overflow","hidden"),$(".popup").toggle(),$("#algolia-search-input").find("input").focus()}),$(".popup-btn-close").click(function(){$(".popup").hide(),$(".popoverlay").remove(),$("body").css("overflow","")})})</script><script type="text/javascript">$(document).ready(function(){function e(){$("body").append('<div class="popoverlay">').css("overflow","hidden"),$(".popup").toggle()}if(0!==$("#local-search-input").size()){var t=!1,n="search.xml";0==n.length&&(n="search.xml");var a="/"+n,r=function(n,a,r){"use strict";$.ajax({url:n,dataType:"xml",async:!0,success:function(n){t=!0,$(".popup").detach().appendTo(".header-inner");var o=$("entry",n).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get(),i=document.getElementById(a),s=document.getElementById(r);i.addEventListener("input",function(){var e=0,t='<ul class="search-result-list">',n=this.value.trim().toLowerCase().split(/[\s\-]+/);s.innerHTML="",this.value.trim().length>1&&o.forEach(function(a){var r=!0,o=a.title.trim().toLowerCase(),i=a.content.trim().replace(/<[^>]+>/g,"").toLowerCase(),s=a.url,c=-1,l=-1,u=-1;if(""!=o&&""!=i&&n.forEach(function(e,t){c=o.indexOf(e),l=i.indexOf(e),0>c&&0>l?r=!1:(0>l&&(l=0),0==t&&(u=l))}),r){e+=1,t+="<li><a href='"+s+"' class='search-result-title'>"+o+"</a>";var p=a.content.trim().replace(/<[^>]+>/g,"");if(u>=0){var f=u-20,d=u+80;0>f&&(f=0),0==f&&(d=50),d>p.length&&(d=p.length);var h=p.substring(f,d);n.forEach(function(e){var t=new RegExp(e,"gi");h=h.replace(t,'<b class="search-keyword">'+e+"</b>")}),t+='<p class="search-result">'+h+"...</p>"}t+="</li>"}}),t+="</ul>",0==e&&(t='<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'),""==n&&(t='<div id="no-result"><i class="fa fa-search fa-5x" /></div>'),s.innerHTML=t}),e()}})};$(".popup-trigger").mousedown(function(n){n.stopPropagation(),0==t?r(a,"local-search-input","local-search-result"):e()}),$(".popup-btn-close").click(function(e){$(".popup").hide(),$(".popoverlay").remove(),$("body").css("overflow","")}),$(".popup").click(function(e){e.stopPropagation()})}})</script><script>with(window._bd_share_config={common:{bdSnsKey:{},bdText:"",bdMini:"2",bdMiniList:["weixin","qzone","tsina","tieba","douban","tqq","mshare","bdysc","renren","bdxc","kaixin001","tqf","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],bdPic:"",bdStyle:"1",bdSize:"24"},share:{}},document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date/36e5)]</script><script>$("body").prepend("<div id='progress-load' style='position:fixed;width:0px;height:2px;top:0;background-color:#337AB7;z-index:10000000;'></div>"),$(window).scroll(function(){var o=$(window).scrollTop(),e=$(document).height(),r=$(window).height();scrollPercent=o/(e-r)*100,scrollPercent=scrollPercent.toFixed(2),$("#progress-load").width(scrollPercent+"%")}).trigger("scroll")</script><script type="text/javascript">function addLink(){var e,n=document.getElementsByTagName("body")[0];e=window.getSelection();var t=e+"<br/>"+pagelink,a=document.createElement("div");a.style.position="absolute",a.style.left="-99999px",n.appendChild(a),a.innerHTML=t,e.selectAllChildren(a),window.setTimeout(function(){n.removeChild(a)},0)}var Sys={},ua=navigator.userAgent.toLowerCase(),pagelink="";pagelink+="<br/>",pagelink+="作者:梦想.家<br/>",pagelink=pagelink+"链接:"+document.location.href+"<br/>",pagelink+="来源:http://www.wuhuan.me<br/>",pagelink+="版权:https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh<br/>",window.ActiveXObject?document.body.oncopy=function(){event.returnValue=!1;var e=document.selection.createRange().text;clipboardData.setData("Text",e+"<br/>"+pagelink)}:document.oncopy=addLink</script><script></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-52788998-1"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script>!function(){var t=document.createElement("script"),s=window.location.protocol.split(":")[0];"https"===s?t.src="https://zz.bdstatic.com/linksubmit/push.js":t.src="http://push.zhanzhang.baidu.com/push.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script src="/js/layer/layer.js"></script><script>$(".weixin").click(function(e){return e.stopPropagation(),e.preventDefault(),layer.open({type:1,title:!1,closeBtn:0,time:1e13,area:["240px","270px"],shadeClose:!0,content:'<div id="tong" class="layui-layer-wrap" style="display: block;"><img src="/images/weixin_qrcode.jpg" style="width:240px;height:240px;">\n	<p style="text-align:center;line-height:20px;margin:0;font-size:12px;">既然都点开了，那就扫一下嘛！</p></div>'}),!1})</script><script>$(document).keydown(function(o){if(o.altKey&&81==o.keyCode){var p="none"===$(".algolia-popup").css("display")?!1:!0;p?$(".popup-btn-close").click():$(".popup-trigger").click()}})</script><script type="text/javascript" src="https://js.users.51.la/20235629.js"></script><img class="wechat-title-img" src="https://www.wuhuan.me/images/ava.jpg"></body></html>
+</code></pre><p><strong>运行结果</strong></p><p><img src="https://www.wuhuan.me/images/loading.gif" alt="运行结果" class="'lazy'" data-original="https://www.wuhuan.me/images//observer_test.jpg"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>以前在一篇文章中看到这么一句话:<strong>“设计模式孜孜不倦追求的是调用者和被调用者之间的解耦”</strong>，上软件工程这门课关于面向对象的设计和分析的时候老师告诉我们一句话：<strong>“高内聚，低耦合”</strong>，就是模块和模块之间依赖联系尽量达到最低，模块内部的个元素联系和紧密程度尽量高，各个模块尽量独立存在，这样才可以使模块达到最大程度的复用，例如现在的电脑一般都是由主板，cpu,显卡，声卡，网卡，硬盘，输入输出设备等组成，这些东西之间就是低耦合的，他们之间依赖的是主板的接口，只要这些模块的接口和主板上接口一致那么都能组成一台电脑正常开机和使用，就算去掉一个声卡，电脑只不过是没声音而已，不会影响到其它的模块，所以在面向对象编程的时候就有这样一个原则:”<strong>针对接口编程，而不是针对实现编程</strong>“就是这个道理。观察者模式中就使用了这样的原则，主题对象不依赖于具体的观察者对象，而是依赖于一个抽象的观察者接口的集合。</p><p>其实java语言已经杜观察者模式提供支持，在java.util包中提供了一个Observable类以及一个Observer接口，使用的时候只需直接实现它就可以了。自己还是比较喜欢用原生的方法去实现，因为这样对观察者的原理理解的比较的透彻，而且更符合开发过程中实际的需求，原生实现定制性比较强。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol><li><p>《HeadFirst设计模式》中文版</p></li><li><p>观察者模式百度百科</p></li><li><p>博客园博客</p></li></ol><br><br><div id="appreciate-btn">本文完</div><br><blockquote class="post-remark" style="border:.3em solid #eee;word-wrap:break-word;font-weight:700;background-color:#fff!important"><p style="text-align:left">本文如有误，请不吝赐教！</p><p style="text-align:left">原文标题：<a href="https://www.wuhuan.me/2014/07/07/observer/">设计模式（二）之观察者模式</a></p><p style="text-align:left">原文链接：<a href="https://www.wuhuan.me/2014/07/07/observer/">https://www.wuhuan.me/2014/07/07/observer/</a></p><p style="text-align:left;color:grey">版权声明：保留署名-非商业性使用-禁止演绎 4.0 国际 | <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">Creative Commons BY-NC-ND 4.0</a></p></blockquote><ul class="pager"><li class="previous"><a href="/2014/07/15/login/" data-toggle="tooltip" data-placement="top" title="对于系统登录流程的一些理解和总结">&larr; Previous Post</a></li><li class="next"><a href="/2014/06/17/singleton/" data-toggle="tooltip" data-placement="top" title="设计模式（一）之单例模式">Next Post &rarr;</a></li></ul><br><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">&nbsp;分享到:</a> <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">&nbsp;qq空间</a> <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">&nbsp;新浪微博</a> <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">&nbsp;腾讯微博</a> <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣">&nbsp;豆瓣</a> <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">&nbsp;微信</a> <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到qq">&nbsp;qq</a></div><div id="lv-container" data-id="city" data-uid="MTAyMC8yOTY0NC82MjEy"><noscript>为正常使用来必力评论功能请激活JavaScript</noscript></div></div><div class="hidden-xs col-sm-3 toc-col" id="catlog-content"><div class="toc-wrap"><p style="font-size:18px;color:#666;margin:0"><i class="fa fa-bookmark"></i> CATLOG</p><ol class="nav toc"><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#生活中的观察者模式"><span class="nav toc-text">生活中的观察者模式</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#观察者模式的定义"><span class="nav toc-text">观察者模式的定义</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#观察者模式的类图"><span class="nav toc-text">观察者模式的类图</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#观察者模式的组成"><span class="nav toc-text">观察者模式的组成</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#观察者模式java实现方式"><span class="nav toc-text">观察者模式java实现方式</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#后记"><span class="nav toc-text">后记</span></a></li><li class="nav toc-item nav toc-level-2"><a class="nav toc-link" href="#参考资料"><span class="nav toc-text">参考资料</span></a></li></ol></div></div><div id="go-top" class="hidden-xs" title="返回顶部"><i class="fa fa-angle-up"></i></div><div id="toggle-catlog" title="目录"><i class="fa fa-bars"></i></div></div><div class="row" style="display:none"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"><section><h5 class="text-center"><a href="/tags/">FEATURED TAGS</a></h5><div class="tags"><a class="tag" href="/tags/#JAVA" title="JAVA">JAVA</a> <a class="tag" href="/tags/#设计模式" title="设计模式">设计模式</a></div></section></div></div></div></article><script>$("#appreciate-btn").click(function(){$("#appreciate-content").toggle()});var catlogFlag=!1;$("#toggle-catlog").click(function(){catlogFlag?($("#catlog-content").show(),$(".post-container").removeClass("col-lg-offset-2"),$(".post-container").addClass("col-lg-offset-1"),catlogFlag=!1):($("#catlog-content").hide(),$(".post-container").removeClass("col-lg-offset-1"),$(".post-container").addClass("col-lg-offset-2"),catlogFlag=!0)}),$("#go-top").click(function(){$("html,body").animate({scrollTop:0},500)});var screenTopOffset=60;$(".post-container h1,.post-container h2,.post-container h3,.post-container h4,.post-container h5,.post-container h6").each(function(o,t){var c=$(this).find("a").text("#");$(c).attr("href","#link-"+o),$(this).find("a").remove(),$(this).append(c),$(this).find("a").click(function(){$("html,body").animate({scrollTop:$(this).offset().top-screenTopOffset},500)})}),$(window).width()>=1200&&$(".toc-link").each(function(o,t){$(this).click(function(){var t=$("a[href=#link-"+o+"]").offset().top;$("html,body").animate({scrollTop:t-60},500)})}),""===$(".toc-wrap").html()&&($(".toc-col").hide(),$(".post-container").removeClass("col-lg-offset-1"),$(".post-container").addClass("col-lg-offset-2"),$("#toggle-catlog").hide(),$("#go-top").css("bottom","40px"))</script><script src="/js/dayjs.min.js"></script><script>dayjs.locale("zh-cn"),dayjs.extend(dayjs_plugin_relativeTime);var postRelativeTime=dayjs("Mon Jul 07 2014 16:52:36 GMT+0800").fromNow();$("#post-relative-time").text(postRelativeTime.replace(" ",""))</script><footer><div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center"><br><ul class="list-inline text-center"><li><a target="_blank" class="weixin" title="小厨笔记"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-weixin fa-stack-1x fa-inverse"></i></span></a></li><li><a target="_blank" href="http://weibo.com/1985520460" rel="external nofollow noopener noreferrer"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-weibo fa-stack-1x fa-inverse"></i></span></a></li><li><a target="_blank" href="https://github.com/wuhuanhost" rel="external nofollow noopener noreferrer"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a target="_blank" href="https://www.instagram.com/dreamer.wuhuan" rel="external nofollow noopener noreferrer"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted" style="line-height:24px"><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">Copyright</a> &copy; 梦想.家 2019<br>Theme by <a href="https://haojen.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Haojen Ma</a> Modified by <a href="http://www.wuhuan.me/">梦想.家</a><br><span>Hosted by <a href="https://pages.coding.me" style="font-weight:200" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a></span></p></div></div></div></footer><script>console.log("%c Welcome To My Blog!!! ","background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;")</script><script src="/js/jquery.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/blog.js"></script><script>function async(e,n){var t=document,a="script",r=t.createElement(a),c=t.getElementsByTagName(a)[0];r.src=e,n&&r.addEventListener("load",function(e){n(null,e)},!1),c.parentNode.insertBefore(r,c)}</script><script>0!==$("#tag_cloud").length&&async("https://www.wuhuan.me/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js",function(){var c=document.querySelector("nav");c&&FastClick.attach(c)})</script><script>$("article p>img").each(function(){var t=$(this).attr("alt");""==t&&(t="wuhuan.me",$(this).attr("alt",t)),$(this).attr("title",t),$(this).parent().css({"text-align":"center"}),$(this).parent().after("<p style='text-align:center;padding:0 1em;margin-top:-1em;'><span style='display:inline-block;border-bottom:1px solid #CCCCCC;font-style:italic;color:#999999;min-width:160px;'>&nbsp;"+t+"&nbsp;</span></p>")})</script><script src="/js/jquery.lazyload.js"></script><script type="text/javascript" charset="utf-8">$(function(){$("p>img,td>img").lazyload({effect:"fadeIn",threshold:200})})</script><script type="text/javascript">!function(e,t){var n,c=e.getElementsByTagName(t)[0];"function"!=typeof LivereTower&&(n=e.createElement(t),n.src="https://cdn-city.livere.com/js/embed.dist.js",n.async=!0,c.parentNode.insertBefore(n,c))}(document,"script")</script><script src="https://www.wuhuan.me/js/highlight.pack.js"></script><script>hljs.initHighlightingOnLoad()</script><style>ul.search-result-list{padding-left:0;margin:0 5px 0 8px}p.search-result{border-bottom:1px dashed #ccc;padding:5px 0}a.search-result-title{font-weight:700}a.search-result{border-bottom:transparent;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.search-keyword{border-bottom:1px dashed #4088b8;font-weight:700}#local-search-result{height:90%;overflow:auto}.popup{display:none;position:fixed;top:10%;left:50%;width:700px;height:80%;margin-left:-350px;padding:3px 0 0 10px;background:#fff;color:#333;z-index:9999;border-radius:5px}@media (max-width:767px){.popup{padding:3px;top:0;left:0;margin:0;width:100%;height:100%;border-radius:0}}.popoverlay{position:fixed;width:100%;height:100%;top:0;left:0;z-index:2080;background-color:rgba(0,0,0,.3)}#local-search-input{margin-bottom:10px;width:50%}.popup-btn-close{position:absolute;top:6px;right:14px;color:#4ebd79;font-size:14px;font-weight:700;text-transform:uppercase;cursor:pointer}#no-result{position:absolute;left:44%;top:42%;color:#ccc}.busuanzi-count:before{content:" ";float:left;width:260px;min-height:25px}@media (min-width:768px) and (max-width:991px){.busuanzi-count{width:auto}.busuanzi-count:before{display:none}}@media (max-width:767px){.busuanzi-count{width:auto}.busuanzi-count:before{display:none}}.page-pv,.site-pv,.site-uv{display:inline-block}.page-pv .busuanzi-value,.site-pv .busuanzi-value,.site-uv .busuanzi-value{margin:0 5px}.site-uv{margin-right:10px}.site-uv::after{content:"|";padding-left:10px}.algolia-popup{overflow:hidden;padding:0}.algolia-popup .popup-btn-close{padding-left:15px;border-left:1px solid #eee;top:17px}.algolia-popup .popup-btn-close .fa{color:#999;font-size:18px}.algolia-popup .popup-btn-close:hover .fa{color:#222}.algolia-search{padding:8px 15px 10px;max-height:50px;border-bottom:1px solid #ccc;background:#f5f5f5;border-top-left-radius:5px;border-top-right-radius:5px}.algolia-search-input-icon{display:inline-block;width:20px}.algolia-search-input-icon .fa{font-size:18px}.algolia-search-input{display:inline-block;width:calc(90% - 20px)}.algolia-search-input input{padding:5px 0;width:100%;outline:0;border:none;background:0 0}.algolia-powered{float:right}.algolia-powered img{display:inline-block;height:18px;vertical-align:middle}.algolia-results{position:relative;overflow:auto;padding:10px 30px;height:calc(100% - 50px)}.algolia-results hr{margin:10px 0}.algolia-results .highlight,.algolia-results em{font-style:normal;margin:0;padding:0 2px;font-size:inherit;color:red;font-weight:700}.algolia-hits{margin-top:20px}.algolia-hit-item{margin:15px 0}.algolia-hit-item-link{display:block;border-bottom:1px dashed #ccc;transition-duration:.2s;transition-timing-function:ease-in-out;transition-delay:0s}.algolia-pagination .pagination{margin-top:40px;border-top:none;padding:0;display:block;text-align:center}.algolia-pagination .pagination-item{display:inline-block}.algolia-pagination .page-number{border-top:none}.algolia-pagination .page-number:hover{border-bottom:1px solid #222}.algolia-pagination .disabled-item{visibility:hidden}.pagination>li>a,.pagination>li>span{border:0;text-decoration:none}</style><div class="algolia-popup popup search-popup"><div class="algolia-search"><div class="algolia-search-input-icon"><i class="fa fa-search"></i></div><div class="algolia-search-input" id="algolia-search-input"></div></div><div class="algolia-results"><div id="algolia-stats"></div><div id="algolia-hits"></div><div id="algolia-pagination" class="algolia-pagination"></div></div><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span></div><script src="//cdn.bootcss.com/instantsearch.js/1.5.1/instantsearch.min.js"></script><script type="text/javascript">$(document).ready(function(){var a={root:"/",algolia:{id:"IYWNTOB2G5",tempstr:"f42beba458cc25eff85950a0981e41cf",indexName:"blog-search",hits:{per_page:10},labels:{input_placeholder:"搜索...",hits_empty:"未发现与 「${query}」相关的内容",hits_stats:"${hits} 条相关条目，使用了 ${time} 毫秒"}}},e=a.algolia,i=e.id&&e.tempstr&&e.indexName;if(!i)return void window.console.error("Algolia Settings are invalid.");var t=instantsearch({appId:e.id,apiKey:e.tempstr,indexName:e.indexName,searchFunction:function(a){var e=$("#algolia-search-input").find("input");e.val()&&a.search()}});[instantsearch.widgets.searchBox({container:"#algolia-search-input",placeholder:e.labels.input_placeholder}),instantsearch.widgets.hits({container:"#algolia-hits",hitsPerPage:e.hits.per_page||10,templates:{item:function(e){var i=e.permalink?e.permalink:a.root+e.path;return'<a href="'+i+'" class="algolia-hit-item-link">'+e._highlightResult.title.value+"</a>"},empty:function(a){return'<div id="algolia-hits-empty">'+e.labels.hits_empty.replace(/\$\{query}/,a.query)+"</div>"}},cssClasses:{item:"algolia-hit-item"}}),instantsearch.widgets.stats({container:"#algolia-stats",templates:{body:function(i){var t=e.labels.hits_stats.replace(/\$\{hits}/,i.nbHits).replace(/\$\{time}/,i.processingTimeMS);return t+'<span class="algolia-powered">  <img src="'+a.root+'images/algolia_logo.svg" alt="Algolia" /></span><hr />'}}}),instantsearch.widgets.pagination({container:"#algolia-pagination",scrollTo:!1,showFirstLast:!1,labels:{first:'<i class="fa fa-angle-double-left"></i>',last:'<i class="fa fa-angle-double-right"></i>',previous:'<i class="fa fa-angle-left"></i>',next:'<i class="fa fa-angle-right"></i>'},cssClasses:{root:"pagination",item:"pagination-item",link:"page-number",active:"current",disabled:"disabled-item"}})].forEach(t.addWidget,t),t.start(),$(".popup-trigger").on("click",function(a){a.stopPropagation(),$("body").append('<div class="popoverlay">').css("overflow","hidden"),$(".popup").toggle(),$("#algolia-search-input").find("input").focus()}),$(".popup-btn-close").click(function(){$(".popup").hide(),$(".popoverlay").remove(),$("body").css("overflow","")})})</script><script type="text/javascript">$(document).ready(function(){function e(){$("body").append('<div class="popoverlay">').css("overflow","hidden"),$(".popup").toggle()}if(0!==$("#local-search-input").size()){var t=!1,n="search.xml";0==n.length&&(n="search.xml");var a="/"+n,r=function(n,a,r){"use strict";$.ajax({url:n,dataType:"xml",async:!0,success:function(n){t=!0,$(".popup").detach().appendTo(".header-inner");var o=$("entry",n).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get(),i=document.getElementById(a),s=document.getElementById(r);i.addEventListener("input",function(){var e=0,t='<ul class="search-result-list">',n=this.value.trim().toLowerCase().split(/[\s\-]+/);s.innerHTML="",this.value.trim().length>1&&o.forEach(function(a){var r=!0,o=a.title.trim().toLowerCase(),i=a.content.trim().replace(/<[^>]+>/g,"").toLowerCase(),s=a.url,c=-1,l=-1,u=-1;if(""!=o&&""!=i&&n.forEach(function(e,t){c=o.indexOf(e),l=i.indexOf(e),0>c&&0>l?r=!1:(0>l&&(l=0),0==t&&(u=l))}),r){e+=1,t+="<li><a href='"+s+"' class='search-result-title'>"+o+"</a>";var p=a.content.trim().replace(/<[^>]+>/g,"");if(u>=0){var f=u-20,d=u+80;0>f&&(f=0),0==f&&(d=50),d>p.length&&(d=p.length);var h=p.substring(f,d);n.forEach(function(e){var t=new RegExp(e,"gi");h=h.replace(t,'<b class="search-keyword">'+e+"</b>")}),t+='<p class="search-result">'+h+"...</p>"}t+="</li>"}}),t+="</ul>",0==e&&(t='<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'),""==n&&(t='<div id="no-result"><i class="fa fa-search fa-5x" /></div>'),s.innerHTML=t}),e()}})};$(".popup-trigger").mousedown(function(n){n.stopPropagation(),0==t?r(a,"local-search-input","local-search-result"):e()}),$(".popup-btn-close").click(function(e){$(".popup").hide(),$(".popoverlay").remove(),$("body").css("overflow","")}),$(".popup").click(function(e){e.stopPropagation()})}})</script><script>with(window._bd_share_config={common:{bdSnsKey:{},bdText:"",bdMini:"2",bdMiniList:["weixin","qzone","tsina","tieba","douban","tqq","mshare","bdysc","renren","bdxc","kaixin001","tqf","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],bdPic:"",bdStyle:"1",bdSize:"24"},share:{}},document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date/36e5)]</script><script>$("body").prepend("<div id='progress-load' style='position:fixed;width:0px;height:2px;top:0;background-color:#337AB7;z-index:10000000;'></div>"),$(window).scroll(function(){var o=$(window).scrollTop(),e=$(document).height(),r=$(window).height();scrollPercent=o/(e-r)*100,scrollPercent=scrollPercent.toFixed(2),$("#progress-load").width(scrollPercent+"%")}).trigger("scroll")</script><script type="text/javascript">function addLink(){var e,n=document.getElementsByTagName("body")[0];e=window.getSelection();var t=e+"<br/>"+pagelink,a=document.createElement("div");a.style.position="absolute",a.style.left="-99999px",n.appendChild(a),a.innerHTML=t,e.selectAllChildren(a),window.setTimeout(function(){n.removeChild(a)},0)}var Sys={},ua=navigator.userAgent.toLowerCase(),pagelink="";pagelink+="<br/>",pagelink+="作者:梦想.家<br/>",pagelink=pagelink+"链接:"+document.location.href+"<br/>",pagelink+="来源:http://www.wuhuan.me<br/>",pagelink+="版权:https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh<br/>",window.ActiveXObject?document.body.oncopy=function(){event.returnValue=!1;var e=document.selection.createRange().text;clipboardData.setData("Text",e+"<br/>"+pagelink)}:document.oncopy=addLink</script><script></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-52788998-1"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script>!function(){var t=document.createElement("script"),s=window.location.protocol.split(":")[0];"https"===s?t.src="https://zz.bdstatic.com/linksubmit/push.js":t.src="http://push.zhanzhang.baidu.com/push.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script src="/js/layer/layer.js"></script><script>$(".weixin").click(function(e){return e.stopPropagation(),e.preventDefault(),layer.open({type:1,title:!1,closeBtn:0,time:1e13,area:["240px","270px"],shadeClose:!0,content:'<div id="tong" class="layui-layer-wrap" style="display: block;"><img src="/images/weixin_qrcode.jpg" style="width:240px;height:240px;">\n	<p style="text-align:center;line-height:20px;margin:0;font-size:12px;">既然都点开了，那就扫一下嘛！</p></div>'}),!1})</script><script>$(document).keydown(function(o){if(o.altKey&&81==o.keyCode){var p="none"===$(".algolia-popup").css("display")?!1:!0;p?$(".popup-btn-close").click():$(".popup-trigger").click()}})</script><script type="text/javascript" src="https://js.users.51.la/20235629.js"></script><img class="wechat-title-img" src="https://www.wuhuan.me/images/ava.jpg"></body></html>
