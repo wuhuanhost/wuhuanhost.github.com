@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.wuhuan.me/2019/11/18/js-regexp/</loc>
+    <lastmod>2019-11-19T03:14:32.049Z</lastmod>
+    <data>
+        <display>
+        <title>javascript正则表达式使用笔记</title>
+        <pubTime>2019-11-18T03:00:00.000Z</pubTime>
+        
+        <tag>正则表达式</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程手册" url="https://www.wuhuan.me/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.wuhuan.me/2018/11/02/canvas-picture-unlock/</loc>
     <lastmod>2019-07-09T07:32:23.747Z</lastmod>
     <data>
@@ -54,9 +74,9 @@
         <title>git使用笔记</title>
         <pubTime>2018-03-15T12:00:00.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>开发工具</tag>
+         
+        <tag>git</tag>
          
          
            
