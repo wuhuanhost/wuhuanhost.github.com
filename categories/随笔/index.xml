@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随笔 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 05 Dec 2019 14:25:36 +0800</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>测试Think主题</title>
+      <link>https://wuhuanhost.github.io/2019/12/05/test-think/</link>
+      <pubDate>Thu, 05 Dec 2019 14:25:36 +0800</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2019/12/05/test-think/</guid>
+      <description>&lt;p&gt;这是一篇用于预览 :(fab fa-markdown): Markdown 基本语法的文章，这是一篇用于预览 :(fab fa-markdown): Markdown 基本语法的文章。&lt;/p&gt;
+
+&lt;p&gt;文章内容基于 &lt;a href=&#34;https://github.github.com/gfm&#34;&gt;GitHub Flavo 红色 Markdown Spec&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;不包含复杂的规则说明，仅仅展示 GFM 所约定的 Markdown 基本语法。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

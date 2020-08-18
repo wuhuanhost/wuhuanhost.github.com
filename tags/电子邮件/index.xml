@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>电子邮件 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/</link>
+    <description>Recent content in 电子邮件 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 20 Jul 2017 10:21:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Node接收电子邮件</title>
+      <link>https://wuhuanhost.github.io/2017/07/20/node-receive-mail/</link>
+      <pubDate>Thu, 20 Jul 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/07/20/node-receive-mail/</guid>
+      <description>上一篇文章写了如何通过node发送电子邮件，有发送就会有接收嘛，所以这篇文章来说说关于在node中如何接收电子邮件。 邮件协议 在开始这篇文章之前我们首先了解三个协议smtp（Simple Mail Transfer Protocol）简单邮件传输协议，pop3（Post Office Protocol 3）邮局协议第三版本，imap（I</description>
+    </item>
+    
+    <item>
+      <title>Node发送电子邮件</title>
+      <link>https://wuhuanhost.github.io/2017/06/20/node-post-mail/</link>
+      <pubDate>Tue, 20 Jun 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/06/20/node-post-mail/</guid>
+      <description>电子邮件作为最广泛使用的一种网络服务和我们的工作学习生活已经密不可分。接受信用卡的账单，注册网站，找回密码等等都需要用到它。今天在就来学习下如何在node下来发送邮件，为当前做的项目提供邮箱校验的功能。 邮箱校验的原理：当我们在xxx网站注册的时候，注册信息中一般都会要求你填一个邮</description>
+    </item>
+    
+  </channel>
+</rss>

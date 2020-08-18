@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo Think Theme</title>
+    <link>https://wuhuanhost.github.io/en/</link>
+    <description>Recent content on Hugo Think Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://wuhuanhost.github.io/en/about/</link>
+      <pubDate>Wed, 09 Oct 2019 11:44:14 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/en/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photo</title>
+      <link>https://wuhuanhost.github.io/en/gallery/instagram/</link>
+      <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/en/gallery/instagram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photo</title>
+      <link>https://wuhuanhost.github.io/en/gallery/photo/</link>
+      <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/en/gallery/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cartoon</title>
+      <link>https://wuhuanhost.github.io/en/gallery/cartoon/</link>
+      <pubDate>Thu, 11 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/en/gallery/cartoon/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

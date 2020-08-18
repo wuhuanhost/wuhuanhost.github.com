@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>canvas on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/canvas/</link>
+    <description>Recent content in canvas on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 02 Nov 2018 10:20:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/canvas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>h5使用canvas画布实现手势解锁</title>
+      <link>https://wuhuanhost.github.io/2018/11/02/canvas-picture-unlock/</link>
+      <pubDate>Fri, 02 Nov 2018 10:20:25 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/11/02/canvas-picture-unlock/</guid>
+      <description>前言 最近做的一个app项目使用的 apicloud 来实现跨平台开发，现在需要为这个 app 添加手势（九宫格）解锁的功能，apicloud 已经有一些第三方的原生实现的手势解锁插件，原生插件性能比较好，调用也比较方便，但是不能对它们的样式做定制修改，所以打算花了一点时间使用h5画布自己来实现这个功能。这篇</description>
+    </item>
+    
+    <item>
+      <title>canvas绘制运动的小球</title>
+      <link>https://wuhuanhost.github.io/2016/01/05/canvas-ball-sports/</link>
+      <pubDate>Tue, 05 Jan 2016 13:13:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/01/05/canvas-ball-sports/</guid>
+      <description>知乎的网页版登录界面的背景有很多运动的小球，小球和小球运动的时候之间还有连线，给人一种三维立体变换的效果，看着十分的不错，所以就试着做了个和知乎登录界面背景类似的效果，下面是我做好的效果的截图。 实现思路 首先了解下canvas中的动画原理？canvas中的动画其实是通过不断的重绘来</description>
+    </item>
+    
+    <item>
+      <title>canvas中遮罩效果的实现方法</title>
+      <link>https://wuhuanhost.github.io/2015/12/31/canvas-mask/</link>
+      <pubDate>Thu, 31 Dec 2015 10:20:25 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/12/31/canvas-mask/</guid>
+      <description>最近做的一个项目需要支持多终端，网页版需要使用html5中canvas画布对象对一组数据进行渲染还原，但是在实际实现过程中遇到了一个问题，canvas中没有mask（遮罩）层的概念，所以一些效果实现不了，最后翻看文档的时候发现可以通过Context对象的globalComposi</description>
+    </item>
+    
+  </channel>
+</rss>

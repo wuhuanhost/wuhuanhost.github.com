@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>心得总结 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/%E5%BF%83%E5%BE%97%E6%80%BB%E7%BB%93/</link>
+    <description>Recent content in 心得总结 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 13 Apr 2017 10:21:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/%E5%BF%83%E5%BE%97%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>你以为你真理解用户的需求吗？</title>
+      <link>https://wuhuanhost.github.io/2017/04/13/know-user-real-need/</link>
+      <pubDate>Thu, 13 Apr 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/04/13/know-user-real-need/</guid>
+      <description>前言 前两天客户在微信群里说某个产品列表页面的数据能不能一次性全部加载出来，不要每次点击“查看更多”按钮后新数据才出来。当时忙手头工作也没多想就很坚定的说：“那样肯定不行，以后数据量大的时候给服务器的压力会变大，查询速度变慢，用户等待的时间会变长”！然后就去忙工作了。 分析 下午和同事</description>
+    </item>
+    
+    <item>
+      <title>对于系统登录流程的一些理解和总结</title>
+      <link>https://wuhuanhost.github.io/2014/07/15/login/</link>
+      <pubDate>Tue, 15 Jul 2014 14:25:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/07/15/login/</guid>
+      <description>&lt;h2 id=&#34;登录的意义&#34;&gt;登录的意义&lt;/h2&gt;
+
+&lt;p&gt;我们常常会发现在一些网站上登录是非必须的，比如一些浏览性的网站（网易新闻，百度图片），但是用户在使用像QQ空间，微博，人人网等这些网站的时候必须要用户登录后才能使用！暂且不分析为什么有的网站需要登录有的不需要登录，这和每个网站的理念也是有关系的，所以我们只着重分析登录的作用和意义，在我看来登录的作用应该有以下几点：&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

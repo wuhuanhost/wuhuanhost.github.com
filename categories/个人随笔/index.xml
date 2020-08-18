@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>个人随笔 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/categories/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 个人随笔 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 07 Aug 2015 18:00:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/categories/%E4%B8%AA%E4%BA%BA%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>对编程语言的一些新的认识</title>
+      <link>https://wuhuanhost.github.io/2015/08/07/about-programming-language/</link>
+      <pubDate>Fri, 07 Aug 2015 18:00:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/08/07/about-programming-language/</guid>
+      <description>编程语言 编程语言（programming language），是用来定义计算机程序的形式语言。它是一种被标准化的交流技巧，用来向计算机发出指令。一种计算机语言让程序员能够准确地定义计算机所需要使用的数据，并精确地定义在不同情况下所应当采取的行动。 &amp;gt;PS:来自百度百科的解释 编程</description>
+    </item>
+    
+    <item>
+      <title>测试文章</title>
+      <link>https://wuhuanhost.github.io/2014/06/10/myfirstblog/</link>
+      <pubDate>Tue, 10 Jun 2014 13:52:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/06/10/myfirstblog/</guid>
+      <description>github上的博客搭建好了，此文章为测试文章，使用轻量级markdown标记语言书写文章! 下面是使用Anisina博客书写设置指南 开启mathjax mathjax: true 块级mathjax $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$ 行内mathjax 勾股定理:$a^2+b^2=c^2$ 开启代码高亮 highlight: true 1 2 3 function sum(m,n){ return m+n; } 设</description>
+    </item>
+    
+  </channel>
+</rss>

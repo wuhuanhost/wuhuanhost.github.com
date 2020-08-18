@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go语言 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/go%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in go语言 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 10 Jan 2017 15:36:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/go%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golang学习笔记（二）go语言基础知识</title>
+      <link>https://wuhuanhost.github.io/2017/01/10/studygo-02-go-basic/</link>
+      <pubDate>Tue, 10 Jan 2017 15:36:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/01/10/studygo-02-go-basic/</guid>
+      <description>1、go语言中的关键字 go语言中一共有25个标识符（关键字）他们分别是：var、const、type、package、import、func、return、defer、go、select、interface、struct、break、case、continue、for、fallt</description>
+    </item>
+    
+    <item>
+      <title>golang学习笔记（一）开发环境的搭建</title>
+      <link>https://wuhuanhost.github.io/2017/01/01/studygo-01-getstart/</link>
+      <pubDate>Sun, 01 Jan 2017 15:36:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/01/01/studygo-01-getstart/</guid>
+      <description>下载安装golang 下载地址:http://www.golangtc.com/download 通过上面的网址下载你操作系统对应的版本的程序进行安装，由于我用的window7所以下载了go1.7.4.windows-386.msi这个包，根据安装提示进行安装，安装好之后go使用的一</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/</link>
+    <description>Recent content on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 25 Dec 2019 15:26:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>javascript正则表达式使用笔记</title>
+      <link>https://wuhuanhost.github.io/2019/11/18/js-regexp/</link>
+      <pubDate>Mon, 18 Nov 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2019/11/18/js-regexp/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wuhuanhost.github.io/blog-img/2019-11-18/banner.jpg&#34; alt=&#34;图片测试&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;正则表达式&#34;&gt;正则表达式&lt;/h2&gt;
+
+&lt;h3 id=&#34;介绍&#34;&gt;介绍&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“正则表达式是对字符串(包括普通字符(例如,a 到 z 之间的字母)和特殊字符(称为“元字符”))操作的一种逻辑公式,就是用事先定义好的一些特定字符、及这些特定字符的组合,组成一个“规则字符串”,这个“规则字符串”用来表达对字符串的一种过滤逻辑。正则表达式是一种文本模式,模式描述在搜索文本时要匹配的一个或多个字符串。”&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>自定义短代码插件</title>
+      <link>https://wuhuanhost.github.io/2019/12/25/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/</link>
+      <pubDate>Wed, 25 Dec 2019 15:26:17 +0800</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2019/12/25/%E6%96%87%E7%AB%A0%E5%90%8D%E7%A7%B0/</guid>
+      <description>选项卡插件测试 Tab 1 Click Me! Tab 3 Check Tab 2 for the example. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 1 var test = &amp;#34;not formatted&amp;#34;; Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</description>
+    </item>
+    
+    <item>
+      <title>Instagram</title>
+      <link>https://wuhuanhost.github.io/gallery/instagram/</link>
+      <pubDate>Tue, 10 Dec 2019 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/gallery/instagram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试Think主题</title>
+      <link>https://wuhuanhost.github.io/2019/12/05/test-think/</link>
+      <pubDate>Thu, 05 Dec 2019 14:25:36 +0800</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2019/12/05/test-think/</guid>
+      <description>&lt;p&gt;这是一篇用于预览 :(fab fa-markdown): Markdown 基本语法的文章，这是一篇用于预览 :(fab fa-markdown): Markdown 基本语法的文章。&lt;/p&gt;
+
+&lt;p&gt;文章内容基于 &lt;a href=&#34;https://github.github.com/gfm&#34;&gt;GitHub Flavo 红色 Markdown Spec&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;不包含复杂的规则说明，仅仅展示 GFM 所约定的 Markdown 基本语法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关 于</title>
+      <link>https://wuhuanhost.github.io/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/about/</guid>
+      <description>喜欢做饭、热爱摄影、工具控~</description>
+    </item>
+    
+    <item>
+      <title>h5使用canvas画布实现手势解锁</title>
+      <link>https://wuhuanhost.github.io/2018/11/02/canvas-picture-unlock/</link>
+      <pubDate>Fri, 02 Nov 2018 10:20:25 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/11/02/canvas-picture-unlock/</guid>
+      <description>前言 最近做的一个app项目使用的 apicloud 来实现跨平台开发，现在需要为这个 app 添加手势（九宫格）解锁的功能，apicloud 已经有一些第三方的原生实现的手势解锁插件，原生插件性能比较好，调用也比较方便，但是不能对它们的样式做定制修改，所以打算花了一点时间使用h5画布自己来实现这个功能。这篇</description>
+    </item>
+    
+    <item>
+      <title>Photo</title>
+      <link>https://wuhuanhost.github.io/gallery/photo/</link>
+      <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/gallery/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cartoon</title>
+      <link>https://wuhuanhost.github.io/gallery/cartoon/</link>
+      <pubDate>Thu, 11 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/gallery/cartoon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git使用笔记</title>
+      <link>https://wuhuanhost.github.io/2018/03/15/git-use-note/</link>
+      <pubDate>Thu, 15 Mar 2018 20:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/03/15/git-use-note/</guid>
+      <description>git、github使用过程中记录的一些笔记，遇到的问题及其解决办法。 1、创建SSH密匙 这步工作应该是最麻烦的吧。回到桌面，打开git bash，输入以下命令。 ssh-keygen -C &#39;your@email.address&#39; -t rsa 确认使用默认路径，然后输入两次你要是用的密码就行（一般直接敲几个回车不使用密码）。 2、提交密匙 现在又要回到git</description>
+    </item>
+    
+    <item>
+      <title>mongodb基础知识</title>
+      <link>https://wuhuanhost.github.io/2018/01/22/mongodb-001/</link>
+      <pubDate>Mon, 22 Jan 2018 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/01/22/mongodb-001/</guid>
+      <description>MongoDB介绍 MongoDB是一个基于分布式文件存储的开源文档数据库。由C++语言编写。旨在为WEB应用提供高性能、高可用性和高伸缩数据存储解决方案。 MongoDB优点 MongoDB使用场景 数据缓存 由于性能很高，MongoDB适合作为信息基础设施的缓存层。在系统重启之后，由M</description>
+    </item>
+    
+    <item>
+      <title>Node接收电子邮件</title>
+      <link>https://wuhuanhost.github.io/2017/07/20/node-receive-mail/</link>
+      <pubDate>Thu, 20 Jul 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/07/20/node-receive-mail/</guid>
+      <description>上一篇文章写了如何通过node发送电子邮件，有发送就会有接收嘛，所以这篇文章来说说关于在node中如何接收电子邮件。 邮件协议 在开始这篇文章之前我们首先了解三个协议smtp（Simple Mail Transfer Protocol）简单邮件传输协议，pop3（Post Office Protocol 3）邮局协议第三版本，imap（I</description>
+    </item>
+    
+    <item>
+      <title>Node发送电子邮件</title>
+      <link>https://wuhuanhost.github.io/2017/06/20/node-post-mail/</link>
+      <pubDate>Tue, 20 Jun 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/06/20/node-post-mail/</guid>
+      <description>电子邮件作为最广泛使用的一种网络服务和我们的工作学习生活已经密不可分。接受信用卡的账单，注册网站，找回密码等等都需要用到它。今天在就来学习下如何在node下来发送邮件，为当前做的项目提供邮箱校验的功能。 邮箱校验的原理：当我们在xxx网站注册的时候，注册信息中一般都会要求你填一个邮</description>
+    </item>
+    
+    <item>
+      <title>你以为你真理解用户的需求吗？</title>
+      <link>https://wuhuanhost.github.io/2017/04/13/know-user-real-need/</link>
+      <pubDate>Thu, 13 Apr 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/04/13/know-user-real-need/</guid>
+      <description>前言 前两天客户在微信群里说某个产品列表页面的数据能不能一次性全部加载出来，不要每次点击“查看更多”按钮后新数据才出来。当时忙手头工作也没多想就很坚定的说：“那样肯定不行，以后数据量大的时候给服务器的压力会变大，查询速度变慢，用户等待的时间会变长”！然后就去忙工作了。 分析 下午和同事</description>
+    </item>
+    
+    <item>
+      <title>网页文字竖排的几种实现方式</title>
+      <link>https://wuhuanhost.github.io/2017/04/05/text-landscape/</link>
+      <pubDate>Wed, 05 Apr 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/04/05/text-landscape/</guid>
+      <description>古时候的书籍里面文字的书写方式都是从上到下从右向左书写的，我们可不可以在网页上实现这种文字排版效果，虽然现在竖排在网页上用的比较的少，但是我们可以在我们自己的个人网站或者博客介绍页面用竖排来排版，使网页样式看起来更加的丰富和复古！ 通过一些尝试我找到了如下3中方式在网页上竖排文字的</description>
+    </item>
+    
+    <item>
+      <title>使用pillow生成分享图片</title>
+      <link>https://wuhuanhost.github.io/2017/04/01/create-image-by-pillow/</link>
+      <pubDate>Sat, 01 Apr 2017 20:05:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/04/01/create-image-by-pillow/</guid>
+      <description>重复性的工作一定要交给计算机去做！ 有时候要为公司做一张宣传用的分享图片，很简单交给设计通过ps、AI做好就行了，但是如果一个网站要为每个用户生成一张专属的分享图片，如果让设计师一张一张的去做，哪设计师估计会崩溃。下面就来演示用程序来生成一张在简书的专属分享图片吧。 程序生成分享图片</description>
+    </item>
+    
+    <item>
+      <title>golang学习笔记（二）go语言基础知识</title>
+      <link>https://wuhuanhost.github.io/2017/01/10/studygo-02-go-basic/</link>
+      <pubDate>Tue, 10 Jan 2017 15:36:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/01/10/studygo-02-go-basic/</guid>
+      <description>1、go语言中的关键字 go语言中一共有25个标识符（关键字）他们分别是：var、const、type、package、import、func、return、defer、go、select、interface、struct、break、case、continue、for、fallt</description>
+    </item>
+    
+    <item>
+      <title>golang学习笔记（一）开发环境的搭建</title>
+      <link>https://wuhuanhost.github.io/2017/01/01/studygo-01-getstart/</link>
+      <pubDate>Sun, 01 Jan 2017 15:36:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/01/01/studygo-01-getstart/</guid>
+      <description>下载安装golang 下载地址:http://www.golangtc.com/download 通过上面的网址下载你操作系统对应的版本的程序进行安装，由于我用的window7所以下载了go1.7.4.windows-386.msi这个包，根据安装提示进行安装，安装好之后go使用的一</description>
+    </item>
+    
+    <item>
+      <title>对Node.js分页查询（mysql）的封装</title>
+      <link>https://wuhuanhost.github.io/2016/12/27/nodejs-paging-util/</link>
+      <pubDate>Tue, 27 Dec 2016 15:32:23 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/12/27/nodejs-paging-util/</guid>
+      <description>前言 最近用node.js+mysql搭了一个web系统，后台管理界面涉及很多查询操作，而且查询的数据量还比较大，对于大批量数据显示的时候需要做分页处理，一来对于管理员来说数据展示比较友好，二来减轻服务器的数据读取压力和流量，java开发的时候分页通常会封装成了一个pagebean</description>
+    </item>
+    
+    <item>
+      <title>使用TypeScript来写javascript代码</title>
+      <link>https://wuhuanhost.github.io/2016/03/15/tyscript-getstart/</link>
+      <pubDate>Tue, 15 Mar 2016 14:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/03/15/tyscript-getstart/</guid>
+      <description>从机器码到汇编语言再到c语言，java等的高级语言的过程其实在不断的抽象，目的就是让人们使用起来更加的方便和简单，想象一下如果让你用0和1来写程序会是一种什么样的体验。编程语言不断的演化，未来也越来越会趋于自然语言。 为什么要使用TypeScript? 了解为什么要使用TypeScr</description>
+    </item>
+    
+    <item>
+      <title>js常用的工具函数整理</title>
+      <link>https://wuhuanhost.github.io/2016/02/11/js-comm-remark/</link>
+      <pubDate>Thu, 11 Feb 2016 11:06:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/02/11/js-comm-remark/</guid>
+      <description>随机从数组中取出count个元素 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 /** * @param {[type]} 数组 * @param {[type]} 取出元素的个数 * @return {[type]} [description] */ function getRandomArrayElements(arr, count) { var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index; while (i-- &amp;gt; min) { index = Math.floor((i + 1) * Math.random()); temp = shuffled[index]; shuffled[index] = shuffled[i]; shuffled[i] = temp; } return shuffled.slice(min); } 数组去重 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 //数组去重复 Array.prototype.distinct = function() { var arr = this, result = [], i, j, len</description>
+    </item>
+    
+    <item>
+      <title>html5，css3前端开发相关内容整理（持续更新）</title>
+      <link>https://wuhuanhost.github.io/2016/01/11/mobile-remark/</link>
+      <pubDate>Mon, 11 Jan 2016 11:06:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/01/11/mobile-remark/</guid>
+      <description>web、webapp前端开发过程中遇到的问题的常用处理方式整理和一些问题整理。 常见问题处理方式 单行文字垂直居中 html结构 1 &amp;lt;div class=&amp;#34;row&amp;#34;&amp;gt;单行文字垂直居中，单行文字垂直居中，单行文字垂直居中&amp;lt;/div&amp;gt; css样式 1 2 3 4 5 6 7 .row { display: block;</description>
+    </item>
+    
+    <item>
+      <title>canvas绘制运动的小球</title>
+      <link>https://wuhuanhost.github.io/2016/01/05/canvas-ball-sports/</link>
+      <pubDate>Tue, 05 Jan 2016 13:13:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/01/05/canvas-ball-sports/</guid>
+      <description>知乎的网页版登录界面的背景有很多运动的小球，小球和小球运动的时候之间还有连线，给人一种三维立体变换的效果，看着十分的不错，所以就试着做了个和知乎登录界面背景类似的效果，下面是我做好的效果的截图。 实现思路 首先了解下canvas中的动画原理？canvas中的动画其实是通过不断的重绘来</description>
+    </item>
+    
+    <item>
+      <title>canvas中遮罩效果的实现方法</title>
+      <link>https://wuhuanhost.github.io/2015/12/31/canvas-mask/</link>
+      <pubDate>Thu, 31 Dec 2015 10:20:25 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/12/31/canvas-mask/</guid>
+      <description>最近做的一个项目需要支持多终端，网页版需要使用html5中canvas画布对象对一组数据进行渲染还原，但是在实际实现过程中遇到了一个问题，canvas中没有mask（遮罩）层的概念，所以一些效果实现不了，最后翻看文档的时候发现可以通过Context对象的globalComposi</description>
+    </item>
+    
+    <item>
+      <title>Express连接mysql数据库实现简单的数据查询</title>
+      <link>https://wuhuanhost.github.io/2015/12/25/nodejs-express-mysql-basic/</link>
+      <pubDate>Fri, 25 Dec 2015 11:32:23 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/12/25/nodejs-express-mysql-basic/</guid>
+      <description>第一步，安装node.js 打开node.js官网，根据系统选择对应的稳定版本进行下载，windows下建议下载.msi为后缀的安装文件。因为安装好后环境变量也会帮你配置好，新版的nodejs安装好包管理工具npm也会默认帮你安装好。 安装好后使用win+r组合键打开运行对话框，在对</description>
+    </item>
+    
+    <item>
+      <title>ruby解析json</title>
+      <link>https://wuhuanhost.github.io/2015/09/25/ruby-json/</link>
+      <pubDate>Fri, 25 Sep 2015 16:39:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/09/25/ruby-json/</guid>
+      <description>做项目的时候需要一个小工具，为了方便就用ruby脚本写了一个小工具，这个小工具有个功能需要对json数据做解析，小工具实现了，顺便就把ruby中解析json的过程记录下来。 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式，简单易用便于阅读和理解，最重要的是几乎所有的语言基本都支持json并且都有</description>
+    </item>
+    
+    <item>
+      <title>gulp使用笔记</title>
+      <link>https://wuhuanhost.github.io/2015/09/24/gulp-one/</link>
+      <pubDate>Thu, 24 Sep 2015 15:15:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/09/24/gulp-one/</guid>
+      <description>如果科学技术是第一生产力，那么客观需求就是学习的动力，也就是说学习一种新的东西知识首先要明白它的作用是什么，如果弄不清楚这个原因我们会去排斥学习它的，甚至根本不想去学习它。所以我们开始就来说说为什么要使用项目自动化构建工具，以及gulp的有点，本文仅仅是自己学习使用后的整理笔记，</description>
+    </item>
+    
+    <item>
+      <title>对编程语言的一些新的认识</title>
+      <link>https://wuhuanhost.github.io/2015/08/07/about-programming-language/</link>
+      <pubDate>Fri, 07 Aug 2015 18:00:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/08/07/about-programming-language/</guid>
+      <description>编程语言 编程语言（programming language），是用来定义计算机程序的形式语言。它是一种被标准化的交流技巧，用来向计算机发出指令。一种计算机语言让程序员能够准确地定义计算机所需要使用的数据，并精确地定义在不同情况下所应当采取的行动。 &amp;gt;PS:来自百度百科的解释 编程</description>
+    </item>
+    
+    <item>
+      <title>对于系统登录流程的一些理解和总结</title>
+      <link>https://wuhuanhost.github.io/2014/07/15/login/</link>
+      <pubDate>Tue, 15 Jul 2014 14:25:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/07/15/login/</guid>
+      <description>&lt;h2 id=&#34;登录的意义&#34;&gt;登录的意义&lt;/h2&gt;
+
+&lt;p&gt;我们常常会发现在一些网站上登录是非必须的，比如一些浏览性的网站（网易新闻，百度图片），但是用户在使用像QQ空间，微博，人人网等这些网站的时候必须要用户登录后才能使用！暂且不分析为什么有的网站需要登录有的不需要登录，这和每个网站的理念也是有关系的，所以我们只着重分析登录的作用和意义，在我看来登录的作用应该有以下几点：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>设计模式（二）之观察者模式</title>
+      <link>https://wuhuanhost.github.io/2014/07/07/observer/</link>
+      <pubDate>Mon, 07 Jul 2014 16:52:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/07/07/observer/</guid>
+      <description>&lt;h2 id=&#34;生活中的观察者模式&#34;&gt;生活中的观察者模式&lt;/h2&gt;
+
+&lt;p&gt;例如一个订阅者A在某出版社订阅了一份一年期的xxxx报纸，那么出版社每次出版新版本的报纸的时候就会给订阅者A送过去，另外一个订阅者B也在该出版社订阅一份半年期的xxxx报纸，同样的出版社出版新报纸后也会给订阅者B送过去，半年时间过去了由于订阅者B没有续订，那么出版社不会在给B送报纸。&lt;/p&gt;
+
+&lt;p&gt;在上面这个过程中出版社和订阅者A，B其实就是一种观察者模式，订阅者A，B（观察者）先在出版社（主题）登记订阅报纸成为订阅者（观察者对象），然后出版社（主题）的状态（报纸）一旦更新就会给订阅者A，B（观察者）送过去，&lt;strong&gt;观察者必须要注册成为主题的观察者对象之后，主题对象的状态发生变化才能通知到所有观察者&lt;/strong&gt;，（就好比你不去出版社告诉你需要订阅报纸，出版社有新报纸出版的时候是不会给你送去的，因为根本不知道给谁送）。半年后订阅者B（观察者）订阅时间到期不再续订，那么出版社（主题）就取消用户B（观察者）的订阅，将订阅者从被订阅者中移除！&lt;/p&gt;
+
+&lt;h2 id=&#34;观察者模式的定义&#34;&gt;观察者模式的定义&lt;/h2&gt;
+
+&lt;p&gt;观察者模式（有时又被称为发布-订阅Subscribe&amp;gt;模式、模型-视图View&amp;gt;模式、源-收听者Listener&amp;gt;模式或从属者模式）是软件设计模式中的一种。观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，让他们能够自动更新自己。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>设计模式（一）之单例模式</title>
+      <link>https://wuhuanhost.github.io/2014/06/17/singleton/</link>
+      <pubDate>Tue, 17 Jun 2014 14:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/06/17/singleton/</guid>
+      <description>&lt;h2 id=&#34;单例模式概念&#34;&gt;单例模式概念&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;一个类有且仅有一个实例，并且自行实例化向整个系统提供。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;单例模式类图&#34;&gt;单例模式类图&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wuhuanhost.github.io/blog-img/singleton.jpg&#34; alt=&#34;单例模式类图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;根据单例模式的描述和类图可以看出单例模式其实是设计模式中很简单的一种模式，一个私有变量，一个私有构造方法，一个公开的方法，就是一个单例模式的基本结构。（ps：类图对于学习和理解设计模式作用非常大）。&lt;/p&gt;
+
+&lt;h2 id=&#34;单例模式应用场景及缺点&#34;&gt;单例模式应用场景及缺点&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;使用场景&lt;/strong&gt;：比如一个系统中有多个地方需要读取系统的核心配置文件的时候，那么这个读取类就可设计成单例的，这样可以节约系统内存资源，再比如Hibernate中的SessionFactory（它本身不是单例的）我们在使用的时候一般会写一个获取sessioFactory的单例工具类去获取它的实例。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;单例模式的缺点&lt;/strong&gt;：实例化的对象长时间不使用那么很可能会被垃圾回收器回收，就会导致对象的状态丢失！所以具体用什么设计模式用不用这个模式都需要根据实际的情况和使用场景去决定，&lt;strong&gt;不要不设计，也不要过度设计&lt;/strong&gt;！Ps:如果每写一个类都去遵循设计模式中给出的原则，那么你会发现连一个最简单的类都不知道该如何去写了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java没有main方法也可以运行</title>
+      <link>https://wuhuanhost.github.io/2014/06/15/java-no-main-fun-run/</link>
+      <pubDate>Sun, 15 Jun 2014 20:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/06/15/java-no-main-fun-run/</guid>
+      <description>下面的代码在cmd模式下通过javac命令编译，java命令运行Hello world可以正常输出。 一段代码 1 2 3 4 5 6 public class Test { static{ System.out.println(&amp;#34;Hello World!&amp;#34;); System.exit(0); } } 探索 当时在网上看见了上面这段没有main方法也可以执行的代码时很好奇，于是为了弄清楚java中代码的运行先后顺序原因，写了如下两段测试代码，来</description>
+    </item>
+    
+    <item>
+      <title>测试文章</title>
+      <link>https://wuhuanhost.github.io/2014/06/10/myfirstblog/</link>
+      <pubDate>Tue, 10 Jun 2014 13:52:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/06/10/myfirstblog/</guid>
+      <description>github上的博客搭建好了，此文章为测试文章，使用轻量级markdown标记语言书写文章! 下面是使用Anisina博客书写设置指南 开启mathjax mathjax: true 块级mathjax $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$ 行内mathjax 勾股定理:$a^2+b^2=c^2$ 开启代码高亮 highlight: true 1 2 3 function sum(m,n){ return m+n; } 设</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>用户需求 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82/</link>
+    <description>Recent content in 用户需求 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 13 Apr 2017 10:21:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>你以为你真理解用户的需求吗？</title>
+      <link>https://wuhuanhost.github.io/2017/04/13/know-user-real-need/</link>
+      <pubDate>Thu, 13 Apr 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/04/13/know-user-real-need/</guid>
+      <description>前言 前两天客户在微信群里说某个产品列表页面的数据能不能一次性全部加载出来，不要每次点击“查看更多”按钮后新数据才出来。当时忙手头工作也没多想就很坚定的说：“那样肯定不行，以后数据量大的时候给服务器的压力会变大，查询速度变慢，用户等待的时间会变长”！然后就去忙工作了。 分析 下午和同事</description>
+    </item>
+    
+  </channel>
+</rss>

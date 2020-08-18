@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 11 Feb 2016 11:06:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>js常用的工具函数整理</title>
+      <link>https://wuhuanhost.github.io/2016/02/11/js-comm-remark/</link>
+      <pubDate>Thu, 11 Feb 2016 11:06:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/02/11/js-comm-remark/</guid>
+      <description>随机从数组中取出count个元素 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 /** * @param {[type]} 数组 * @param {[type]} 取出元素的个数 * @return {[type]} [description] */ function getRandomArrayElements(arr, count) { var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index; while (i-- &amp;gt; min) { index = Math.floor((i + 1) * Math.random()); temp = shuffled[index]; shuffled[index] = shuffled[i]; shuffled[i] = temp; } return shuffled.slice(min); } 数组去重 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 //数组去重复 Array.prototype.distinct = function() { var arr = this, result = [], i, j, len</description>
+    </item>
+    
+  </channel>
+</rss>

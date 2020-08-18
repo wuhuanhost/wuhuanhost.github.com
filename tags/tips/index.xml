@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tips on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/tips/</link>
+    <description>Recent content in tips on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 11 Feb 2016 11:06:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>js常用的工具函数整理</title>
+      <link>https://wuhuanhost.github.io/2016/02/11/js-comm-remark/</link>
+      <pubDate>Thu, 11 Feb 2016 11:06:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/02/11/js-comm-remark/</guid>
+      <description>随机从数组中取出count个元素 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 /** * @param {[type]} 数组 * @param {[type]} 取出元素的个数 * @return {[type]} [description] */ function getRandomArrayElements(arr, count) { var shuffled = arr.slice(0), i = arr.length, min = i - count, temp, index; while (i-- &amp;gt; min) { index = Math.floor((i + 1) * Math.random()); temp = shuffled[index]; shuffled[index] = shuffled[i]; shuffled[i] = temp; } return shuffled.slice(min); } 数组去重 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 //数组去重复 Array.prototype.distinct = function() { var arr = this, result = [], i, j, len</description>
+    </item>
+    
+    <item>
+      <title>html5，css3前端开发相关内容整理（持续更新）</title>
+      <link>https://wuhuanhost.github.io/2016/01/11/mobile-remark/</link>
+      <pubDate>Mon, 11 Jan 2016 11:06:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/01/11/mobile-remark/</guid>
+      <description>web、webapp前端开发过程中遇到的问题的常用处理方式整理和一些问题整理。 常见问题处理方式 单行文字垂直居中 html结构 1 &amp;lt;div class=&amp;#34;row&amp;#34;&amp;gt;单行文字垂直居中，单行文字垂直居中，单行文字垂直居中&amp;lt;/div&amp;gt; css样式 1 2 3 4 5 6 7 .row { display: block;</description>
+    </item>
+    
+  </channel>
+</rss>

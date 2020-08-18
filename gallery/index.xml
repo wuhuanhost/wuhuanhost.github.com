@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Galleries on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/gallery/</link>
+    <description>Recent content in Galleries on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 10 Dec 2019 10:20:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instagram</title>
+      <link>https://wuhuanhost.github.io/gallery/instagram/</link>
+      <pubDate>Tue, 10 Dec 2019 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/gallery/instagram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photo</title>
+      <link>https://wuhuanhost.github.io/gallery/photo/</link>
+      <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/gallery/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cartoon</title>
+      <link>https://wuhuanhost.github.io/gallery/cartoon/</link>
+      <pubDate>Thu, 11 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/gallery/cartoon/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

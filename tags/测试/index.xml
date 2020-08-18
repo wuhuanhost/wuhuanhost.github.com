@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 10 Jun 2014 13:52:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>测试文章</title>
+      <link>https://wuhuanhost.github.io/2014/06/10/myfirstblog/</link>
+      <pubDate>Tue, 10 Jun 2014 13:52:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/06/10/myfirstblog/</guid>
+      <description>github上的博客搭建好了，此文章为测试文章，使用轻量级markdown标记语言书写文章! 下面是使用Anisina博客书写设置指南 开启mathjax mathjax: true 块级mathjax $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$ 行内mathjax 勾股定理:$a^2+b^2=c^2$ 开启代码高亮 highlight: true 1 2 3 function sum(m,n){ return m+n; } 设</description>
+    </item>
+    
+  </channel>
+</rss>

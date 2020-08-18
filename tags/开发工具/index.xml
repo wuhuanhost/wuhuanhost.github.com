@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发工具 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 开发工具 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 15 Mar 2018 20:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git使用笔记</title>
+      <link>https://wuhuanhost.github.io/2018/03/15/git-use-note/</link>
+      <pubDate>Thu, 15 Mar 2018 20:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/03/15/git-use-note/</guid>
+      <description>git、github使用过程中记录的一些笔记，遇到的问题及其解决办法。 1、创建SSH密匙 这步工作应该是最麻烦的吧。回到桌面，打开git bash，输入以下命令。 ssh-keygen -C &#39;your@email.address&#39; -t rsa 确认使用默认路径，然后输入两次你要是用的密码就行（一般直接敲几个回车不使用密码）。 2、提交密匙 现在又要回到git</description>
+    </item>
+    
+    <item>
+      <title>gulp使用笔记</title>
+      <link>https://wuhuanhost.github.io/2015/09/24/gulp-one/</link>
+      <pubDate>Thu, 24 Sep 2015 15:15:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/09/24/gulp-one/</guid>
+      <description>如果科学技术是第一生产力，那么客观需求就是学习的动力，也就是说学习一种新的东西知识首先要明白它的作用是什么，如果弄不清楚这个原因我们会去排斥学习它的，甚至根本不想去学习它。所以我们开始就来说说为什么要使用项目自动化构建工具，以及gulp的有点，本文仅仅是自己学习使用后的整理笔记，</description>
+    </item>
+    
+  </channel>
+</rss>

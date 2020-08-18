@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>正则表达式 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+    <description>Recent content in 正则表达式 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 18 Nov 2019 11:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>javascript正则表达式使用笔记</title>
+      <link>https://wuhuanhost.github.io/2019/11/18/js-regexp/</link>
+      <pubDate>Mon, 18 Nov 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2019/11/18/js-regexp/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wuhuanhost.github.io/blog-img/2019-11-18/banner.jpg&#34; alt=&#34;图片测试&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;正则表达式&#34;&gt;正则表达式&lt;/h2&gt;
+
+&lt;h3 id=&#34;介绍&#34;&gt;介绍&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“正则表达式是对字符串(包括普通字符(例如,a 到 z 之间的字母)和特殊字符(称为“元字符”))操作的一种逻辑公式,就是用事先定义好的一些特定字符、及这些特定字符的组合,组成一个“规则字符串”,这个“规则字符串”用来表达对字符串的一种过滤逻辑。正则表达式是一种文本模式,模式描述在搜索文本时要匹配的一个或多个字符串。”&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

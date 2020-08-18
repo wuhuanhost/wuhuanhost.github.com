@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程手册 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/</link>
+    <description>Recent content in 编程手册 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 18 Nov 2019 11:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/categories/%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>javascript正则表达式使用笔记</title>
+      <link>https://wuhuanhost.github.io/2019/11/18/js-regexp/</link>
+      <pubDate>Mon, 18 Nov 2019 11:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2019/11/18/js-regexp/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://wuhuanhost.github.io/blog-img/2019-11-18/banner.jpg&#34; alt=&#34;图片测试&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;正则表达式&#34;&gt;正则表达式&lt;/h2&gt;
+
+&lt;h3 id=&#34;介绍&#34;&gt;介绍&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“正则表达式是对字符串(包括普通字符(例如,a 到 z 之间的字母)和特殊字符(称为“元字符”))操作的一种逻辑公式,就是用事先定义好的一些特定字符、及这些特定字符的组合,组成一个“规则字符串”,这个“规则字符串”用来表达对字符串的一种过滤逻辑。正则表达式是一种文本模式,模式描述在搜索文本时要匹配的一个或多个字符串。”&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>git使用笔记</title>
+      <link>https://wuhuanhost.github.io/2018/03/15/git-use-note/</link>
+      <pubDate>Thu, 15 Mar 2018 20:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/03/15/git-use-note/</guid>
+      <description>git、github使用过程中记录的一些笔记，遇到的问题及其解决办法。 1、创建SSH密匙 这步工作应该是最麻烦的吧。回到桌面，打开git bash，输入以下命令。 ssh-keygen -C &#39;your@email.address&#39; -t rsa 确认使用默认路径，然后输入两次你要是用的密码就行（一般直接敲几个回车不使用密码）。 2、提交密匙 现在又要回到git</description>
+    </item>
+    
+    <item>
+      <title>设计模式（二）之观察者模式</title>
+      <link>https://wuhuanhost.github.io/2014/07/07/observer/</link>
+      <pubDate>Mon, 07 Jul 2014 16:52:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/07/07/observer/</guid>
+      <description>&lt;h2 id=&#34;生活中的观察者模式&#34;&gt;生活中的观察者模式&lt;/h2&gt;
+
+&lt;p&gt;例如一个订阅者A在某出版社订阅了一份一年期的xxxx报纸，那么出版社每次出版新版本的报纸的时候就会给订阅者A送过去，另外一个订阅者B也在该出版社订阅一份半年期的xxxx报纸，同样的出版社出版新报纸后也会给订阅者B送过去，半年时间过去了由于订阅者B没有续订，那么出版社不会在给B送报纸。&lt;/p&gt;
+
+&lt;p&gt;在上面这个过程中出版社和订阅者A，B其实就是一种观察者模式，订阅者A，B（观察者）先在出版社（主题）登记订阅报纸成为订阅者（观察者对象），然后出版社（主题）的状态（报纸）一旦更新就会给订阅者A，B（观察者）送过去，&lt;strong&gt;观察者必须要注册成为主题的观察者对象之后，主题对象的状态发生变化才能通知到所有观察者&lt;/strong&gt;，（就好比你不去出版社告诉你需要订阅报纸，出版社有新报纸出版的时候是不会给你送去的，因为根本不知道给谁送）。半年后订阅者B（观察者）订阅时间到期不再续订，那么出版社（主题）就取消用户B（观察者）的订阅，将订阅者从被订阅者中移除！&lt;/p&gt;
+
+&lt;h2 id=&#34;观察者模式的定义&#34;&gt;观察者模式的定义&lt;/h2&gt;
+
+&lt;p&gt;观察者模式（有时又被称为发布-订阅Subscribe&amp;gt;模式、模型-视图View&amp;gt;模式、源-收听者Listener&amp;gt;模式或从属者模式）是软件设计模式中的一种。观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，让他们能够自动更新自己。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>设计模式（一）之单例模式</title>
+      <link>https://wuhuanhost.github.io/2014/06/17/singleton/</link>
+      <pubDate>Tue, 17 Jun 2014 14:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/06/17/singleton/</guid>
+      <description>&lt;h2 id=&#34;单例模式概念&#34;&gt;单例模式概念&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;一个类有且仅有一个实例，并且自行实例化向整个系统提供。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;单例模式类图&#34;&gt;单例模式类图&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://wuhuanhost.github.io/blog-img/singleton.jpg&#34; alt=&#34;单例模式类图&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;根据单例模式的描述和类图可以看出单例模式其实是设计模式中很简单的一种模式，一个私有变量，一个私有构造方法，一个公开的方法，就是一个单例模式的基本结构。（ps：类图对于学习和理解设计模式作用非常大）。&lt;/p&gt;
+
+&lt;h2 id=&#34;单例模式应用场景及缺点&#34;&gt;单例模式应用场景及缺点&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;使用场景&lt;/strong&gt;：比如一个系统中有多个地方需要读取系统的核心配置文件的时候，那么这个读取类就可设计成单例的，这样可以节约系统内存资源，再比如Hibernate中的SessionFactory（它本身不是单例的）我们在使用的时候一般会写一个获取sessioFactory的单例工具类去获取它的实例。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;单例模式的缺点&lt;/strong&gt;：实例化的对象长时间不使用那么很可能会被垃圾回收器回收，就会导致对象的状态丢失！所以具体用什么设计模式用不用这个模式都需要根据实际的情况和使用场景去决定，&lt;strong&gt;不要不设计，也不要过度设计&lt;/strong&gt;！Ps:如果每写一个类都去遵循设计模式中给出的原则，那么你会发现连一个最简单的类都不知道该如何去写了！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

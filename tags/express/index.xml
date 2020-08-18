@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>express on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/express/</link>
+    <description>Recent content in express on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 25 Dec 2015 11:32:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/express/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Express连接mysql数据库实现简单的数据查询</title>
+      <link>https://wuhuanhost.github.io/2015/12/25/nodejs-express-mysql-basic/</link>
+      <pubDate>Fri, 25 Dec 2015 11:32:23 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/12/25/nodejs-express-mysql-basic/</guid>
+      <description>第一步，安装node.js 打开node.js官网，根据系统选择对应的稳定版本进行下载，windows下建议下载.msi为后缀的安装文件。因为安装好后环境变量也会帮你配置好，新版的nodejs安装好包管理工具npm也会默认帮你安装好。 安装好后使用win+r组合键打开运行对话框，在对</description>
+    </item>
+    
+  </channel>
+</rss>

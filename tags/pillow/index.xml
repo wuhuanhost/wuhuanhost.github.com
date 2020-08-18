@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pillow on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/pillow/</link>
+    <description>Recent content in pillow on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 01 Apr 2017 20:05:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/pillow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用pillow生成分享图片</title>
+      <link>https://wuhuanhost.github.io/2017/04/01/create-image-by-pillow/</link>
+      <pubDate>Sat, 01 Apr 2017 20:05:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/04/01/create-image-by-pillow/</guid>
+      <description>重复性的工作一定要交给计算机去做！ 有时候要为公司做一张宣传用的分享图片，很简单交给设计通过ps、AI做好就行了，但是如果一个网站要为每个用户生成一张专属的分享图片，如果让设计师一张一张的去做，哪设计师估计会崩溃。下面就来演示用程序来生成一张在简书的专属分享图片吧。 程序生成分享图片</description>
+    </item>
+    
+  </channel>
+</rss>

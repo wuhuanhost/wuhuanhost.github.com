@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>归 档 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/archives/</link>
+    <description>Recent content in 归 档 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/archives/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

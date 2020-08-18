@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://wuhuanhost.github.io/ko/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wuhuanhost.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wuhuanhost.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://wuhuanhost.github.io/ko/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://wuhuanhost.github.io/ko/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wuhuanhost.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wuhuanhost.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://wuhuanhost.github.io/ko/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://wuhuanhost.github.io/ko/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wuhuanhost.github.io/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wuhuanhost.github.io/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://wuhuanhost.github.io/ko/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://wuhuanhost.github.io/ko/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://wuhuanhost.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wuhuanhost.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://wuhuanhost.github.io/ko/tags/"
+                />
+  </url>
+  
+</urlset>

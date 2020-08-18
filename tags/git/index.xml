@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/git/</link>
+    <description>Recent content in git on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 15 Mar 2018 20:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git使用笔记</title>
+      <link>https://wuhuanhost.github.io/2018/03/15/git-use-note/</link>
+      <pubDate>Thu, 15 Mar 2018 20:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/03/15/git-use-note/</guid>
+      <description>git、github使用过程中记录的一些笔记，遇到的问题及其解决办法。 1、创建SSH密匙 这步工作应该是最麻烦的吧。回到桌面，打开git bash，输入以下命令。 ssh-keygen -C &#39;your@email.address&#39; -t rsa 确认使用默认路径，然后输入两次你要是用的密码就行（一般直接敲几个回车不使用密码）。 2、提交密匙 现在又要回到git</description>
+    </item>
+    
+  </channel>
+</rss>

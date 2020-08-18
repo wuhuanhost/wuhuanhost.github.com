@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Demo on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/tags/demo/</link>
+    <description>Recent content in Demo on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 05 Jan 2016 13:13:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>canvas绘制运动的小球</title>
+      <link>https://wuhuanhost.github.io/2016/01/05/canvas-ball-sports/</link>
+      <pubDate>Tue, 05 Jan 2016 13:13:30 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/01/05/canvas-ball-sports/</guid>
+      <description>知乎的网页版登录界面的背景有很多运动的小球，小球和小球运动的时候之间还有连线，给人一种三维立体变换的效果，看着十分的不错，所以就试着做了个和知乎登录界面背景类似的效果，下面是我做好的效果的截图。 实现思路 首先了解下canvas中的动画原理？canvas中的动画其实是通过不断的重绘来</description>
+    </item>
+    
+    <item>
+      <title>canvas中遮罩效果的实现方法</title>
+      <link>https://wuhuanhost.github.io/2015/12/31/canvas-mask/</link>
+      <pubDate>Thu, 31 Dec 2015 10:20:25 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/12/31/canvas-mask/</guid>
+      <description>最近做的一个项目需要支持多终端，网页版需要使用html5中canvas画布对象对一组数据进行渲染还原，但是在实际实现过程中遇到了一个问题，canvas中没有mask（遮罩）层的概念，所以一些效果实现不了，最后翻看文档的时候发现可以通过Context对象的globalComposi</description>
+    </item>
+    
+  </channel>
+</rss>

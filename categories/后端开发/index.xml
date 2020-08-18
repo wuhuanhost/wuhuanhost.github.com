@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>后端开发 on 梦想.家的博客</title>
+    <link>https://wuhuanhost.github.io/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 后端开发 on 梦想.家的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 22 Jan 2018 10:21:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://wuhuanhost.github.io/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mongodb基础知识</title>
+      <link>https://wuhuanhost.github.io/2018/01/22/mongodb-001/</link>
+      <pubDate>Mon, 22 Jan 2018 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2018/01/22/mongodb-001/</guid>
+      <description>MongoDB介绍 MongoDB是一个基于分布式文件存储的开源文档数据库。由C++语言编写。旨在为WEB应用提供高性能、高可用性和高伸缩数据存储解决方案。 MongoDB优点 MongoDB使用场景 数据缓存 由于性能很高，MongoDB适合作为信息基础设施的缓存层。在系统重启之后，由M</description>
+    </item>
+    
+    <item>
+      <title>Node接收电子邮件</title>
+      <link>https://wuhuanhost.github.io/2017/07/20/node-receive-mail/</link>
+      <pubDate>Thu, 20 Jul 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/07/20/node-receive-mail/</guid>
+      <description>上一篇文章写了如何通过node发送电子邮件，有发送就会有接收嘛，所以这篇文章来说说关于在node中如何接收电子邮件。 邮件协议 在开始这篇文章之前我们首先了解三个协议smtp（Simple Mail Transfer Protocol）简单邮件传输协议，pop3（Post Office Protocol 3）邮局协议第三版本，imap（I</description>
+    </item>
+    
+    <item>
+      <title>Node发送电子邮件</title>
+      <link>https://wuhuanhost.github.io/2017/06/20/node-post-mail/</link>
+      <pubDate>Tue, 20 Jun 2017 10:21:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/06/20/node-post-mail/</guid>
+      <description>电子邮件作为最广泛使用的一种网络服务和我们的工作学习生活已经密不可分。接受信用卡的账单，注册网站，找回密码等等都需要用到它。今天在就来学习下如何在node下来发送邮件，为当前做的项目提供邮箱校验的功能。 邮箱校验的原理：当我们在xxx网站注册的时候，注册信息中一般都会要求你填一个邮</description>
+    </item>
+    
+    <item>
+      <title>golang学习笔记（二）go语言基础知识</title>
+      <link>https://wuhuanhost.github.io/2017/01/10/studygo-02-go-basic/</link>
+      <pubDate>Tue, 10 Jan 2017 15:36:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/01/10/studygo-02-go-basic/</guid>
+      <description>1、go语言中的关键字 go语言中一共有25个标识符（关键字）他们分别是：var、const、type、package、import、func、return、defer、go、select、interface、struct、break、case、continue、for、fallt</description>
+    </item>
+    
+    <item>
+      <title>golang学习笔记（一）开发环境的搭建</title>
+      <link>https://wuhuanhost.github.io/2017/01/01/studygo-01-getstart/</link>
+      <pubDate>Sun, 01 Jan 2017 15:36:36 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2017/01/01/studygo-01-getstart/</guid>
+      <description>下载安装golang 下载地址:http://www.golangtc.com/download 通过上面的网址下载你操作系统对应的版本的程序进行安装，由于我用的window7所以下载了go1.7.4.windows-386.msi这个包，根据安装提示进行安装，安装好之后go使用的一</description>
+    </item>
+    
+    <item>
+      <title>对Node.js分页查询（mysql）的封装</title>
+      <link>https://wuhuanhost.github.io/2016/12/27/nodejs-paging-util/</link>
+      <pubDate>Tue, 27 Dec 2016 15:32:23 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2016/12/27/nodejs-paging-util/</guid>
+      <description>前言 最近用node.js+mysql搭了一个web系统，后台管理界面涉及很多查询操作，而且查询的数据量还比较大，对于大批量数据显示的时候需要做分页处理，一来对于管理员来说数据展示比较友好，二来减轻服务器的数据读取压力和流量，java开发的时候分页通常会封装成了一个pagebean</description>
+    </item>
+    
+    <item>
+      <title>Express连接mysql数据库实现简单的数据查询</title>
+      <link>https://wuhuanhost.github.io/2015/12/25/nodejs-express-mysql-basic/</link>
+      <pubDate>Fri, 25 Dec 2015 11:32:23 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2015/12/25/nodejs-express-mysql-basic/</guid>
+      <description>第一步，安装node.js 打开node.js官网，根据系统选择对应的稳定版本进行下载，windows下建议下载.msi为后缀的安装文件。因为安装好后环境变量也会帮你配置好，新版的nodejs安装好包管理工具npm也会默认帮你安装好。 安装好后使用win+r组合键打开运行对话框，在对</description>
+    </item>
+    
+    <item>
+      <title>java没有main方法也可以运行</title>
+      <link>https://wuhuanhost.github.io/2014/06/15/java-no-main-fun-run/</link>
+      <pubDate>Sun, 15 Jun 2014 20:00:00 +0000</pubDate>
+      
+      <guid>https://wuhuanhost.github.io/2014/06/15/java-no-main-fun-run/</guid>
+      <description>下面的代码在cmd模式下通过javac命令编译，java命令运行Hello world可以正常输出。 一段代码 1 2 3 4 5 6 public class Test { static{ System.out.println(&amp;#34;Hello World!&amp;#34;); System.exit(0); } } 探索 当时在网上看见了上面这段没有main方法也可以执行的代码时很好奇，于是为了弄清楚java中代码的运行先后顺序原因，写了如下两段测试代码，来</description>
+    </item>
+    
+  </channel>
+</rss>
